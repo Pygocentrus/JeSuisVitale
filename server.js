@@ -52,19 +52,17 @@ app.get('/', function(req, res) {
 		//Get this department's associated regions
 		for (var j = 0, dptSize = associatedDpt.departments.length; j < dptSize; j++) {
 			associatedCities = getAssociatedCities(associatedDpt.departments[j], cities);
-			console.log(associatedCities);
-			console.log('###');
+			associatedDpt.departments[j].communes = associatedCities;
 			//Get this region's associated cities
 			// for (var k = 0, citSize = associatedCities.length; k < citSize; k++) {
 			// 	//reseau = getNetwork(departments[i], regions[j], cities[k]);
 			// }
 		}
-		console.log('_________');
 		associatedDpts.push(associatedDpt);
 	}
 	//console.log(associatedDpts);
 
-	res.end('Processing...');
+	res.json(associatedDpts);
 });
 
 
@@ -101,8 +99,17 @@ function getAssociatedDpt(region, departments) {
  * @return {Object}              The cities that are linked to the department
  */
 function getAssociatedCities(department, cities) {
-	if(typeof department!='undefined')
-		console.log('- '+department.nom);
+	var associatedCities = new Array();
+	for(var i=0, size=cities.length; i<size; i++){
+		if(department.nom.toLowerCase() === cities[i].Departement.toLowerCase()){
+			associatedCities.push({
+				commune: cities[i].Commune,
+				codePostal: cities[i].Codepos,
+				insee: cities[i].INSEE
+			});
+		}
+	}
+	return associatedCities;
 }
 
 

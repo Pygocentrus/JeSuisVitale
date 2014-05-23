@@ -110,19 +110,19 @@
   }, {
     "numero": "8",
     "nom": "Ardennes",
-    "region": "Champagne"
+    "region": "Champagne-ardenne"
   }, {
     "numero": "10",
     "nom": "Aube",
-    "region": "Champagne"
+    "region": "Champagne-ardenne"
   }, {
     "numero": "52",
     "nom": "Haute-Marne",
-    "region": "Champagne"
+    "region": "Champagne-ardenne"
   }, {
     "numero": "51",
     "nom": "Marne",
-    "region": "Champagne"
+    "region": "Champagne-ardenne"
   }, {
     "numero": "2A",
     "nom": "Corse du Sud",
@@ -190,23 +190,23 @@
   }, {
     "numero": "11",
     "nom": "Aude",
-    "region": "Languedoc"
+    "region": "Languedoc-roussillon"
   }, {
     "numero": "30",
     "nom": "Gard",
-    "region": "Languedoc"
+    "region": "Languedoc-roussillon"
   }, {
     "numero": "34",
     "nom": "Hérault",
-    "region": "Languedoc"
+    "region": "Languedoc-roussillon"
   }, {
     "numero": "48",
     "nom": "Lozère",
-    "region": "Languedoc"
+    "region": "Languedoc-roussillon"
   }, {
     "numero": "66",
     "nom": "Pyrénées-Orientales",
-    "region": "Languedoc"
+    "region": "Languedoc-roussillon"
   }, {
     "numero": "19",
     "nom": "Corrèze",
@@ -270,11 +270,11 @@
   }, {
     "numero": "59",
     "nom": "Nord",
-    "region": "Nord"
+    "region": "Nord-pas-de-calais"
   }, {
     "numero": "62",
     "nom": "Pas-de-Calais",
-    "region": "Nord"
+    "region": "Nord-pas-de-calais"
   }, {
     "numero": "50",
     "nom": "Manche",
@@ -314,19 +314,19 @@
   }, {
     "numero": "16",
     "nom": "Charente",
-    "region": "Poitou-Charente"
+    "region": "Poitou-Charentes"
   }, {
     "numero": "17",
     "nom": "Charente Maritime",
-    "region": "Poitou-Charente"
+    "region": "Poitou-Charentes"
   }, {
     "numero": "79",
     "nom": "Deux-Sèvres",
-    "region": "Poitou-Charente"
+    "region": "Poitou-Charentes"
   }, {
     "numero": "86",
     "nom": "Vienne",
-    "region": "Poitou-Charente"
+    "region": "Poitou-Charentes"
   }, {
     "numero": "4",
     "nom": "Alpes de Haute-Provence",

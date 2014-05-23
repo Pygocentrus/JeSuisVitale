@@ -1,106 +1,106 @@
 [
   {
-    "region":"aquitaine",
-    "id":72
+    "region":"Aquitaine",
+    "id":"72"
   },
   {
-    "region":"auvergne",
-    "id":83
+    "region":"Auvergne",
+    "id":"83"
   },
   {
-    "region":"bourgogne",
-    "id":26
+    "region":"Bourgogne",
+    "id":"26"
   },
   {
-    "region":"bretagne",
-    "id":53
+    "region":"Bretagne",
+    "id":"53"
   },
   {
-    "region":"centre",
-    "id":24
+    "region":"Centre",
+    "id":"24"
   },
   {
-    "region":"champagne-ardenne",
-    "id":21
+    "region":"Champagne-Ardenne",
+    "id":"21"
   },
   {
-    "region":"franche-comte",
-    "id":43
+    "region":"Franche-comté",
+    "id":"43"
   },
   {
-    "region":"île-de-france",
-    "id":11
+    "region":"Ile-de-France",
+    "id":"11"
   },
   {
-    "region":"languedoc-roussillon",
-    "id":91
+    "region":"Languedoc-Roussillon",
+    "id":"91"
   },
   {
-    "region":"limousin",
-    "id":74
+    "region":"Limousin",
+    "id":"74"
   },
   {
-    "region":"lorraine",
-    "id":41
+    "region":"Lorraine",
+    "id":"41"
   },
   {
-    "region":"midi-pyrenées",
-    "id":73
+    "region":"Midi-pyrénées",
+    "id":"73"
   },
   {
-    "region":"nord-pas-de-calais",
-    "id":31
+    "region":"Nord-Pas-de-Calais",
+    "id":"31"
   },
   {
-    "region":"haute-normandie",
-    "id":23
+    "region":"Haute-Normandie",
+    "id":"23"
   },
   {
-    "region":"pays-de-la-loire",
-    "id":52
+    "region":"Pays-de-la-Loire",
+    "id":"52"
   },
   {
-    "region":"picardie",
-    "id":22
+    "region":"Picardie",
+    "id":"22"
   },
   {
-    "region":"poitou-charentes",
-    "id":54
+    "region":"Poitou-Charentes",
+    "id":"54"
   },
   {
-    "region":"provence-alpes-côte-d'azur",
-    "id":93
+    "region":"Provence-Alpes-Côte-d'Azur",
+    "id":"93"
   },
   {
-    "region":"rhône-alpes",
-    "id":82
+    "region":"Rhône-Alpes",
+    "id":"82"
   },
   {
-    "region":"alsace",
-    "id":42
+    "region":"Alsace",
+    "id":"42"
   },
   {
-    "region":"basse-normandie",
-    "id":25
+    "region":"Basse-Normandie",
+    "id":"25"
   },
   {
-    "region":"corse",
-    "id":94
+    "region":"Corse",
+    "id":"94"
   },
   {
-    "region":"guadeloupe",
-    "id":01
+    "region":"Guadeloupe",
+    "id":"01"
   },
   {
-    "region":"martinique",
-    "id":02
+    "region":"Martinique",
+    "id":"02"
   },
   {
-    "region":"guyane-française",
-    "id":03
+    "region":"Guyane-Française",
+    "id":"03"
   },
   {
-    "region":"réunion",
-    "id":96
+    "region":"Réunion",
+    "id":"96"
   }
 ]

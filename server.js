@@ -62,7 +62,7 @@ app.get('/', function(req, res) {
 	}
 	//console.log(associatedDpts);
 
-	res.json(associatedDpts);
+	res.end('Processing...');
 });
 
 

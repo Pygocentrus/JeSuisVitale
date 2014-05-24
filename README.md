@@ -18,13 +18,3 @@ d. npm install<br />
 e. bower install<br />
 f. grunt serve --force<br />
 </p>
-
-###Branche scrapp
-<p>
-  //TODO
-</p>
-
-###Branche back
-<p>
-  //TODO
-</p>

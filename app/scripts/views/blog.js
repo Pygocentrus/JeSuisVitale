@@ -4,29 +4,28 @@ define([
     'jquery',
     'underscore',
     'backbone',
-    'templates'
-], function ($, _, Backbone, JST) {
+], function ($, _, Backbone) {
     'use strict';
 
-    var BlogView = Backbone.View.extend({
-        template: JST['app/scripts/templates/blog.ejs'],
+    // var BlogView = Backbone.View.extend({
+    //     template: JST['app/scripts/templates/blog.ejs'],
 
-        tagName: 'div',
+    //     tagName: 'div',
 
-        id: '',
+    //     id: '',
 
-        className: '',
+    //     className: '',
 
-        events: {},
+    //     events: {},
 
-        initialize: function () {
-            this.listenTo(this.model, 'change', this.render);
-        },
+    //     initialize: function () {
+    //         this.listenTo(this.model, 'change', this.render);
+    //     },
 
-        render: function () {
-            this.$el.html(this.template(this.model.toJSON()));
-        }
-    });
+    //     render: function () {
+    //         this.$el.html(this.template(this.model.toJSON()));
+    //     }
+    // });
 
-    return BlogView;
+    return {BlogView:'yep'};
 });

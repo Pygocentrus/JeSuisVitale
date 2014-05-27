@@ -1,6 +1,7 @@
 var express = require('express');
 var fs = require('fs');
 var http = require('http');
+var request = require('request');
 var Q = require('q');
 var app = express();
 
@@ -40,13 +41,13 @@ app.get('/algo1', function(req, res) {
  * Second algorithm to get the data from the
  * orobnat.sante.gouv.fr website
  */
-app.get('/', function(req, res) {
+app.get('/algo2', function(req, res) {
 	var departments = JSON.parse(fs.readFileSync('ressources/departements.json', 'utf-8'));
 	var regions = JSON.parse(fs.readFileSync('ressources/regions.json', 'utf-8'));
 	var cities = JSON.parse(fs.readFileSync('ressources/villes.json', 'utf-8'));
-	var associatedCities, associatedDpt, associatedDpts=new Array();
+	var associatedCities, associatedDpt, associatedDpts = new Array();
 
-	//Get departments
+	//Get regions
 	for (var i = 0, regSize = regions.length; i < regSize; i++) {
 		associatedDpt = getAssociatedDpt(regions[i], departments);
 		//Get this department's associated regions
@@ -62,6 +63,76 @@ app.get('/', function(req, res) {
 	}
 	//console.log(associatedDpts);
 
+	res.end('Processing...');
+});
+
+
+app.get('/', function(req, res) {
+	var locations = JSON.parse(fs.readFileSync('all.json', 'utf-8'));
+	var communeDepartement, departement, posPLV, methode, idRegionf, ville;
+	// console.log(locations);
+	for (var i = 0, regSize = /* locations.length */ 1; i < regSize; i++) {
+		// console.log(locations[i].departments);
+		for (var j = 0, dptSize = /* locations[i].departments.length */ 1; j < dptSize; j++) {
+			// console.log(locations[i].departments[j]);
+			for (var k = 0, comSize = /* locations[i].departments[j].communes.length */ 1; k < comSize; k++) {
+				// console.log(locations[i].departments[j].communes[k]);
+				ville = locations[i].departments[j].communes[k];
+				departement = "0" + locations[i].departments[j].numero;
+				communeDepartement = (ville.insee + "").substr(2, 3).length === 3 ? (ville.insee + "").substr(2, 3) : "0" + (ville.insee + "").substr(2, 3);
+				posPLV = 0;
+				methode = "changerCommune"; //changerReseau ou changerCommune
+				idRegionf = locations[i].id;
+
+				// Data to be sent
+				console.log(ville.commune);
+				console.log('--> Département: ' + departement);
+				console.log('--> Commune Département: ' + communeDepartement);
+				console.log('--> PosPLV: ' + posPLV);
+				console.log('--> Méthode: ' + methode);
+				console.log('--> idRegionf: ' + idRegionf);
+
+				// Request to the orobnat.sante.gouv website
+				var options = {
+					method: 'POST',
+					form: {
+						departement: departement,
+						communeDepartement: communeDepartement,
+						posPLV: posPLV,
+						methode: methode,
+						idRegionf: idRegionf
+					},
+					uri: 'http://orobnat.sante.gouv.fr/orobnat/rechercherResultatQualite.do'
+				}
+				request(options, function requestSent(err, httpResponse, body) {
+					if (err) {
+						console.error('Request failed:');
+						console.log(err);
+					} else {
+						console.log('Request success !');
+						console.log(body);
+					}
+				});
+
+
+
+				// var r = request.post('http://orobnat.sante.gouv.fr/orobnat/rechercherResultatQualite.do', function cb(err, httpResponse, body) {
+				// 	if (err) {
+				// 		console.error('Request failed:');
+				// 		console.log(err);
+				// 	}
+				// 	console.log('Request success !');
+				// 	console.log(body);
+				// });
+				// var form = r.form();
+				// form.append('departement', departement);
+				// form.append('communeDepartement', communeDepartement);
+				// form.append('posPLV', posPLV);
+				// form.append('methode', methode);
+				// form.append('idRegionf', idRegionf);
+			}
+		}
+	}
 	res.end('Processing...');
 });
 
@@ -100,8 +171,8 @@ function getAssociatedDpt(region, departments) {
  */
 function getAssociatedCities(department, cities) {
 	var associatedCities = new Array();
-	for(var i=0, size=cities.length; i<size; i++){
-		if(department.nom.toLowerCase() === cities[i].Departement.toLowerCase()){
+	for (var i = 0, size = cities.length; i < size; i++) {
+		if (department.nom.toLowerCase() === cities[i].Departement.toLowerCase()) {
 			associatedCities.push({
 				commune: cities[i].Commune,
 				codePostal: cities[i].Codepos,

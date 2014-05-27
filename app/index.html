@@ -1,21 +1,40 @@
 <!doctype html>
 <html class="no-js">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Je suis vitale</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link rel="stylesheet" href="styles/main.css">
-        <script src="bower_components/modernizr/modernizr.js"></script>
-    </head>
-    <body>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Je suis vitale</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="styles/stylesheets/main.css">
+    <script src="bower_components/modernizr/modernizr.js"></script>
+  </head>
+  <body>
+    <section id="home">
+      <h1><a href="index.html">Je suis vitale</a></h1>
+      
+          <h3>Chaque année, Un français consomme 12 000 LitreS D'eau en bouteille.</h3>
+        <h2>Et si L'eau de votre robinet était tout aussi bonne ?</h2>
 
-        <div class="container">
-            <h1>Je suis vitale</h1>
-        </div>
+        <input type="text" placeholder="Arcachon"></input>
+    </section>
 
-        <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
+    <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
+    <script>
+      var home = document.getElementById('home');
+
+      function customHeight() {
+        var windowHeight = window.innerHeight + "px";
+        home.style.height = windowHeight;
+      }
+
+      window.onresize = function () {  
+        customHeight();
+      };
+
+      customHeight();
+
+    </script>
 </body>
 </html>

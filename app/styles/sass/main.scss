@@ -11,8 +11,37 @@
 
 $font-color: #308ebb;
 
+.logo a {
+	font-size: 0;
+	display: inline-block;
+	width: 150px;
+	height: 183px;
+	margin: 8vw 0 0 0;
+	@include background(image-url('logo.png') no-repeat);
+}
+
 body {
 	font: 14px Verdana, sans-serif;
+	@include background(linear-gradient(top, rgba(136,197,225,0) 0%,rgba(141,200,229,1) 100%));
+}
+
+a.go-down {
+	position: relative;
+	color: #fff;
+	font-size: 1em;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+	display: inline-block;
+	margin: 0 auto;
+	height: 50px;	
+	line-height: 50px;
+	padding: 0 20px;
+	margin: 50px 0 0 0;
+	border: 3px solid #fff;
+	z-index: 20;
 }
 
 @import "home";
+@import "level-1";
+@import "level-2";

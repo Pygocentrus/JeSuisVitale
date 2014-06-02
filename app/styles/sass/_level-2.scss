@@ -1,30 +1,95 @@
 #level-2 {
+	position: relative;
 	text-align: center;
+	padding: 3% 0 0 0;
 	background: #43BCF1;
+	@include box-sizing(border-box);
 	h2 {
 		font-size: 3em;
-		color: rgba(255,255,255,0.2);
+		color: #fff;
 		text-transform: uppercase;
-		line-height: 0.5em;
-	}
-	h3 {
-		font-size: 10em;
-		color: #fff;
-		font-weight: bold;
 		line-height: 1em;
+		@include background(image-url('arrow.png') 61% 30px no-repeat);
+		background-size: 15px auto;
 	}
-
 	p {
-		position: relative;
+		font-size: 1.2em;
 		color: #fff;
-		font-weight: bold;
-		margin: 7% 0 0 0;
-		line-height: 2em;
-		z-index: 20;
+		font-weight: 400;
+		text-transform: uppercase;
+		vertical-align: top;
+		margin: 5px 5px 0 0; 
+		i {
+			display: inline-block;
+			width: 15px;
+			height: 18px;
+			margin: 1px 5px 0 5px; 
+			@include background(image-url('glass.png') no-repeat);
+			background-size: 15px auto;
+			&.inactive { opacity: 0.35; }
+		}
+	}
+	img {
+		display: block;
+		margin: 0 auto;
+		width: 400px;
+		height: auto;
+	}
+	ul li {
+		color: #0b589a;
+		font-size: 0.7em;
+		text-transform: uppercase;
 		span {
 			display: block;
-			font-weight: normal;
+			font-size: 1.5em;
+			color: #fff;
+			font-weight: 600;
+			margin: 0 0 5px 0; 
+			&::before {
+				content: '';
+				display: block;
+				margin: 5px auto;
+				height: 1px;
+				width: 50px;
+				background: rgba(255,255,255,0.3);
+			}
+		}
+		sub {
+			text-transform: none;
 			font-style: italic;
 		}
 	}
+	a.go-down { 
+		display: block;
+		margin: 2% auto 0 auto;
+		width: 215px;
+	}
+}
+
+#ammonium, #chlore, #ph, #conductivite {
+	position: absolute;
+}
+
+#ammonium {
+	top: 31%;
+	left: 36%;
+}
+
+#ph {
+	top: 53%;
+	left: 33%;
+}
+
+#chlore {
+	top: 31%;
+	right: 36%;
+}
+
+#conductivite {
+	top: 53%;
+	right: 32%;
+}
+
+#nitrates {
+	margin: -1% auto 0 auto;
 }

@@ -1,5 +1,6 @@
 @import "compass/reset";
 @import "compass";
+@import "fonts";
 
 @mixin input-placeholder {
     &.placeholder { @content; }
@@ -25,6 +26,18 @@ body {
 	@include background(linear-gradient(top, rgba(136,197,225,0) 0%,rgba(141,200,229,1) 100%));
 }
 
+nav.menu {
+	position: fixed;
+	top: 3%;
+	right: 3%;
+	color: #fff;
+	text-transform: uppercase;
+	text-decoration: none;
+	border-bottom: 1px solid #fff;
+	z-index: 50;
+	&:hover { opacity: 0.7; }
+}
+
 a.go-down {
 	position: relative;
 	color: #fff;
@@ -45,3 +58,4 @@ a.go-down {
 @import "home";
 @import "level-1";
 @import "level-2";
+@import "level-3";

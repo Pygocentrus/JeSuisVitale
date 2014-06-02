@@ -11,7 +11,14 @@
     <script src="bower_components/modernizr/modernizr.js"></script>
   </head>
   <body>
-    <nav class="menu">Menu
+    <nav class="menu">
+      <h2>Menu</h2>
+      <ul>
+        <li><a href="#">Niveau 1</a></li>
+        <li><a href="#">Niveau 2</a></li>
+        <li><a href="#">Niveau 3</a></li>
+        <li><a href="#">Niveau 4</a></li>
+      </ul>
     </nav>
     <section id="home">
       <h1 class="logo"><a href="index.html">Je suis vitale</a></h1>
@@ -56,6 +63,23 @@
 
     <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
     <script>
+      // MENU 
+      var h2   = document.querySelector('.menu h2'),
+          list = document.querySelectorAll('.menu ul li');
+
+      h2.addEventListener('click', function() {    
+        // AddClass
+        h2.className += '' + 'cross';  
+
+        Array.prototype.forEach.call(list, function(li, i){
+          timer = 40 * i;
+          setTimeout(function(){
+              li.className += '' + 'visible';
+          }, timer);
+        });
+      });
+
+      // WINDOW HEIGHT
       var home    = document.getElementById('home'),
           level_1 = document.getElementById('level-1');
           level_2 = document.getElementById('level-2');

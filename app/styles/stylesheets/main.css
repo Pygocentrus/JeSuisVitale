@@ -121,17 +121,88 @@ nav.menu {
   top: 3%;
   right: 3%;
   color: #fff;
+  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  border-bottom: 1px solid #fff;
   z-index: 50;
 }
 /* line 38, ../sass/main.scss */
-nav.menu:hover {
-  opacity: 0.7;
+nav.menu h2 {
+  position: relative;
+  cursor: pointer;
+}
+/* line 41, ../sass/main.scss */
+nav.menu h2.cross {
+  color: transparent;
+}
+/* line 44, ../sass/main.scss */
+nav.menu h2.cross::before {
+  opacity: 1;
+  -webkit-transform: rotate(40deg);
+  -moz-transform: rotate(40deg);
+  -ms-transform: rotate(40deg);
+  -o-transform: rotate(40deg);
+  transform: rotate(40deg);
+}
+/* line 48, ../sass/main.scss */
+nav.menu h2.cross::after {
+  opacity: 1;
+  -webkit-transform: rotate(-40deg);
+  -moz-transform: rotate(-40deg);
+  -ms-transform: rotate(-40deg);
+  -o-transform: rotate(-40deg);
+  transform: rotate(-40deg);
+}
+/* line 52, ../sass/main.scss */
+nav.menu h2::before, nav.menu h2::after {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto auto;
+  content: '';
+  display: block;
+  height: 3px;
+  width: 20px;
+  background: #fff;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+/* line 65, ../sass/main.scss */
+nav.menu li {
+  opacity: 0;
+  -webkit-transition: all 400ms ease-in-out, opacity 1000ms ease;
+  -moz-transition: all 400ms ease-in-out, opacity 1000ms ease;
+  -o-transition: all 400ms ease-in-out, opacity 1000ms ease;
+  transition: all 400ms ease-in-out, opacity 1000ms ease;
+  -webkit-transform: translate3d(150px, 0px, 0px) scale(0.2);
+  -moz-transform: translate3d(150px, 0px, 0px) scale(0.2);
+  -ms-transform: translate3d(150px, 0px, 0px) scale(0.2);
+  -o-transform: translate3d(150px, 0px, 0px) scale(0.2);
+  transform: translate3d(150px, 0px, 0px) scale(0.2);
+}
+/* line 69, ../sass/main.scss */
+nav.menu li a {
+  color: #fff;
+  line-height: 2.5em;
+  text-decoration: none;
+  text-transform: none;
+}
+/* line 76, ../sass/main.scss */
+nav.menu li.visible {
+  opacity: 1;
+  -webkit-transform: translate3d(0px, 0px, 0px) scale(1);
+  -moz-transform: translate3d(0px, 0px, 0px) scale(1);
+  -ms-transform: translate3d(0px, 0px, 0px) scale(1);
+  -o-transform: translate3d(0px, 0px, 0px) scale(1);
+  transform: translate3d(0px, 0px, 0px) scale(1);
 }
 
-/* line 41, ../sass/main.scss */
+/* line 82, ../sass/main.scss */
 a.go-down {
   position: relative;
   color: #fff;

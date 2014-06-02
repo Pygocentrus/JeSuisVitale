@@ -1,0 +1,46 @@
+#home {
+	color: #fff;
+	text-align: center;
+	@include background(image-url('bg_cloud.png') top center repeat-x);
+	h2, h3 {
+		text-transform: uppercase;
+	}
+	h2 {
+		font-size: 2.5vw;
+		margin: 25px 0 50px 0;
+	}
+	h3 {
+		font-size: 1.5vw;
+		margin: 50px 0 25px 0;
+	}
+	input[type="text"] {
+		color: $font-color;
+		font-size: 2.5vw;
+		text-transform: uppercase;
+		width: 35%;
+		min-width: 250px;
+		height: 70px;
+		padding: 0 0 0 60px;
+		border: none;
+		@include background(image-url('location.png') 15px center no-repeat, image-url('arrow.png') 95% center no-repeat, #fff);
+		@include box-sizing(content-box);
+		@include input-placeholder {
+			color: $font-color;
+		}
+		&:focus {
+			outline: none;
+		}
+	}
+
+	a.go-down {
+		font-size: 0;
+		text-decoration: none;
+		display: block;
+		height: 25px;
+		width: 44px;
+		padding: 0;
+		margin: 50px auto 0 auto;
+		border: none;
+		@include background(image-url('arrow-thin.png'));
+	}
+}

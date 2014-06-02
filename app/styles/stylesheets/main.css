@@ -1,0 +1,248 @@
+/* line 17, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 14, ../sass/main.scss */
+.logo a {
+  font-size: 0;
+  display: inline-block;
+  width: 150px;
+  height: 183px;
+  margin: 8vw 0 0 0;
+  background: url('/img/logo.png?1401542073') no-repeat;
+}
+
+/* line 23, ../sass/main.scss */
+body {
+  font: 14px Verdana, sans-serif;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(136, 197, 225, 0)), color-stop(100%, #8dc8e5));
+  background: -webkit-linear-gradient(top, rgba(136, 197, 225, 0) 0%, #8dc8e5 100%);
+  background: -moz-linear-gradient(top, rgba(136, 197, 225, 0) 0%, #8dc8e5 100%);
+  background: -o-linear-gradient(top, rgba(136, 197, 225, 0) 0%, #8dc8e5 100%);
+  background: linear-gradient(top, rgba(136, 197, 225, 0) 0%, #8dc8e5 100%);
+}
+
+/* line 28, ../sass/main.scss */
+a.go-down {
+  position: relative;
+  color: #fff;
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 0 auto;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px;
+  margin: 50px 0 0 0;
+  border: 3px solid #fff;
+  z-index: 20;
+}
+
+/* line 1, ../sass/_home.scss */
+#home {
+  color: #fff;
+  text-align: center;
+  background: url('/img/bg_cloud.png?1401201982') top center repeat-x;
+}
+/* line 5, ../sass/_home.scss */
+#home h2, #home h3 {
+  text-transform: uppercase;
+}
+/* line 8, ../sass/_home.scss */
+#home h2 {
+  font-size: 2.5vw;
+  margin: 25px 0 50px 0;
+}
+/* line 12, ../sass/_home.scss */
+#home h3 {
+  font-size: 1.5vw;
+  margin: 50px 0 25px 0;
+}
+/* line 16, ../sass/_home.scss */
+#home input[type="text"] {
+  color: #308ebb;
+  font-size: 2.5vw;
+  text-transform: uppercase;
+  width: 35%;
+  min-width: 250px;
+  height: 70px;
+  padding: 0 0 0 60px;
+  border: none;
+  background: url('/img/location.png?1401543459') 15px center no-repeat, url('/img/arrow.png?1401543753') 95% center no-repeat, white;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+/* line 5, ../sass/main.scss */
+#home input[type="text"].placeholder {
+  color: #308ebb;
+}
+/* line 6, ../sass/main.scss */
+#home input[type="text"]:-moz-placeholder {
+  color: #308ebb;
+}
+/* line 7, ../sass/main.scss */
+#home input[type="text"]::-moz-placeholder {
+  color: #308ebb;
+}
+/* line 8, ../sass/main.scss */
+#home input[type="text"]:-ms-input-placeholder {
+  color: #308ebb;
+}
+/* line 9, ../sass/main.scss */
+#home input[type="text"]::-webkit-input-placeholder {
+  color: #308ebb;
+}
+/* line 30, ../sass/_home.scss */
+#home input[type="text"]:focus {
+  outline: none;
+}
+/* line 35, ../sass/_home.scss */
+#home a.go-down {
+  font-size: 0;
+  text-decoration: none;
+  display: block;
+  height: 25px;
+  width: 44px;
+  padding: 0;
+  margin: 50px auto 0 auto;
+  border: none;
+  background: url('/img/arrow-thin.png?1401544353');
+}
+
+/* line 1, ../sass/_level-1.scss */
+#level-1 {
+  position: relative;
+  text-align: center;
+  padding: 15% 0 0 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 6, ../sass/_level-1.scss */
+#level-1 h2 {
+  font-size: 3em;
+  color: rgba(255, 255, 255, 0.2);
+  text-transform: uppercase;
+  line-height: 0.5em;
+}
+/* line 12, ../sass/_level-1.scss */
+#level-1 h3 {
+  font-size: 10em;
+  color: #fff;
+  font-weight: bold;
+  line-height: 1em;
+}
+/* line 19, ../sass/_level-1.scss */
+#level-1 p {
+  position: relative;
+  color: #fff;
+  font-weight: bold;
+  margin: 7% 0 0 0;
+  line-height: 2em;
+  z-index: 20;
+}
+/* line 26, ../sass/_level-1.scss */
+#level-1 p span {
+  display: block;
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* line 1, ../sass/_level-2.scss */
+#level-2 {
+  text-align: center;
+  background: #43BCF1;
+}
+/* line 4, ../sass/_level-2.scss */
+#level-2 h2 {
+  font-size: 3em;
+  color: rgba(255, 255, 255, 0.2);
+  text-transform: uppercase;
+  line-height: 0.5em;
+}
+/* line 10, ../sass/_level-2.scss */
+#level-2 h3 {
+  font-size: 10em;
+  color: #fff;
+  font-weight: bold;
+  line-height: 1em;
+}
+/* line 17, ../sass/_level-2.scss */
+#level-2 p {
+  position: relative;
+  color: #fff;
+  font-weight: bold;
+  margin: 7% 0 0 0;
+  line-height: 2em;
+  z-index: 20;
+}
+/* line 24, ../sass/_level-2.scss */
+#level-2 p span {
+  display: block;
+  font-weight: normal;
+  font-style: italic;
+}

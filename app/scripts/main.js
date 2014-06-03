@@ -19,7 +19,7 @@ require.config({
     },
     paths: {
         jquery: '../bower_components/jquery/dist/jquery',
-        d3: '../bower_components/d3/d3.js',
+        snap: '../bower_components/Snap.svg/dist/snap.svg-min',
         backbone: '../bower_components/backbone/backbone',
         underscore: '../bower_components/underscore/underscore',
         handlebars: '../bower_components/handlebars/handlebars',
@@ -28,48 +28,56 @@ require.config({
 });
 
 require([
-    'backbone'
-], function(Backbone) {
+    'backbone', 'snap'
+], function(Backbone, snap) {
     Backbone.history.start();
-
+    console.log(snap);
     // MENU
-    var h2 = document.querySelector('.menu h2'),
-        list = document.querySelectorAll('.menu ul li');
+    (function() {
+    var h2 = document.querySelector('.menu h2');
 
-    h2.addEventListener('click', function() {
-        // AddClass
-        h2.className += '' + 'cross';
-
+    function menu(e) {
+        e.stopPropagation();
+        if (h2.className == 'cross') {
+            h2.className = '';
+        } else {
+            h2.className = 'cross';
+        }
+        // LI VISIBLE 
+        var list = document.querySelectorAll('.menu ul li');
         Array.prototype.forEach.call(list, function(li, i) {
-            timer = 40 * i;
+            var timer = 40 * i;
             setTimeout(function() {
-                li.className += '' + 'visible';
+                if (li.className == 'visible') {
+                    li.className = '';
+                } else {
+                    li.className = 'visible';
+                }
             }, timer);
         });
-    });
+    }
+    
+    if (typeof h2 !== 'undefined') h2.addEventListener('click', menu);
+
+    }).call(this);
 
     // WINDOW HEIGHT
-    var home = document.getElementById('home'),
-        level_1 = document.getElementById('level-1');
-    level_2 = document.getElementById('level-2');
-    level_3 = document.getElementById('level-3');
+    (function() {
+        var section = document.querySelectorAll('.section-height');
 
-    function customHeight(section) {
-        var windowHeight = window.innerHeight + "px";
-        section.style.height = windowHeight;
-    }
+        function customHeight(section) {
+            var windowHeight = window.innerHeight + 'px';
+            for (var i = 0, size = section.length; i < size; i++) {
+                section[i].style.height =  windowHeight;
+            };
+        }
 
-    window.onresize = function() {
-        customHeight(home);
-        customHeight(level_1);
-        customHeight(level_2);
-        customHeight(level_3);
-    };
+        window.onresize = function() {
+            customHeight(section);
+        };
 
-    customHeight(home);
-    customHeight(level_1);
-    customHeight(level_2);
-    customHeight(level_3);
+        customHeight(section);
+    }).call(this);
 
     // WAVES
     var self = window;

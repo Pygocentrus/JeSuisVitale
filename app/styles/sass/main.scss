@@ -22,7 +22,7 @@ $font-color: #308ebb;
 }
 
 body {
-	font: 14px Verdana, sans-serif;
+	font: 14px 'DINCond', Verdana, sans-serif;
 	@include background(linear-gradient(top, rgba(136,197,225,0) 0%,rgba(141,200,229,1) 100%));
 }
 
@@ -38,6 +38,9 @@ nav.menu {
 	h2 {
 		position: relative;
 		cursor: pointer;
+		&::selection {
+			background: transparent;
+		} 
 		&.cross {
 			color: transparent;
 		}

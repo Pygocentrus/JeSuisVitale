@@ -1,8 +1,9 @@
 #level-1 {
 	position: relative;
 	text-align: center;
-	padding: 15% 0 0 0;
+	padding: 7% 0 0 0;
 	@include box-sizing(border-box);
+	@include background(linear-gradient(top, rgba(125,185,232,1) 0%,rgba(0,135,213,0.8) 100%));	
 	h2 {
 		font-size: 3em;
 		color: rgba(255,255,255,0.2);
@@ -10,17 +11,51 @@
 		line-height: 0.5em;
 	}
 	h3 {
+		position: relative;
 		font-size: 10em;
 		color: #fff;
-		font-weight: bold;
+		font-weight: 600;
 		line-height: 1em;
+		&::after {
+			position: absolute;
+			left: 0; right: 0; bottom: 0; top: 0;
+			margin: 80px auto 0 auto;
+			content: '';
+			display: block;
+			width: 140px;
+			height: 40px;
+			background: rgba(255,255,255,.5);
+			@include filter(blur(5px));
+			-webkit-animation: blur 2s ease infinite;
+					animation: blur 2s ease infinite;
+		}
 	}
-
+	svg:nth-of-type(1) {
+		position: absolute;
+		top: 43%; left: 0; right: 0; bottom: 0;
+		margin: auto auto;
+		width: 100%;
+	}
+	// svg:nth-of-type(2) {
+	// 	position: absolute;
+	// 	bottom: 37%;
+	// 	left: 0;
+	// 	width: 100%;
+	// 	@include transform(rotate(180deg));
+	// }
+	svg:nth-of-type(2) {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		@include transform(rotate(180deg));
+	}
 	p {
+		font-size: 1.5em;
+		font-weight: bold;
 		position: relative;
 		color: #fff;
-		font-weight: bold;
-		margin: 3% 0 0 0;
+		margin: 7% 0 0 0;
 		line-height: 2em;
 		z-index: 20;
 		span {
@@ -29,4 +64,18 @@
 			font-style: italic;
 		}
 	}
+}
+
+@keyframes blur {
+	0%   {   opacity: 0; }
+	10%    {  opacity: 1; }
+	25%    {  opacity: 1; }
+	100% { opacity: 0; }
+}
+
+@-webkit-keyframes blur {
+	0%   {   opacity: 0; }
+	10%     {  opacity: 1; }
+	25%    {  opacity: 1; }
+	100% { opacity: 0; }
 }

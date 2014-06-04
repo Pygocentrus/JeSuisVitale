@@ -2,7 +2,7 @@
 	position: relative;
 	text-align: center;
 	padding: 3% 0 0 0;
-	background: #43BCF1;
+	background: rgba(0,135,213,.8);
 	@include box-sizing(border-box);
 	h2 {
 		font-size: 3em;
@@ -58,11 +58,6 @@
 			text-transform: none;
 			font-style: italic;
 		}
-	}
-	a.go-down { 
-		display: block;
-		margin: 2% auto 0 auto;
-		width: 215px;
 	}
 }
 

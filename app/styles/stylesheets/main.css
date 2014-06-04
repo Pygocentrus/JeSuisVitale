@@ -65,32 +65,32 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 @font-face {
   font-family: 'DINCond';
-  src: url("DINCond-Black.eot");
-  src: url("DINCond-Black.eot?#iefix") format("embedded-opentype"), url("DINCond-Black.woff") format("woff"), url("DINCond-Black.ttf") format("truetype"), url("DINCond-Black.svg#181280313c3d1b2345ac7c4aa551689d") format("svg");
+  src: url("../fonts/DINCond-Black.eot");
+  src: url("../fonts/DINCond-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/DINCond-Black.woff") format("woff"), url("../fonts/DINCond-Black.ttf") format("truetype"), url("../fonts/DINCond-Black.svg#181280313c3d1b2345ac7c4aa551689d") format("svg");
   font-style: normal;
   font-weight: 700;
 }
 
 @font-face {
   font-family: 'DINCond';
-  src: url("DINCond-Bold.eot");
-  src: url("DINCond-Bold.eot?#iefix") format("embedded-opentype"), url("DINCond-Bold.woff") format("woff"), url("DINCond-Bold.ttf") format("truetype"), url("DINCond-Bold.svg#14fd422d6ed77dac08bb4d6fb77510a4") format("svg");
+  src: url("../fonts/DINCond-Bold.eot");
+  src: url("../fonts/DINCond-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/DINCond-Bold.woff") format("woff"), url("../fonts/DINCond-Bold.ttf") format("truetype"), url("../fonts/DINCond-Bold.svg#14fd422d6ed77dac08bb4d6fb77510a4") format("svg");
   font-style: normal;
   font-weight: 600;
 }
 
 @font-face {
   font-family: 'DINCond';
-  src: url("DINCond-Medium.eot");
-  src: url("DINCond-Medium.eot?#iefix") format("embedded-opentype"), url("DINCond-Medium.woff") format("woff"), url("DINCond-Medium.ttf") format("truetype"), url("DINCond-Medium.svg#54bc58aaaf4d87e858b892df39ecdecb") format("svg");
+  src: url("../fonts/DINCond-Medium.eot");
+  src: url("../fonts/DINCond-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/DINCond-Medium.woff") format("woff"), url("../fonts/DINCond-Medium.ttf") format("truetype"), url("../fonts/DINCond-Medium.svg#54bc58aaaf4d87e858b892df39ecdecb") format("svg");
   font-style: normal;
   font-weight: 500;
 }
 
 @font-face {
   font-family: 'DINCond';
-  src: url("DINCond-Regular.eot");
-  src: url("DINCond-Regular.eot?#iefix") format("embedded-opentype"), url("DINCond-Regular.woff") format("woff"), url("DINCond-Regular.ttf") format("truetype"), url("DINCond-Regular.svg#708292701cfa979e49cd78324036f863") format("svg");
+  src: url("../fonts/DINCond-Regular.eot");
+  src: url("../fonts/DINCond-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/DINCond-Regular.woff") format("woff"), url("../fonts/DINCond-Regular.ttf") format("truetype"), url("../fonts/DINCond-Regular.svg#708292701cfa979e49cd78324036f863") format("svg");
   font-style: normal;
   font-weight: 400;
 }
@@ -107,7 +107,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 24, ../sass/main.scss */
 body {
-  font: 14px Verdana, sans-serif;
+  font: 14px 'DINCond', Verdana, sans-serif;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(136, 197, 225, 0)), color-stop(100%, #8dc8e5));
   background: -webkit-linear-gradient(top, rgba(136, 197, 225, 0) 0%, #8dc8e5 100%);
   background: -moz-linear-gradient(top, rgba(136, 197, 225, 0) 0%, #8dc8e5 100%);
@@ -132,10 +132,14 @@ nav.menu h2 {
   cursor: pointer;
 }
 /* line 41, ../sass/main.scss */
+nav.menu h2::selection {
+  background: transparent;
+}
+/* line 44, ../sass/main.scss */
 nav.menu h2.cross {
   color: transparent;
 }
-/* line 44, ../sass/main.scss */
+/* line 47, ../sass/main.scss */
 nav.menu h2.cross::before {
   opacity: 1;
   -webkit-transform: rotate(40deg);
@@ -144,7 +148,7 @@ nav.menu h2.cross::before {
   -o-transform: rotate(40deg);
   transform: rotate(40deg);
 }
-/* line 48, ../sass/main.scss */
+/* line 51, ../sass/main.scss */
 nav.menu h2.cross::after {
   opacity: 1;
   -webkit-transform: rotate(-40deg);
@@ -153,7 +157,7 @@ nav.menu h2.cross::after {
   -o-transform: rotate(-40deg);
   transform: rotate(-40deg);
 }
-/* line 52, ../sass/main.scss */
+/* line 55, ../sass/main.scss */
 nav.menu h2::before, nav.menu h2::after {
   opacity: 0;
   position: absolute;
@@ -172,7 +176,7 @@ nav.menu h2::before, nav.menu h2::after {
   -o-transition: -o-transform 0.3s ease;
   transition: transform 0.3s ease;
 }
-/* line 65, ../sass/main.scss */
+/* line 68, ../sass/main.scss */
 nav.menu li {
   opacity: 0;
   -webkit-transition: all 400ms ease-in-out, opacity 1000ms ease;
@@ -185,14 +189,14 @@ nav.menu li {
   -o-transform: translate3d(150px, 0px, 0px) scale(0.2);
   transform: translate3d(150px, 0px, 0px) scale(0.2);
 }
-/* line 69, ../sass/main.scss */
+/* line 72, ../sass/main.scss */
 nav.menu li a {
   color: #fff;
   line-height: 2.5em;
   text-decoration: none;
   text-transform: none;
 }
-/* line 76, ../sass/main.scss */
+/* line 79, ../sass/main.scss */
 nav.menu li.visible {
   opacity: 1;
   -webkit-transform: translate3d(0px, 0px, 0px) scale(1);
@@ -202,7 +206,7 @@ nav.menu li.visible {
   transform: translate3d(0px, 0px, 0px) scale(1);
 }
 
-/* line 82, ../sass/main.scss */
+/* line 85, ../sass/main.scss */
 a.go-down {
   position: relative;
   color: #fff;
@@ -224,23 +228,27 @@ a.go-down {
 #home {
   color: #fff;
   text-align: center;
-  background: url('/img/bg_cloud.png?1401201982') top center repeat-x;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #96d6e9), color-stop(100%, #7db9e8));
+  background: -webkit-linear-gradient(top, #96d6e9 0%, #7db9e8 100%);
+  background: -moz-linear-gradient(top, #96d6e9 0%, #7db9e8 100%);
+  background: -o-linear-gradient(top, #96d6e9 0%, #7db9e8 100%);
+  background: linear-gradient(top, #96d6e9 0%, #7db9e8 100%);
 }
-/* line 5, ../sass/_home.scss */
+/* line 6, ../sass/_home.scss */
 #home h2, #home h3 {
   text-transform: uppercase;
 }
-/* line 8, ../sass/_home.scss */
+/* line 9, ../sass/_home.scss */
 #home h2 {
   font-size: 2.5vw;
-  margin: 25px 0 50px 0;
+  margin: 20px 0 40px 0;
 }
-/* line 12, ../sass/_home.scss */
+/* line 13, ../sass/_home.scss */
 #home h3 {
   font-size: 1.5vw;
-  margin: 50px 0 25px 0;
+  margin: 40px 0 20px 0;
 }
-/* line 16, ../sass/_home.scss */
+/* line 17, ../sass/_home.scss */
 #home input[type="text"] {
   color: #308ebb;
   font-size: 2.5vw;
@@ -275,11 +283,11 @@ a.go-down {
 #home input[type="text"]::-webkit-input-placeholder {
   color: #308ebb;
 }
-/* line 30, ../sass/_home.scss */
+/* line 31, ../sass/_home.scss */
 #home input[type="text"]:focus {
   outline: none;
 }
-/* line 35, ../sass/_home.scss */
+/* line 36, ../sass/_home.scss */
 #home a.go-down {
   font-size: 0;
   text-decoration: none;
@@ -296,39 +304,131 @@ a.go-down {
 #level-1 {
   position: relative;
   text-align: center;
-  padding: 15% 0 0 0;
+  padding: 7% 0 0 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7db9e8), color-stop(100%, rgba(0, 135, 213, 0.8)));
+  background: -webkit-linear-gradient(top, #7db9e8 0%, rgba(0, 135, 213, 0.8) 100%);
+  background: -moz-linear-gradient(top, #7db9e8 0%, rgba(0, 135, 213, 0.8) 100%);
+  background: -o-linear-gradient(top, #7db9e8 0%, rgba(0, 135, 213, 0.8) 100%);
+  background: linear-gradient(top, #7db9e8 0%, rgba(0, 135, 213, 0.8) 100%);
 }
-/* line 6, ../sass/_level-1.scss */
+/* line 7, ../sass/_level-1.scss */
 #level-1 h2 {
   font-size: 3em;
   color: rgba(255, 255, 255, 0.2);
   text-transform: uppercase;
   line-height: 0.5em;
 }
-/* line 12, ../sass/_level-1.scss */
+/* line 13, ../sass/_level-1.scss */
 #level-1 h3 {
+  position: relative;
   font-size: 10em;
   color: #fff;
-  font-weight: bold;
+  font-weight: 600;
   line-height: 1em;
 }
 /* line 19, ../sass/_level-1.scss */
+#level-1 h3::after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: 80px auto 0 auto;
+  content: '';
+  display: block;
+  width: 140px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  filter: blur(5px);
+  -webkit-animation: blur 2s ease infinite;
+  animation: blur 2s ease infinite;
+}
+/* line 33, ../sass/_level-1.scss */
+#level-1 svg:nth-of-type(1) {
+  position: absolute;
+  top: 43%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto auto;
+  width: 100%;
+}
+/* line 46, ../sass/_level-1.scss */
+#level-1 svg:nth-of-type(2) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+/* line 53, ../sass/_level-1.scss */
 #level-1 p {
+  font-size: 1.5em;
+  font-weight: bold;
   position: relative;
   color: #fff;
-  font-weight: bold;
-  margin: 3% 0 0 0;
+  margin: 7% 0 0 0;
   line-height: 2em;
   z-index: 20;
 }
-/* line 26, ../sass/_level-1.scss */
+/* line 61, ../sass/_level-1.scss */
 #level-1 p span {
   display: block;
   font-weight: normal;
   font-style: italic;
+}
+
+@keyframes blur {
+  /* line 70, ../sass/_level-1.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 71, ../sass/_level-1.scss */
+  10% {
+    opacity: 1;
+  }
+
+  /* line 72, ../sass/_level-1.scss */
+  25% {
+    opacity: 1;
+  }
+
+  /* line 73, ../sass/_level-1.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes blur {
+  /* line 77, ../sass/_level-1.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 78, ../sass/_level-1.scss */
+  10% {
+    opacity: 1;
+  }
+
+  /* line 79, ../sass/_level-1.scss */
+  25% {
+    opacity: 1;
+  }
+
+  /* line 80, ../sass/_level-1.scss */
+  100% {
+    opacity: 0;
+  }
 }
 
 /* line 1, ../sass/_level-2.scss */
@@ -336,7 +436,7 @@ a.go-down {
   position: relative;
   text-align: center;
   padding: 3% 0 0 0;
-  background: #43BCF1;
+  background: rgba(0, 135, 213, 0.8);
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -407,55 +507,55 @@ a.go-down {
   text-transform: none;
   font-style: italic;
 }
-/* line 62, ../sass/_level-2.scss */
-#level-2 a.go-down {
-  display: block;
-  margin: 2% auto 0 auto;
-  width: 215px;
-}
 
-/* line 69, ../sass/_level-2.scss */
+/* line 64, ../sass/_level-2.scss */
 #ammonium, #chlore, #ph, #conductivite {
   position: absolute;
 }
 
-/* line 73, ../sass/_level-2.scss */
+/* line 68, ../sass/_level-2.scss */
 #ammonium {
   top: 31%;
   left: 36%;
 }
 
-/* line 78, ../sass/_level-2.scss */
+/* line 73, ../sass/_level-2.scss */
 #ph {
   top: 53%;
   left: 33%;
 }
 
-/* line 83, ../sass/_level-2.scss */
+/* line 78, ../sass/_level-2.scss */
 #chlore {
   top: 31%;
   right: 36%;
 }
 
-/* line 88, ../sass/_level-2.scss */
+/* line 83, ../sass/_level-2.scss */
 #conductivite {
   top: 53%;
   right: 32%;
 }
 
-/* line 93, ../sass/_level-2.scss */
+/* line 88, ../sass/_level-2.scss */
 #nitrates {
   margin: -1% auto 0 auto;
 }
 
 /* line 1, ../sass/_level-3.scss */
 #level-3 {
+  text-align: center;
   padding: 10% 0 0 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 135, 213, 0.8)), color-stop(100%, #135f8e));
+  background: -webkit-linear-gradient(top, rgba(0, 135, 213, 0.8) 0%, #135f8e 100%);
+  background: -moz-linear-gradient(top, rgba(0, 135, 213, 0.8) 0%, #135f8e 100%);
+  background: -o-linear-gradient(top, rgba(0, 135, 213, 0.8) 0%, #135f8e 100%);
+  background: linear-gradient(top, rgba(0, 135, 213, 0.8) 0%, #135f8e 100%);
 }
-/* line 4, ../sass/_level-3.scss */
+/* line 6, ../sass/_level-3.scss */
 #level-3 figure {
   display: block;
   width: 49%;

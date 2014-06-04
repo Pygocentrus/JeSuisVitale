@@ -12,7 +12,7 @@ var app = express();
  */
 app.get('/algo1', function(req, res) {
 	//Getting all the french zip codes
-	fs.readFile('ressources/villes.json', 'utf-8', function(err, data) {
+	fs.readFile('data/villes.json', 'utf-8', function(err, data) {
 		if (!err) {
 			var villes = JSON.parse(data);
 			var zipCode, options, str = '',
@@ -42,9 +42,9 @@ app.get('/algo1', function(req, res) {
  * orobnat.sante.gouv.fr website
  */
 app.get('/algo2', function(req, res) {
-	var departments = JSON.parse(fs.readFileSync('ressources/departements.json', 'utf-8'));
-	var regions = JSON.parse(fs.readFileSync('ressources/regions.json', 'utf-8'));
-	var cities = JSON.parse(fs.readFileSync('ressources/villes.json', 'utf-8'));
+	var departments = JSON.parse(fs.readFileSync('data/departements.json', 'utf-8'));
+	var regions = JSON.parse(fs.readFileSync('data/regions.json', 'utf-8'));
+	var cities = JSON.parse(fs.readFileSync('data/villes.json', 'utf-8'));
 	var associatedCities, associatedDpt, associatedDpts = new Array();
 
 	//Get regions
@@ -68,7 +68,7 @@ app.get('/algo2', function(req, res) {
 
 
 app.get('/', function(req, res) {
-	var locations = JSON.parse(fs.readFileSync('all.json', 'utf-8'));
+	var locations = JSON.parse(fs.readFileSync('data/all.json', 'utf-8'));
 	var communeDepartement, departement, posPLV, methode, idRegionf, ville;
 	// console.log(locations);
 	for (var i = 0, regSize = /* locations.length */ 1; i < regSize; i++) {
@@ -243,7 +243,7 @@ function grabRow(ville, index) {
 					waterData = JSON.parse(waterData);
 					waterData.push(received);
 					//Writes back the final file's content according to the previous results
-					fs.writeFileSync('eau.json', JSON.stringify(waterData), 'utf-8');
+					fs.writeFileSync('data/eau.json', JSON.stringify(waterData), 'utf-8');
 					console.log('  --> Data saved');
 				}
 				deferred.resolve(200);

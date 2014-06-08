@@ -19,14 +19,6 @@
 </defs>
 <sodipodi:namedview  inkscape:window-maximized="1" inkscape:guide-bbox="true" inkscape:window-y="25" inkscape:window-x="0" inkscape:window-height="951" inkscape:window-width="1280" inkscape:current-layer="layer2" inkscape:document-units="px" inkscape:pageshadow="2" inkscape:pageopacity="0.0" id="base" inkscape:cx="281.00058" bordercolor="#666666" inkscape:zoom="1.2846206" pagecolor="#ffffff" borderopacity="1.0" borderlayer="true" showguides="true" showgrid="false" inkscape:cy="264.43028">
 	</sodipodi:namedview>
-<g id="layer9" sodipodi:insensitive="true" inkscape:groupmode="layer" inkscape:label="Fond de carte">
-	<path id="path17029" fill="#FFF3E3" d="M112.094,76.344l1.125,2.219l-3.594,1.906l-1.094-1.906L112.094,76.344z"/>
-	<path id="path17027" fill="#FFF3E3" d="M98.031,88.219l1.375,6.062l-2.219-0.531l-2.469,1.094l-1.938-2.469L98.031,88.219z"/>
-	<path id="path17025" fill="#FFF3E3" d="M105.469,91.812l0.562,1.656l-1.938,1.094l-0.812-1.656L105.469,91.812z"/>
-	<path id="path17021" fill="#FFF3E3" d="M115.156,103.688L116.25,107l-1.938,2.75l-1.938-1.656L111.281,107l-1.094,1.094h-1.938
-		l0.281-3.844L115.156,103.688z"/>
-	<path id="path2737" fill="none" stroke="#000000" d="M-382,586l98-716"/>
-</g>
 <g id="layer10" sodipodi:insensitive="true" inkscape:groupmode="layer" inkscape:label="D√©partement">
 	
 		<path id="FR-13" inkscape:label="Bouches-du-Rh√¥ne" fill="#EEEEEE" stroke="#808080" stroke-width="0.5" stroke-opacity="0.5146" d="
@@ -843,8 +835,8 @@
 		M451.438,186.031l-1.812,0.938l-1.531,1.125v2.5l0.844,2.969v1.938l-0.469,3.125l-1.062,1.094l12.031,5.438l0.75-0.875l2.594-0.406
 		l-0.969-4.156l-0.594-2.156l-2.75,0.406l-0.375-2.344l0.969-1.781l0.188-2.344l-0.562-1.344l-3.531-2.75l-3.125-0.188
 		L451.438,186.031z"/>
-	<g id="g5364_1_" opacity="0.3">
-		<path id="path9334_1_" fill="none" stroke="#5095F9" d="M427.533,267.523c-0.405-0.405-2.736,3.702-2.857,3.946
+	<g id="g5364_1_" display="none" opacity="0.3">
+		<path id="path9334_1_" display="inline" fill="none" stroke="#5095F9" d="M427.533,267.523c-0.405-0.405-2.736,3.702-2.857,3.946
 			c-0.491,0.983-1.898,1.985-2.585,3.129c-0.478,0.796-0.791,1.446-1.225,2.313c-0.521,1.041-0.99,1.732-1.633,2.857
 			c-0.595,1.042-2.17,1.798-1.905,2.857c0.206,0.822,0.136,2.083,0.136,3.129 M327.124,364.53c-3.424,0-1.241,0.516-4.218,1.633
 			c-1.041,0.39-2.405,0.316-2.857-0.136c-1.356-1.356-1.769-0.526-1.769-2.721c0-1.058,0.034-1.904,0.272-2.857

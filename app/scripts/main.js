@@ -29,9 +29,21 @@ require.config({
 
 require([
     'backbone', 'snap'
-], function(jquery, backbone, snap) {
+], function(backbone, snap) {
     Backbone.history.start();
     
+    // SNAP 
+    Snap.load("map.svg", function(f) {
+
+        for(var s in states) {
+            stateFragments[s] = f.select("#"+s);
+        }
+
+        snapOb.append(f);
+
+        start();
+
+    });
 
     // BLUR
     var content = document.querySelector('.blur-percentage');

@@ -33,12 +33,15 @@ require([
     Backbone.history.start();
     
 
-    // SNAP 
-    // Snap.load("../img/map.svg", function(f) {
+    // BLUR
+    var content = document.querySelector('.blur-percentage');
+    var duplicate = content.cloneNode(true);
+    var contentBlurred = document.createElement('div');
+    contentBlurred.className = 'content-blurred';
+    contentBlurred.appendChild(duplicate);
 
-    //   console.log("You clicked the red thing!"); 
-
-    // });
+    var blur = document.querySelector('#blur');
+    blur.appendChild(contentBlurred);
 
     // MENU
     (function() {

@@ -308,11 +308,12 @@ a.go-down {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7db9e8), color-stop(100%, rgba(0, 135, 213, 0.8)));
-  background: -webkit-linear-gradient(top, #7db9e8 0%, rgba(0, 135, 213, 0.8) 100%);
-  background: -moz-linear-gradient(top, #7db9e8 0%, rgba(0, 135, 213, 0.8) 100%);
-  background: -o-linear-gradient(top, #7db9e8 0%, rgba(0, 135, 213, 0.8) 100%);
-  background: linear-gradient(top, #7db9e8 0%, rgba(0, 135, 213, 0.8) 100%);
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7db9e8), color-stop(45%, rgba(0, 135, 213, 0.8)), color-stop(55%, rgba(0, 135, 213, 0.8)), color-stop(100%, #0087d5));
+  background: -webkit-linear-gradient(top, #7db9e8 0%, rgba(0, 135, 213, 0.8) 45%, rgba(0, 135, 213, 0.8) 55%, #0087d5 100%);
+  background: -moz-linear-gradient(top, #7db9e8 0%, rgba(0, 135, 213, 0.8) 45%, rgba(0, 135, 213, 0.8) 55%, #0087d5 100%);
+  background: -o-linear-gradient(top, #7db9e8 0%, rgba(0, 135, 213, 0.8) 45%, rgba(0, 135, 213, 0.8) 55%, #0087d5 100%);
+  background: linear-gradient(top, #7db9e8 0%, rgba(0, 135, 213, 0.8) 45%, rgba(0, 135, 213, 0.8) 55%, #0087d5 100%);
+  /* BLUR */
 }
 /* line 7, ../sass/_level-1.scss */
 #level-1 h2 {
@@ -321,35 +322,55 @@ a.go-down {
   text-transform: uppercase;
   line-height: 0.5em;
 }
-/* line 13, ../sass/_level-1.scss */
-#level-1 h3 {
-  position: relative;
+/* line 20, ../sass/_level-1.scss */
+#level-1 .blur-percentage p {
   font-size: 10em;
   color: #fff;
   font-weight: 600;
   line-height: 1em;
 }
-/* line 19, ../sass/_level-1.scss */
-#level-1 h3::after {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  margin: 80px auto 0 auto;
-  content: '';
-  display: block;
-  width: 140px;
-  height: 40px;
-  background: rgba(255, 255, 255, 0.5);
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  filter: blur(5px);
-  -webkit-animation: blur 2s ease infinite;
-  animation: blur 2s ease infinite;
+/* line 27, ../sass/_level-1.scss */
+#level-1 .wrapper {
+  position: relative;
+  display: inline-block;
+  z-index: 15;
 }
-/* line 33, ../sass/_level-1.scss */
-#level-1 svg:nth-of-type(1) {
+/* line 32, ../sass/_level-1.scss */
+#level-1 .blur-percentage {
+  display: block;
+  height: 100px;
+  width: 170px;
+}
+/* line 37, ../sass/_level-1.scss */
+#level-1 #blur {
+  position: absolute;
+  bottom: -26px;
+  left: 0;
+  height: 50px;
+  width: 170px;
+  overflow: hidden;
+  background: red;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #55a5e2), color-stop(100%, #499fe0));
+  background-image: -webkit-linear-gradient(top, #55a5e2 0%, #499fe0 100%);
+  background-image: -moz-linear-gradient(top, #55a5e2 0%, #499fe0 100%);
+  background-image: -o-linear-gradient(top, #55a5e2 0%, #499fe0 100%);
+  background-image: linear-gradient(top, #55a5e2 0%, #499fe0 100%);
+  z-index: 50;
+}
+/* line 50, ../sass/_level-1.scss */
+#level-1 .content-blurred {
+  -webkit-filter: blur(3px);
+  filter: url(#blur-effect);
+  opacity: 1;
+}
+/* line 55, ../sass/_level-1.scss */
+#level-1 .content-blurred .blur-percentage {
+  position: relative;
+  top: -88px;
+  left: 0;
+}
+/* line 60, ../sass/_level-1.scss */
+#level-1 svg {
   position: absolute;
   top: 43%;
   left: 0;
@@ -357,20 +378,9 @@ a.go-down {
   bottom: 0;
   margin: auto auto;
   width: 100%;
+  z-index: 9999;
 }
-/* line 46, ../sass/_level-1.scss */
-#level-1 svg:nth-of-type(2) {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-/* line 53, ../sass/_level-1.scss */
+/* line 74, ../sass/_level-1.scss */
 #level-1 p {
   font-size: 1.5em;
   font-weight: bold;
@@ -380,7 +390,7 @@ a.go-down {
   line-height: 2em;
   z-index: 20;
 }
-/* line 61, ../sass/_level-1.scss */
+/* line 82, ../sass/_level-1.scss */
 #level-1 p span {
   display: block;
   font-weight: normal;
@@ -388,44 +398,34 @@ a.go-down {
 }
 
 @keyframes blur {
-  /* line 70, ../sass/_level-1.scss */
+  /* line 91, ../sass/_level-1.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 71, ../sass/_level-1.scss */
-  10% {
+  /* line 94, ../sass/_level-1.scss */
+  75% {
     opacity: 1;
   }
 
-  /* line 72, ../sass/_level-1.scss */
-  25% {
-    opacity: 1;
-  }
-
-  /* line 73, ../sass/_level-1.scss */
+  /* line 97, ../sass/_level-1.scss */
   100% {
     opacity: 0;
   }
 }
 
 @-webkit-keyframes blur {
-  /* line 77, ../sass/_level-1.scss */
+  /* line 103, ../sass/_level-1.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 78, ../sass/_level-1.scss */
-  10% {
+  /* line 106, ../sass/_level-1.scss */
+  75% {
     opacity: 1;
   }
 
-  /* line 79, ../sass/_level-1.scss */
-  25% {
-    opacity: 1;
-  }
-
-  /* line 80, ../sass/_level-1.scss */
+  /* line 109, ../sass/_level-1.scss */
   100% {
     opacity: 0;
   }
@@ -436,7 +436,7 @@ a.go-down {
   position: relative;
   text-align: center;
   padding: 3% 0 0 0;
-  background: rgba(0, 135, 213, 0.8);
+  background: #0087d5;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -464,7 +464,7 @@ a.go-down {
   display: inline-block;
   width: 15px;
   height: 18px;
-  margin: 1px 5px 0 5px;
+  margin: 1px 5px 50px 5px;
   background: url('/img/glass.png?1401713684') no-repeat;
   background-size: 15px auto;
 }
@@ -549,11 +549,11 @@ a.go-down {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 135, 213, 0.8)), color-stop(100%, #135f8e));
-  background: -webkit-linear-gradient(top, rgba(0, 135, 213, 0.8) 0%, #135f8e 100%);
-  background: -moz-linear-gradient(top, rgba(0, 135, 213, 0.8) 0%, #135f8e 100%);
-  background: -o-linear-gradient(top, rgba(0, 135, 213, 0.8) 0%, #135f8e 100%);
-  background: linear-gradient(top, rgba(0, 135, 213, 0.8) 0%, #135f8e 100%);
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #0087d5), color-stop(100%, #005b85));
+  background: -webkit-linear-gradient(top, #0087d5 0%, #005b85 100%);
+  background: -moz-linear-gradient(top, #0087d5 0%, #005b85 100%);
+  background: -o-linear-gradient(top, #0087d5 0%, #005b85 100%);
+  background: linear-gradient(top, #0087d5 0%, #005b85 100%);
 }
 /* line 6, ../sass/_level-3.scss */
 #level-3 figure {

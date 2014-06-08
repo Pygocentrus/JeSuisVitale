@@ -2,7 +2,7 @@
 	text-align: center;
 	padding: 10% 0 0 0;
 	@include box-sizing(border-box);	
-	@include background(linear-gradient(top, rgba(0,135,213,.8) 0%, rgba(19,95,142,1) 100%));
+	@include background(linear-gradient(top, rgba(0,135,213,1) 0%, rgba(0,91,133,1) 100%));
 	figure {
 		display: block;
 		width: 49%;

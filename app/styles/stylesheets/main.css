@@ -288,6 +288,13 @@ a.go-down {
   outline: none;
 }
 /* line 36, ../sass/_home.scss */
+#home svg path {
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+/* line 40, ../sass/_home.scss */
 #home a.go-down {
   font-size: 0;
   text-decoration: none;

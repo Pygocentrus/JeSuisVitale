@@ -32,7 +32,11 @@
 			outline: none;
 		}
 	}
-
+	svg {
+		path {
+			@include transition(all 0.1s linear);
+		}
+	}
 	a.go-down {
 		font-size: 0;
 		text-decoration: none;

@@ -18,19 +18,24 @@
 
 
 // Grab the user's current location and sets the input with his city
-Locator.init(function cityReceived(location, locationErr){
-    if(typeof locationErr === 'undefined'){
+Locator.init(function cityReceived(location, err){
+    if(typeof err === 'undefined'){
         document.querySelector('.geolocation').value = location.address.town+" - "+location.address.postcode.substr(0, 2);
         Ajax.getJSON('data/fiefs.json', function jsonLoaded(data, dataErr) {
             if(typeof dataErr === 'undefined') {
+                //received data
                 var userData = data[location.address.postcode.substr(0, 2)];
-                console.log(userData);
+                var ville = new City(userData);
+                console.log(ville.toString());
+                var villes = new Cities([]);
+                villes.add(ville);
+                console.log(villes);
             } else {
                 console.log(dataErr);
             }
         });
     }
     else{
-        console.log(locationErr);
+        console.log(err);
     }
 });

@@ -8,9 +8,11 @@ module.exports = function(grunt) {
         concat: {
             dist: {
                 src: [
-                    'bower_components/underscore/underscore.js',
-                    'bower_components/backbone/backbone.js',
+                    'app/bower_components/underscore/underscore.js',
+                    'app/bower_components/backbone/backbone.js',
                     'app/scripts/lib/q.js',
+                    'app/scripts/models/*.js',
+                    'app/scripts/collections/*.js',
                     'app/scripts/custom/*.js',
                     'app/scripts/main.js'
                 ],
@@ -38,7 +40,12 @@ module.exports = function(grunt) {
 
         watch: {
             scripts: {
-                files: ['app/scripts/custom/*.js', 'app/scripts/main.js'],
+                files: [
+                    'app/scripts/models/*.js',
+                    'app/scripts/collections/*.js',
+                    'app/scripts/custom/*.js',
+                    'app/scripts/main.js'
+                ],
                 tasks: ['concat', 'uglify'],
                 options: {
                     spawn: false,

@@ -1,16 +1,22 @@
 var City = Backbone.Model.extend({
 
     defaults: {
-        "id": 75,
-        "departement": "Paris",
-        "prefecture": "Paris",
-        "population": 2249975,
-        "ammonium": "<0,05 mg/L",
-        "chlore": "0,14 mg/LCl2",
-        "ph": "7,50 unitépH",
-        "conductivite": "604 µS/cm",
-        "nitrate": "37,5 mg/L",
-        "temperature": "15,1 °C"
+        "id": 0,
+        "departement":"Seine-Saint-Denis",
+        "prefecture":"Bobigny",
+        "population":47224,
+        "ammonium":0.05,
+        "chlore":0.35,
+        "ph":7.8,
+        "conductivite":604,
+        "nitrates":37.5,
+        "temperature":"15,7",
+        "noteAmmonium":10,
+        "noteChlore":12,
+        "noteConductivite":19.87,
+        "noteNitrates":5,
+        "notePh":19.87,
+        "aqualite":66.74
     },
 
     toString: function(){

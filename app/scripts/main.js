@@ -1,3 +1,8 @@
+var $scope = {
+    cities: new Cities(),
+    city: null
+};
+
 // Manages window height
 (function() {
     var section = document.querySelectorAll('.section-height');
@@ -23,13 +28,32 @@ Locator.init(function cityReceived(location, err){
         document.querySelector('.geolocation').value = location.address.town+" - "+location.address.postcode.substr(0, 2);
         Ajax.getJSON('data/fiefs.json', function jsonLoaded(data, dataErr) {
             if(typeof dataErr === 'undefined') {
-                //received data
-                var userData = data[location.address.postcode.substr(0, 2)];
-                var ville = new City(userData);
-                console.log(ville.toString());
-                var villes = new Cities([]);
-                villes.add(ville);
-                console.log(villes);
+                var currentCity;
+                //Setting the app's Scope data
+                for(var c in data){
+                    currentCity = new City({
+                        id: c,
+                        departement : data[c].departement,
+                        prefecture : data[c].prefecture,
+                        population : data[c].population,
+                        ammonium : data[c].ammonium,
+                        chlore : data[c].chlore,
+                        ph : data[c].ph,
+                        conductivite : data[c].conductivite,
+                        nitrates : data[c].nitrate,
+                        noteAmmonium : data[c].noteAmmonium,
+                        noteChlore : data[c].noteChlore,
+                        noteConductivite : data[c].noteConductivite,
+                        noteNitrates : data[c].noteNitrates,
+                        notePh : data[c].notePh,
+                        aqualite : data[c].aqualite
+                    });
+                    //Checks if the current county equals the user's and set the Scope
+                    if(currentCity.get('id') === location.address.postcode.substr(0, 2)){
+                        $scope.city = currentCity;
+                    }
+                    $scope.cities.add(currentCity);
+                }
             } else {
                 console.log(dataErr);
             }

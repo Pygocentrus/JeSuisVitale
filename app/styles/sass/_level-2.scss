@@ -5,33 +5,37 @@
 	background: rgba(0,135,213,1);
 	@include box-sizing(border-box);
 	h2 {
-		font-size: 3em;
-		color: #fff;
+		font-size: 7vw;
+		font-weight: 500;
 		text-transform: uppercase;
-		line-height: 1em;
-		@include background(image-url('arrow.png') 61% 30px no-repeat);
+		text-shadow: 0px 3px 5px rgba(8, 81, 120, 0.2);
+		@include background(image-url('arrow.png') 64% 81% no-repeat);
 		background-size: 15px auto;
 	}
-	p {
-		font-size: 1.2em;
-		color: #fff;
-		font-weight: 400;
-		text-transform: uppercase;
-		vertical-align: top;
-		margin: 5px 5px 0 0; 
-		i {
-			display: inline-block;
-			width: 15px;
-			height: 18px;
-			margin: 1px 5px 50px 5px; 
-			@include background(image-url('glass.png') no-repeat);
-			background-size: 15px auto;
-			&.inactive { opacity: 0.35; }
-		}
+	// p {
+	// 	font-size: 1.2em;
+	// 	color: #fff;
+	// 	font-weight: 400;
+	// 	text-transform: uppercase;
+	// 	vertical-align: top;
+	// 	margin: 5px 5px 0 0; 
+	// 	i {
+	// 		display: inline-block;
+	// 		width: 15px;
+	// 		height: 18px;
+	// 		margin: 1px 5px 50px 5px; 
+	// 		@include background(image-url('glass.png') no-repeat);
+	// 		background-size: 15px auto;
+	// 		&.inactive { opacity: 0.35; }
+	// 	}
+	// }
+	.left {
+		float: left;
+		position: relative;
+		margin: 0 0 0 5vw;
 	}
 	img {
 		display: block;
-		margin: 0 auto;
 		width: 400px;
 		height: auto;
 	}
@@ -41,8 +45,8 @@
 		text-transform: uppercase;
 		span {
 			display: block;
-			font-size: 1.5em;
 			color: #fff;
+			font: 1.5em 'Glober', 'DINCond', Verdana, sans-serif; 
 			font-weight: 600;
 			margin: 0 0 5px 0; 
 			&::before {
@@ -57,6 +61,45 @@
 		sub {
 			text-transform: none;
 			font-style: italic;
+		}
+	}
+	.right {
+		text-align: left;
+		float: right;
+		h3 {
+			display: inline-block;
+			font-size: 2.5em;
+			font-weight: 400;
+			text-transform: uppercase;
+			&::after {
+				content: '';
+				display: block;
+				height: 1px;
+				width: 350px;
+				opacity: 0.15;
+				background: #fff;
+			}
+		}
+		p {
+			clear: both;
+			text-transform: initial;
+			strong {
+				color: #1062a2;
+				font: 2.5em 'Glober', 'DINCond', Verdana, sans-serif; 
+				font-weight: 600;
+				text-transform: uppercase;
+				sup {
+					display: inline-block;
+					font-size: 0.4em;
+					vertical-align: top;
+					margin-top: 10px;
+				}
+			}
+			span {
+				color: #1062a2;
+				text-transform: uppercase;
+				margin-left: -13px;
+			}
 		}
 	}
 }

@@ -1,0 +1,74 @@
+#home {
+	padding: 5vw 0 0 0;
+	text-align: center;
+	@include background(image-url('cloud_1.png') repeat-x, image-url('cloud_2.png') repeat-x, image-url('cloud_3.png') repeat-x, linear-gradient(top, rgba(150,214,233,1) 0%,rgba(125,185,232,1) 100%));
+	-webkit-animation: cloud 115s linear infinite;
+		    animation: cloud 115s linear infinite;
+	h2 {
+		font-size: 4.5vw;
+		margin: 20px 0 40px 0;
+	}
+	h3 {
+		font-size: 2.5vw;
+		margin: 40px 0 20px 0;
+	}
+	input[type="text"] {
+		color: $font-color;
+		font-size: 2vw;
+		text-transform: uppercase;
+		width: 35%;
+		min-width: 250px;
+		max-width: 450px;
+		height: 70px;
+		padding: 0 0 0 60px;
+		border: none;
+		@include background(image-url('location.png') 15px center no-repeat, image-url('arrow.png') 95% center no-repeat, #fff);
+		@include box-sizing(content-box);
+		@include input-placeholder {
+			color: $font-color;
+		}
+		&:focus {
+			outline: none;
+		}
+	}
+	svg {
+		path {
+			@include transition(all 0.1s linear);
+		}
+	}
+	a.go-down {
+		font-size: 0;
+		text-decoration: none;
+		display: block;
+		height: 25px;
+		width: 44px;
+		padding: 0;
+		margin: 50px auto 0 auto;
+		border: none;
+		@include background(image-url('arrow-thin.png'));
+	}
+}
+
+@keyframes cloud {
+	0% { 
+		background-position: 0px -115px,  0px -115px,  0px -115px; 
+	} 
+	50% { 
+		background-position: 1174px -115px,  1174px -115px,  1174px -115px; 
+	}
+	100% {
+		background-position: 0px -115px, 0px -115px, 0px -115px;
+	}
+}
+
+@-webkit-keyframes cloud {
+	0% { 
+		background-position: 0px -115px,  0px -115px,  0px -115px; 
+	} 
+	50% { 
+		background-position: 1174px -115px,  1174px -115px,  1174px -115px; 
+	}
+	100% {
+		background-position: 0px -115px, 0px -115px, 0px -115px;
+	}
+}

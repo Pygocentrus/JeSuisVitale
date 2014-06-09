@@ -1,8 +1,3 @@
-var $scope = {
-    cities: new Cities(),
-    city: null
-};
-
 // Manages window height
 (function() {
     var section = document.querySelectorAll('.section-height');

@@ -1,70 +1,4 @@
-
-Backbone.history.start();
-
-// MAP
-// (function() {
-
-//     var path = document.querySelectorAll('path');
-//     var departements = new Array();
-
-//     for (var i = 0; i < 94; i++) {
-//         departements.push(path[i]);
-//     };
-
-//     for (var i = 0, size = departements.length; i < size; i++) {
-//         departements[i].addEventListener('mouseover', function() {
-//             this.style.fill = '#5095F9';
-//         }, false);
-//         departements[i].addEventListener('mouseout', function() {
-//             this.style.fill = '#EEEEEE';
-//         }, false);
-//     };
-
-//     console.log(departements);
-// }).call(this);
-
-// BLUR
-(function() {
-    var content = document.querySelector('.blur-percentage');
-    var duplicate = content.cloneNode(true);
-    var contentBlurred = document.createElement('div');
-    contentBlurred.className = 'content-blurred';
-    contentBlurred.appendChild(duplicate);
-
-    var blur = document.querySelector('#blur');
-    blur.appendChild(contentBlurred);
-}).call(this);
-
-// MENU
-(function() {
-var h2 = document.querySelector('.menu h2');
-
-function menu(e) {
-    e.stopPropagation();
-    if (h2.className == 'cross') {
-        h2.className = '';
-    } else {
-        h2.className = 'cross';
-    }
-    // LI VISIBLE
-    var list = document.querySelectorAll('.menu ul li');
-    Array.prototype.forEach.call(list, function(li, i) {
-        var timer = 40 * i;
-        setTimeout(function() {
-            if (li.className == 'visible') {
-                li.className = '';
-            } else {
-                li.className = 'visible';
-            }
-        }, timer);
-    });
-}
-
-if (typeof h2 !== 'undefined') h2.addEventListener('click', menu);
-
-}).call(this);
-
-// WINDOW HEIGHT
+// Manages window height
 (function() {
     var section = document.querySelectorAll('.section-height');
 
@@ -81,3 +15,22 @@ if (typeof h2 !== 'undefined') h2.addEventListener('click', menu);
 
     customHeight(section);
 }).call(this);
+
+
+// Grab the user's current location and sets the input with his city
+Locator.init(function cityReceived(location, locationErr){
+    if(typeof locationErr === 'undefined'){
+        document.querySelector('.geolocation').value = location.address.town+" - "+location.address.postcode.substr(0, 2);
+        Ajax.getJSON('data/fiefs.json', function jsonLoaded(data, dataErr) {
+            if(typeof dataErr === 'undefined') {
+                var userData = data[location.address.postcode.substr(0, 2)];
+                console.log(userData);
+            } else {
+                console.log(dataErr);
+            }
+        });
+    }
+    else{
+        console.log(locationErr);
+    }
+});

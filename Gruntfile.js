@@ -10,6 +10,8 @@ module.exports = function(grunt) {
                 src: [
                     'app/bower_components/underscore/underscore.js',
                     'app/bower_components/backbone/backbone.js',
+                    'app/bower_components/handlebars/handlebars.js',
+                    'app/bower_components/d3/d3.js',
                     'app/scripts/lib/q.js',
                     'app/scripts/models/*.js',
                     'app/scripts/collections/*.js',

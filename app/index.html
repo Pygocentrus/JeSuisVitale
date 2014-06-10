@@ -18,13 +18,18 @@
                 <li><a href="#level-3">Niveau 4</a></li>
             </ul>
         </nav>
+
         <section id="home" class="section-height">
-            <h1 class="logo"><a href="index.html">Je suis vitale</a></h1>
-            <h3>Chaque année, un français consomme 12 000 Litres d'eau en bouteille.</h3>
-            <h2>Et si l'eau de votre robinet était tout aussi bonne ?</h2>
-            <input type="text" class="geolocation" placeholder="Localisez vous"></input>
-            <a class="go-down" href="#level-1">Go</a>
+                <h1 class="logo"><a href="index.html">Je suis vitale</a></h1>
+                <h3>Chaque année, un français consomme 12 000 Litres d'eau en bouteille.</h3>
+                <h2>Et si l'eau de votre robinet était tout aussi bonne ?</h2>
+                <input type="text" class="geolocation" placeholder="Localisez vous"></input>
+                <a class="go-down" href="#level-1">Go</a>
+            </div>
         </section>
+
+        <section id="map-wrapper" class="section-height"></section>
+
         <section id="level-1" class="section-height">
             <h2>Arcachon</h2>
             <div class="wrapper">
@@ -44,7 +49,7 @@
                     <animateTransform attributeName="transform" type="translate" values=" 0 0; 32 0 "
                         dur="2s" repeatCount="indefinite" />
                 </path>
-                <path id="blur" fill="none" stroke="#0087d5" stroke-width="4" opacity=".5"
+                <path fill="none" stroke="#0087d5" stroke-width="4" opacity=".5"
                     d=" M-32 8 C-24 8 -24 24 -16 24 C-8 24 -8 8 0 8 C8 8 8 24 16 24 C24 24 24 8 32 8 ">
                     <animateTransform attributeName="transform" type="translate" values=" 0 0; 32 0 "
                         dur="2s" repeatCount="indefinite" />
@@ -56,6 +61,7 @@
             </p>
             <a class="go-down" href="#level-2">Découvrez pourquoi</a>
         </section>
+
         <section id="level-2" class="section-height">
             <h2>Arcachon</h2>
             <p>Aqualité <i></i><i></i><i></i><i class="inactive"></i><i class="inactive"></i>
@@ -69,6 +75,7 @@
                 <li id="nitrates">Nitrates<span>0,8</span><sub>mg/L</sub></li>
             </ul>
         </section>
+
         <section id="level-3" class="section-height">
             <a class="go-down" href="#level-2">Et les autres eaux?</a>
             <figure>
@@ -76,6 +83,7 @@
                 <img src="img/bottle.png" alt="Bottle">
             </figure>
         </section>
-        <script type="text/javascript" src="scripts/production.min.js"></script>
+
+        <script type="text/javascript" src="scripts/production.js"></script>
     </body>
 </html>

@@ -26,3 +26,23 @@ function menu(e) {
 if (typeof h2 !== 'undefined') h2.addEventListener('click', menu);
 
 }).call(this);
+
+// MAPS
+(function() {
+var href   = document.querySelectorAll('.menu a'),
+mapWrapper = document.querySelector('#map-wrapper');
+
+for (var i = 0, size = href.length ; i < size; i++) {
+    href[i].addEventListener('click', function() {
+        if (this.getAttribute('href') == "#mapWrapper") {
+            if (mapWrapper.className == 'visible') {
+                mapWrapper.className = '';
+                this.innerHTML = 'Carte';
+            } else {
+                mapWrapper.className = 'visible';
+                this.innerHTML = 'Home';
+            }
+        };
+    }, false);
+};
+}).call(this);

@@ -31,6 +31,7 @@ body {
 	@include background(linear-gradient(top, rgba(136,197,225,0) 0%,rgba(141,200,229,1) 100%));
 }
 
+/* NAV */
 nav.menu {
 	position: fixed;
 	top: 3%;
@@ -39,7 +40,7 @@ nav.menu {
 	text-align: center;
 	text-transform: uppercase;
 	text-decoration: none;
-	z-index: 50;
+	z-index: 9999;
 	h2 {
 		position: relative;
 		cursor: pointer;
@@ -86,6 +87,18 @@ nav.menu {
 		@include transform(translate3d(0px, 0px, 0px) scale(1));
 	}
 }
+
+#map-wrapper {
+	visibility: hidden;
+	@include transition(all 400ms ease-in-out);
+	@include transform(translate3d(1500px, 0px, 0px));
+	&.visible {
+		visibility: initial;
+		@include transform(translate3d(0px, 0px, 0px));
+	}
+}
+
+/* END NAV */
 
 a.go-down {
 	position: relative;

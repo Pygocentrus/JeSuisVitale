@@ -1,7 +1,11 @@
 #home {
+	z-index: 100;
+	position: relative;
 	padding: 5vw 0 0 0;
 	text-align: center;
 	@include box-sizing(border-box);
+	@include transition(all 400ms ease-in-out);
+	@include transform(translate3d(0px, 0px, 0px));
 	.bg-container {
 		position:absolute;
 		top:0;

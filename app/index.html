@@ -23,38 +23,63 @@
         </nav>
 
         <section id="home" class="section-height">
-                <h1 class="logo"><a href="index.html">Je suis vitale</a></h1>
-                <h3>Chaque année, un français consomme 12 000 Litres d'eau en bouteille.</h3>
-                <h2>Et si l'eau de votre robinet était tout aussi bonne ?</h2>
-                <input type="text" class="geolocation" placeholder="Localisez vous"></input>
-                <a class="go-down" href="#level-1">Go</a>
+            <div class="bg-container">
+                <div class="clouds"></div><div class="clouds"></div><div class="clouds"></div>
+            </div>
+            <h1 class="logo"><a href="index.html">Je suis vitale</a></h1>
+            <h3>Chaque année, un français consomme 12 000 Litres d'eau en bouteille.</h3>
+            <h2>Et si l'eau de votre robinet était tout aussi bonne ?</h2>
+            <input type="text" class="geolocation" placeholder="Localisez vous"></input>
+            <a class="go-down" href="#level-1">Go</a>
         </section>
 
-        <section id="map-wrapper" class="section-height"></section>
+        <!-- <section id="map-wrapper" class="section-height"></section> -->
 
         <section id="level-1" class="section-height">
             <h2>Arcachon</h2>
             <div class="wrapper">
-                <div class="blur-percentage">
-                    <p id="percentage">{{aqualite}}</p>
-                </div>
-                <div id="blur"></div>
+              <div class="blur-percentage">
+                <p id="percentage" style="mask: url(#fade_right_svg_mask); -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), color-stop(.7, rgba(0,0,0,0)), to(rgba(0,0,0,0)));">7.5</p>
+                <p id="blurred-percentage" style="mask: url(#fade_right_svg_mask); -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), color-stop(.5, rgba(0,0,0,.5)), to(rgba(0,0,0,1)));">7.5</p>
+              </div>
             </div>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 100" preserveAspectRatio="none">
-                <path  fill="none" stroke="#05cdf8" stroke-width="3" opacity=".5"
-                    d=" M-32 4 C-24 4 -24 28 -16 28 C-8 28 -8 4 0 4 C8 4 8 28 16 28 C24 28 24 8 32 8 ">
-                    <animateTransform attributeName="transform" type="translate" values=" 0 0; 32 0 "
-                        dur="2s" repeatCount="indefinite" />
+            <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 50" preserveAspectRatio="none">
+                <linearGradient id="wave_1" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0" stop-opacity="1" stop-color="#05cdf8"/>
+                    <stop offset=".5" stop-opacity="0" stop-color="#05cdf8"/>
+                </linearGradient>
+                    <linearGradient id="wave_2" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0" stop-opacity="1" stop-color="#00c7f9"/>
+                    <stop offset=".5" stop-opacity="0" stop-color="#00c7f9"/>
+                </linearGradient>
+                <linearGradient id="wave_3" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0" stop-opacity="1" stop-color="#0087d5"/>
+                    <stop offset=".5" stop-opacity="0" stop-color="#0087d5"/>
+                </linearGradient>
+
+                <mask id="fade_right_svg_mask" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+                
+                <linearGradient id="fade_right_svg_gradient" gradientUnits="objectBoundingBox" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop stop-color="white" stop-opacity="1" offset="0.5"></stop>
+                    <stop stop-color="white" stop-opacity="0" offset="1"></stop>
+                </linearGradient>
+
+                </mask>
+                        
+                <path  fill="none" stroke="url(#wave_1)" stroke-width="10" opacity=".5"
+                  d=" m-32,5c8,0 8.3846,9.369273 16.3846,9.369273c8,0 7.6154,-9.369273 15.6154,-9.369273c8,0 8.042526,9.282497 16.042526,9.282497c8,0 7.957474,-5.282497 15.957474,-5.282497 ">
+                  <animateTransform attributeName="transform" type="translate" values=" 0 0; 32 0 "
+                    dur="6s" repeatCount="indefinite" />
                 </path>
-                <path  fill="none" stroke="#00c7f9" stroke-width="4" opacity=".5"
-                    d=" M-32 12 C-24 12 -24 20 -16 20 C-8 20 -8 12 0 12 C8 12 8 20 16 20 C24 20 24 12 32 12 ">
-                    <animateTransform attributeName="transform" type="translate" values=" 0 0; 32 0 "
-                        dur="2s" repeatCount="indefinite" />
+                <path  fill="none" stroke="url(#wave_2)" stroke-width="10" opacity=".5"
+                  d=" m-32,6.5c8,0 7.77195,5.719494 15.77195,5.719494c8,0 8.22805,-5.719494 16.22805,-5.719494c8,0 8,5.83352 16,5.83352c8,0 8,-5.83352 16,-5.83352 ">
+                  <animateTransform attributeName="transform" type="translate" values=" 0 0; 32 0 "
+                    dur="6s" repeatCount="indefinite" />
                 </path>
-                <path fill="none" stroke="#0087d5" stroke-width="4" opacity=".5"
-                    d=" M-32 8 C-24 8 -24 24 -16 24 C-8 24 -8 8 0 8 C8 8 8 24 16 24 C24 24 24 8 32 8 ">
-                    <animateTransform attributeName="transform" type="translate" values=" 0 0; 32 0 "
-                        dur="2s" repeatCount="indefinite" />
+                <path fill="none" stroke="url(#wave_3)" stroke-width="10" opacity=".5"
+                  d=" m-32,7c8,0 8.1807,6.782549 16.1807,6.782549c8,0 7.8193,-6.782549 15.8193,-6.782549c8,0 8,6.747099 16,6.747099c8,0 8,-6.747099 16,-6.747099 ">
+                  <animateTransform attributeName="transform" type="translate" values=" 0 0; 32 0 "
+                    dur="6s" repeatCount="indefinite" />
                 </path>
             </svg>
             <p>

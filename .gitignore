@@ -3,11 +3,12 @@ dist
 test/temp
 .sass-cache
 app/bower_components
+app/config.rb
+app/scripts/production.js
+app/scripts/production.min.js
 .tmp
 .editorconfig
 .jshintrc
 .yo-rc.json
 .DS_Store
-app/config.rb
-app/scripts/production.js
-app/scripts/production.min.js
+dploy.yaml

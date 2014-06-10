@@ -1,6 +1,18 @@
 var handlebarsConfig = {
 	insertDatas: function () {
-		var source   = document.getElementById('datas-composition').innerHTML;
+		// datas of the note : level-1
+		var element = document.getElementById('level-1');
+		var source = element.innerHTML;
+		var template = Handlebars.compile(source);
+		var context = {
+			aqualite: ($scope.city.attributes.aqualite / 10).toFixed(2)
+		}
+		var html = template(context);
+		element.innerHTML = html;
+
+		// datas of the goutte : level-2
+		var element = document.getElementById('level-2');
+		var source = element.innerHTML;
 		var template = Handlebars.compile(source);
 		var context = {
 			ammonium: $scope.city.attributes.ammonium, 
@@ -10,6 +22,6 @@ var handlebarsConfig = {
 			nitrates: $scope.city.attributes.nitrates
 		}
 		var html = template(context);
-		document.getElementById('datas-composition').innerHTML = html;
+		element.innerHTML = html;
 	}
 }

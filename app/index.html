@@ -35,7 +35,7 @@
             <h2>Arcachon</h2>
             <div class="wrapper">
                 <div class="blur-percentage">
-                    <p id="percentage">7.5</p>
+                    <p id="percentage">{{aqualite}}</p>
                 </div>
                 <div id="blur"></div>
             </div>
@@ -57,7 +57,7 @@
                 </path>
             </svg>
             <p>
-                Votre eau possède une aqualité* de 7.5/10
+                Votre eau possède une aqualité* de {{aqualite}}/10
                 <span>Elle est meilleure que dans 85% des départements français</span>
             </p>
             <a class="go-down" href="#level-2">Découvrez pourquoi</a>
@@ -68,7 +68,7 @@
             <p>Aqualité <i></i><i></i><i></i><i class="inactive"></i><i class="inactive"></i>
             </h3>
             <img src="img/drop.png" alt="Drop">
-            <ul id="datas-composition">
+            <ul>
                 <li id="ammonium">Ammonium<span id="ammonium-value">{{ammonium}}</span><sub>mg/L</sub></li>
                 <li id="chlore">Chlore<span>{{chlore}}</span><sub>mg/LCI2</sub></li>
                 <li id="ph">pH<span>{{ph}}</span><sub>unité pH</sub></li>

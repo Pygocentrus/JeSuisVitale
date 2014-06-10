@@ -3,7 +3,7 @@
 	text-align: center;
 	padding: 5% 0 0 0;
 	@include box-sizing(border-box);
-	@include background(linear-gradient(top, rgba(125,185,232,1) 0%, rgba(0,135,213,0.8) 45%, rgba(0,135,213,0.8) 55%, rgba(0,135,213,1) 100%));	
+	@include background(linear-gradient(top, rgba(125,185,232,1) 0%, rgba(0,135,213,0.8) 45%, rgba(0,135,213,0.8) 55%, rgba(0,135,213,1) 100%));
 	h2 {
 		font-size: 3.5em;
 		color: rgba(255,255,255,0.2);
@@ -83,25 +83,25 @@
 }
 
 @keyframes blur {
-	0% { 
-		opacity: 0; 
-	} 
-	50% {
-		opacity: 1; 
+	0% {
+		opacity: 0;
 	}
-	100% { 
-		opacity: 0; 
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
 	}
 }
 
 @-webkit-keyframes blur {
-	0% { 
-		opacity: 0; 
-	} 
-	50% {
-		opacity: 1; 
+	0% {
+		opacity: 0;
 	}
-	100% { 
-		opacity: 0; 
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
 	}
 }

@@ -14,7 +14,7 @@ d3.xml("img/goutte.svg", "image/svg+xml", function(xml) {
     // ammoniumGroup
    	var ammoniumGroup = svgContainer.append("g");
 
-	var lineData = [ { "x": 150,   "y": 210},  { "x": 20,  "y": 20},
+	var lineData = [ { "x": 152,   "y": 206},  { "x": 20,  "y": 20},
 	                 { "x": 40,  "y": 10}, { "x": 60,  "y": 40},
 	                 { "x": 80,  "y": 5},  { "x": 100, "y": 60}];
 

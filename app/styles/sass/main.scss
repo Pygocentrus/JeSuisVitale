@@ -12,6 +12,11 @@
 
 $font-color: #308ebb;
 
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
 .logo a {
 	font-size: 0;
 	display: inline-block;

@@ -1,11 +1,7 @@
 # Require any additional compass plugins here.
 
 # Set this to the root of your project when deployed:
-<<<<<<< HEAD
-http_path = "/Hetic/_dataviz_master/dataviz"
-=======
-http_path = "/dataviz-master/dataviz"
->>>>>>> 2fdb4db26578cae6c41fbd5e811b933bdbbfa434
+http_path = "/Hetic/_dataviz/dataviz"
 css_dir = "styles/stylesheets"
 sass_dir = "styles/sass"
 images_dir = "app/img"

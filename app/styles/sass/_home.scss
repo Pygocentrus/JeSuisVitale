@@ -1,9 +1,38 @@
 #home {
 	padding: 5vw 0 0 0;
 	text-align: center;
-	@include background(image-url('cloud_1.png') repeat-x, image-url('cloud_2.png') repeat-x, image-url('cloud_3.png') repeat-x, linear-gradient(top, rgba(150,214,233,1) 0%,rgba(125,185,232,1) 100%));
-	-webkit-animation: cloud 115s linear infinite;
-		    animation: cloud 115s linear infinite;
+	@include box-sizing(border-box);
+	.bg-container {
+		position:absolute;
+		top:0;
+		width:100%;
+		height:100%;
+		z-index:-1000;
+		overflow-x: hidden;
+		@include background(linear-gradient(top, rgba(150,214,233,1) 0%,rgba(125,185,232,1) 100%));
+		.clouds {
+			animation: cloud 200s ease infinite;
+			height:100%;
+			width:200%;
+			position:absolute;
+			top:0; left:0;
+			&:nth-child(1) {
+				@include background(image-url('cloud_1.png') repeat-x);
+				-webkit-animation: cloud 220s ease infinite;
+						animation: cloud 220s ease infinite;
+			}
+			&:nth-child(2) {
+				@include background(image-url('cloud_2.png') repeat-x);
+				-webkit-animation: cloud 180s ease infinite;
+						animation: cloud 220s ease infinite;
+			}
+			&:nth-child(3) {
+				@include background(image-url('cloud_3.png') repeat-x);
+				-webkit-animation: cloud 140s ease infinite;
+						animation: cloud 220s ease infinite;
+			}
+		}
+	}
 	h2 {
 		font-size: 4.5vw;
 		margin: 20px 0 40px 0;
@@ -51,24 +80,24 @@
 
 @keyframes cloud {
 	0% {
-		background-position: 0px -115px,  0px -115px,  0px -115px;
+		@include transform(translateX(0%) translateZ(0));
 	}
 	50% {
-		background-position: 1174px -115px,  1174px -115px,  1174px -115px;
+		@include transform(translateX(-50%) translateZ(0));
 	}
 	100% {
-		background-position: 0px -115px, 0px -115px, 0px -115px;
+		@include transform(translateX(0%) translateZ(0));
 	}
 }
 
 @-webkit-keyframes cloud {
 	0% {
-		background-position: 0px -115px,  0px -115px,  0px -115px;
+		@include transform(translateX(0%) translateZ(0));
 	}
 	50% {
-		background-position: 1174px -115px,  1174px -115px,  1174px -115px;
+		@include transform(translateX(-50%) translateZ(0));
 	}
 	100% {
-		background-position: 0px -115px, 0px -115px, 0px -115px;
+		@include transform(translateX(0%) translateZ(0));
 	}
 }

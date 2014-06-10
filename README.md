@@ -1,11 +1,11 @@
 dataviz
 =======
 
-Data visualization student project about the french water system
+Data visualization student project about the french water system. This project was made by a student team from HETIC webschool, France. <br />
+Website's preprod available <a href="http://pierreguilhou.fr/sites/jesuisvitale/">Here</a>.
 
 ##Introduction
 <p>
-  This project was made by a student team from HETIC webschool, France.<br />
   Technologies involved :
   <ul>
     <li>Backbone.js </li>
@@ -44,7 +44,7 @@ Data visualization student project about the french water system
   </tr>
 </table>
 
-##Getting started
+##Getting started - Workflow
 - git clone https://github.com/Pygocentrus/dataviz.git<br />
 - npm install<br />
 - bower install<br />

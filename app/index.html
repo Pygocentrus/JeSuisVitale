@@ -1,96 +1,81 @@
 <!doctype html>
 <html class="no-js">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Je suis vitale</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link rel="stylesheet" href="styles/stylesheets/main.css">
-  </head>
-  <body>
-    <nav class="menu">
-      <h2>Menu</h2>
-      <ul>
-        <li><a href="#home">Niveau 1</a></li>
-        <li><a href="#level-1">Niveau 2</a></li>
-        <li><a href="#level-2">Niveau 3</a></li>
-        <li><a href="#level-3">Niveau 4</a></li>
-      </ul>
-    </nav>
-    <section id="home" class="section-height">
-       <div id="landing" style="display: none;">
-           <h1 class="logo"><a href="index.html">Je suis vitale</a></h1>
-
-            <h3>Chaque année, un français consomme 12 000 Litres d'eau en bouteille.</h3>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Je suis vitale</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/stylesheets/main.css">
+    </head>
+    <body>
+        <nav class="menu">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="#home">Niveau 1</a></li>
+                <li><a href="#level-1">Niveau 2</a></li>
+                <li><a href="#level-2">Niveau 3</a></li>
+                <li><a href="#level-3">Niveau 4</a></li>
+            </ul>
+        </nav>
+        <section id="home" class="section-height">
+            <h1 class="logo"><a href="index.html">Je suis vitale</a></h1>
+            <h3>Chaque année, un français consomme 12 000 Litres d'eau en bouteille.</h3>
             <h2>Et si l'eau de votre robinet était tout aussi bonne ?</h2>
-
             <input type="text" class="geolocation" placeholder="Localisez vous"></input>
-
             <a class="go-down" href="#level-1">Go</a>
-        </div>
-        <div id="mapWrapper">
-            
-        </div>
-    </section>
-    <section id="level-1" class="section-height">
-        <h2>Arcachon</h2>
-
-        <div class="wrapper">
-          <div class="blur-percentage">
-            <p id="percentage">7.5</p>
-          </div>
-        <div id="blur"></div>
-        </div>
-
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 100" preserveAspectRatio="none">
-            <path  fill="none" stroke="#05cdf8" stroke-width="3" opacity=".5"
-              d=" M-32 4 C-24 4 -24 28 -16 28 C-8 28 -8 4 0 4 C8 4 8 28 16 28 C24 28 24 8 32 8 ">
-              <animateTransform attributeName="transform" type="translate" values=" 0 0; 32 0 "
-                dur="2s" repeatCount="indefinite" />
-            </path>
-            <path  fill="none" stroke="#00c7f9" stroke-width="4" opacity=".5"
-              d=" M-32 12 C-24 12 -24 20 -16 20 C-8 20 -8 12 0 12 C8 12 8 20 16 20 C24 20 24 12 32 12 ">
-              <animateTransform attributeName="transform" type="translate" values=" 0 0; 32 0 "
-                dur="2s" repeatCount="indefinite" />
-            </path>
-            <path id="blur" fill="none" stroke="#0087d5" stroke-width="4" opacity=".5"
-              d=" M-32 8 C-24 8 -24 24 -16 24 C-8 24 -8 8 0 8 C8 8 8 24 16 24 C24 24 24 8 32 8 ">
-              <animateTransform attributeName="transform" type="translate" values=" 0 0; 32 0 "
-                dur="2s" repeatCount="indefinite" />
-            </path>
-          </svg>
-
-        <p>
-          Votre eau possède une aqualité* de 7.5/10
-          <span>Elle est meilleure que dans 85% des départements français</span>
-        </p>
-
-        <a class="go-down" href="#level-2">Découvrez pourquoi</a>
-    </section>
-    <section id="level-2" class="section-height">
-      <h2>Arcachon</h2>
-        <p>Aqualité <i></i><i></i><i></i><i class="inactive"></i><i class="inactive"></i></h3>
-        <img src="img/drop.png" alt="Drop">
-        <ul>
-          <li id="ammonium">Ammonium<span><0,05</span><sub>mg/L</sub></li>
-          <li id="chlore">Chlore<span>0,11</span><sub>mg/LCI2</sub></li>
-          <li id="ph">pH<span>7.85</span><sub>unité pH</sub></li>
-          <li id="conductivite">Conductivité<span>264</span><sub>pS/cm</sub></li>
-          <li id="nitrates">Nitrates<span>0,8</span><sub>mg/L</sub></li>
-        </ul>
-    </section>
-    <section id="level-3" class="section-height">
-      <a class="go-down" href="#level-2">Et les autres eaux?</a>
-      <figure>
-        <img src="img/glass-big.png" alt="Glass">
-        <img src="img/bottle.png" alt="Bottle">
-      </figure>
-    </section>
-
-    <script type="text/javascript" src="scripts/production.min.js"></script>
-
-    <!-- <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script> -->
-</body>
+        </section>
+        <section id="level-1" class="section-height">
+            <h2>Arcachon</h2>
+            <div class="wrapper">
+                <div class="blur-percentage">
+                    <p id="percentage">7.5</p>
+                </div>
+                <div id="blur"></div>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 100" preserveAspectRatio="none">
+                <path  fill="none" stroke="#05cdf8" stroke-width="3" opacity=".5"
+                    d=" M-32 4 C-24 4 -24 28 -16 28 C-8 28 -8 4 0 4 C8 4 8 28 16 28 C24 28 24 8 32 8 ">
+                    <animateTransform attributeName="transform" type="translate" values=" 0 0; 32 0 "
+                        dur="2s" repeatCount="indefinite" />
+                </path>
+                <path  fill="none" stroke="#00c7f9" stroke-width="4" opacity=".5"
+                    d=" M-32 12 C-24 12 -24 20 -16 20 C-8 20 -8 12 0 12 C8 12 8 20 16 20 C24 20 24 12 32 12 ">
+                    <animateTransform attributeName="transform" type="translate" values=" 0 0; 32 0 "
+                        dur="2s" repeatCount="indefinite" />
+                </path>
+                <path id="blur" fill="none" stroke="#0087d5" stroke-width="4" opacity=".5"
+                    d=" M-32 8 C-24 8 -24 24 -16 24 C-8 24 -8 8 0 8 C8 8 8 24 16 24 C24 24 24 8 32 8 ">
+                    <animateTransform attributeName="transform" type="translate" values=" 0 0; 32 0 "
+                        dur="2s" repeatCount="indefinite" />
+                </path>
+            </svg>
+            <p>
+                Votre eau possède une aqualité* de 7.5/10
+                <span>Elle est meilleure que dans 85% des départements français</span>
+            </p>
+            <a class="go-down" href="#level-2">Découvrez pourquoi</a>
+        </section>
+        <section id="level-2" class="section-height">
+            <h2>Arcachon</h2>
+            <p>Aqualité <i></i><i></i><i></i><i class="inactive"></i><i class="inactive"></i>
+            </h3>
+            <img src="img/drop.png" alt="Drop">
+            <ul>
+                <li id="ammonium">Ammonium<span><0,05</span><sub>mg/L</sub></li>
+                <li id="chlore">Chlore<span>0,11</span><sub>mg/LCI2</sub></li>
+                <li id="ph">pH<span>7.85</span><sub>unité pH</sub></li>
+                <li id="conductivite">Conductivité<span>264</span><sub>pS/cm</sub></li>
+                <li id="nitrates">Nitrates<span>0,8</span><sub>mg/L</sub></li>
+            </ul>
+        </section>
+        <section id="level-3" class="section-height">
+            <a class="go-down" href="#level-2">Et les autres eaux?</a>
+            <figure>
+                <img src="img/glass-big.png" alt="Glass">
+                <img src="img/bottle.png" alt="Bottle">
+            </figure>
+        </section>
+        <script type="text/javascript" src="scripts/production.min.js"></script>
+    </body>
 </html>

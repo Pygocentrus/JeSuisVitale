@@ -48,7 +48,7 @@ module.exports = function(grunt) {
                     'app/scripts/custom/*.js',
                     'app/scripts/main.js'
                 ],
-                tasks: ['concat', 'uglify'],
+                tasks: ['concat'],
                 options: {
                     spawn: false,
                 }
@@ -69,6 +69,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.registerTask('default', ['concat', 'uglify', 'compass', 'watch']);
+    grunt.registerTask('min', ['concat', 'uglify', 'compass', 'watch']);
+    grunt.registerTask('default', ['concat', 'compass', 'watch']);
 
 };

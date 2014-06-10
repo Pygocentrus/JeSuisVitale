@@ -4,45 +4,54 @@
 	padding: 3% 0 0 0;
 	background: rgba(0,135,213,1);
 	@include box-sizing(border-box);
+
+	.container {
+		padding-top: 40px;
+	}
 	h2 {
-		font-size: 3em;
-		color: #fff;
+		font-size: 7vw;
+		font-weight: 500;
 		text-transform: uppercase;
-		line-height: 1em;
-		@include background(image-url('arrow.png') 61% 30px no-repeat);
+		text-shadow: 0px 3px 5px rgba(8, 81, 120, 0.2);
+		@include background(image-url('arrow.png') 64% 81% no-repeat);
 		background-size: 15px auto;
 	}
-	p {
-		font-size: 1.2em;
-		color: #fff;
-		font-weight: 400;
-		text-transform: uppercase;
-		vertical-align: top;
-		margin: 5px 5px 0 0; 
-		i {
-			display: inline-block;
-			width: 15px;
-			height: 18px;
-			margin: 1px 5px 50px 5px; 
-			@include background(image-url('glass.png') no-repeat);
-			background-size: 15px auto;
-			&.inactive { opacity: 0.35; }
-		}
+/*	// p {
+	// 	font-size: 1.2em;
+	// 	color: #fff;
+	// 	font-weight: 400;
+	// 	text-transform: uppercase;
+	// 	vertical-align: top;
+	// 	margin: 5px 5px 0 0; 
+	// 	i {
+	// 		display: inline-block;
+	// 		width: 15px;
+	// 		height: 18px;
+	// 		margin: 1px 5px 50px 5px; 
+	// 		@include background(image-url('glass.png') no-repeat);
+	// 		background-size: 15px auto;
+	// 		&.inactive { opacity: 0.35; }
+	// 	}
+	// }*/
+	.left {
+		float: left;
+		position: relative;
+		margin: 0 0 0 5vw;
 	}
 	img {
 		display: block;
-		margin: 0 auto;
 		width: 400px;
 		height: auto;
 	}
 	ul li {
 		color: #0b589a;
-		font-size: 0.7em;
+		font-size: 0.9em;
 		text-transform: uppercase;
 		span {
 			display: block;
-			font-size: 1.5em;
 			color: #fff;
+			font: 1.8em 'Glober', 'DINCond', Verdana, sans-serif; 
+			line-height: 0.8;
 			font-weight: 600;
 			margin: 0 0 5px 0; 
 			&::before {
@@ -59,6 +68,45 @@
 			font-style: italic;
 		}
 	}
+	.right {
+		text-align: left;
+		float: right;
+		h3 {
+			display: inline-block;
+			font-size: 2.5em;
+			font-weight: 400;
+			text-transform: uppercase;
+			&::after {
+				content: '';
+				display: block;
+				height: 1px;
+				width: 350px;
+				opacity: 0.15;
+				background: #fff;
+			}
+		}
+		p {
+			clear: both;
+			text-transform: initial;
+			strong {
+				color: #1062a2;
+				font: 2.5em 'Glober', 'DINCond', Verdana, sans-serif; 
+				font-weight: 600;
+				text-transform: uppercase;
+				sup {
+					display: inline-block;
+					font-size: 0.4em;
+					vertical-align: top;
+					margin-top: 10px;
+				}
+			}
+			span {
+				color: #1062a2;
+				text-transform: uppercase;
+				margin-left: -13px;
+			}
+		}
+	}
 }
 
 #ammonium, #chlore, #ph, #conductivite {
@@ -66,23 +114,23 @@
 }
 
 #ammonium {
-	top: 31%;
-	left: 36%;
+	top: 9%;
+	left: 0%;
 }
 
 #ph {
-	top: 53%;
-	left: 33%;
+	top: 58%;
+	left: -2%;
 }
 
 #chlore {
-	top: 31%;
-	right: 36%;
+	top: 9%;
+	right: -2%;
 }
 
 #conductivite {
-	top: 53%;
-	right: 32%;
+	top: 58%;
+	right: -22%;
 }
 
 #nitrates {

@@ -974,12 +974,12 @@
       <h2>Arcachon</h2>
         <p>Aqualité <i></i><i></i><i></i><i class="inactive"></i><i class="inactive"></i></h3>
         <img src="img/drop.png" alt="Drop">
-        <ul>
-          <li id="ammonium">Ammonium<span><0,05</span><sub>mg/L</sub></li>
-          <li id="chlore">Chlore<span>0,11</span><sub>mg/LCI2</sub></li>
-          <li id="ph">pH<span>7.85</span><sub>unité pH</sub></li>
-          <li id="conductivite">Conductivité<span>264</span><sub>pS/cm</sub></li>
-          <li id="nitrates">Nitrates<span>0,8</span><sub>mg/L</sub></li>
+        <ul id="datas-composition">
+          <li id="ammonium">Ammonium<span id="ammonium-value">{{ammonium}}</span><sub>mg/L</sub></li>
+          <li id="chlore">Chlore<span>{{chlore}}</span><sub>mg/LCI2</sub></li>
+          <li id="ph">pH<span>{{ph}}</span><sub>unité pH</sub></li>
+          <li id="conductivite">Conductivité<span>{{conductivite}}</span><sub>pS/cm</sub></li>
+          <li id="nitrates">Nitrates<span>{{nitrates}}</span><sub>mg/L</sub></li>
         </ul>
     </section>
     <section id="level-3" class="section-height">

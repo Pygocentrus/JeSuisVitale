@@ -10,39 +10,35 @@
 	    mapWrapper.node().appendChild(importedNode);
 
 	    var svgContainer = d3.select('#map');
-	    var path = document.querySelectorAll('path');
-	    console.log(path); 
-	    var departements = new Array();
+	    var groups = svgContainer.selectAll('g');
+	    var paths = groups.selectAll('path'); 
 
-		for (var i = 0; i < 94; i++) {
-	        departements.push(path[i]);
-	    };
+	    console.log(paths);
 
+	    groups.append('circle')
+			  .attr('r', 7)
+			  .style('fill', '#FFFFFF')
+			  .style('pointer-events', 'none')
+			  .style('stroke', '#FB5050')
+			  .style('stroke-width', '3px');
 	});
-
-	// var path = svgContainer.selectAll("path")
-	//                            .data(data)
-	//                            .enter()
-	//                            .append("path");
-	//                            console.log(path);
-
     
 
 // }).call(this);
 
-// var initialScaleData = [0, 1000, 3000, 2000, 5000, 4000, 7000, 6000, 9000, 8000, 10000];
+var initialScaleData = [0, 1000, 3000, 2000, 5000, 4000, 7000, 6000, 9000, 8000, 10000];
 
-// var newScaledData = [];
-// var minDataPoint = d3.min(initialScaleData);
-// var maxDataPoint = d3.max(initialScaleData);
+var newScaledData = [];
+var minDataPoint = d3.min(initialScaleData);
+var maxDataPoint = d3.max(initialScaleData);
 
-// var linearScale = d3.scale.linear()
-//                            .domain([minDataPoint,maxDataPoint])
-//                            .range([0,100]);
+var linearScale = d3.scale.linear()
+                           .domain([minDataPoint,maxDataPoint])
+                           .range([0,100]);
 
-// for (var i = 0; i < initialScaleData.length; i++) {
-//   newScaledData[i] = linearScale(initialScaleData[i]);
-// }
+for (var i = 0; i < initialScaleData.length; i++) {
+  newScaledData[i] = linearScale(initialScaleData[i]);
+}
 
-// newScaledData;
-// //[0, 10, 30, 20, 50, 40, 70, 60, 90, 80, 100]
+newScaledData;
+//[0, 10, 30, 20, 50, 40, 70, 60, 90, 80, 100]

@@ -5698,8 +5698,6 @@ var __module0__ = (function(__dependency1__, __dependency2__, __dependency3__, _
   return __module0__;
 })();
 
-<<<<<<< HEAD
-=======
 !function() {
   var d3 = {
     version: "3.4.8"
@@ -14955,7 +14953,6 @@ var __module0__ = (function(__dependency1__, __dependency2__, __dependency3__, _
     this.d3 = d3;
   }
 }();
->>>>>>> b457feccbd613ed7020befd1f417c04347615619
 /*!
  *
  * Copyright 2009-2012 Kris Kowal under the terms of the MIT
@@ -17137,7 +17134,19 @@ Location.getError = function() {
 
 var handlebarsConfig = {
 	insertDatas: function () {
-		var source   = document.getElementById('datas-composition').innerHTML;
+		// datas of the note : level-1
+		var element = document.getElementById('level-1');
+		var source = element.innerHTML;
+		var template = Handlebars.compile(source);
+		var context = {
+			aqualite: ($scope.city.attributes.aqualite / 10).toFixed(2)
+		}
+		var html = template(context);
+		element.innerHTML = html;
+
+		// datas of the goutte : level-2
+		var element = document.getElementById('level-2');
+		var source = element.innerHTML;
 		var template = Handlebars.compile(source);
 		var context = {
 			ammonium: $scope.city.attributes.ammonium, 
@@ -17147,7 +17156,7 @@ var handlebarsConfig = {
 			nitrates: $scope.city.attributes.nitrates
 		}
 		var html = template(context);
-		document.getElementById('datas-composition').innerHTML = html;
+		element.innerHTML = html;
 	}
 }
 var Locator = {};

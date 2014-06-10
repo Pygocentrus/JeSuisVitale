@@ -37,6 +37,12 @@ Website's preprod available <a href="http://pierreguilhou.fr/sites/jesuisvitale/
     <td><a href="https://github.com/pierreburgy"><img src="http://ciembor.github.io/4bit/images/github.png" alt="LinkedIn"/></a></td>
   </tr>
   <tr>
+    <td><img src="#" alt="front-dev"/></td>
+    <td><h4>Chassagne Kévin</h4><h5>Développeur front</h5></td>
+    <td><a href="http://fr.linkedin.com/pub/kévin-chassagne/8b/788/28b/"><img src="http://www.tlogistics.eu/wp-content/uploads/2013/01/Linkedin-Logo1.png" alt="LinkedIn"/></a></td>
+    <td><a href="https://github.com/Kevin445"><img src="http://ciembor.github.io/4bit/images/github.png" alt="LinkedIn"/></a></td>
+  </tr>
+  <tr>
     <td><img src="https://fr.gravatar.com/userimage/49542208/dff7f1c796cfadefbcb5bfc8a26191a5.jpeg" alt="lead dev"/></td>
     <td><h4>GUILHOU Pierre</h4><h5>Développeur back & front</h5></td>
     <td><a href="http://www.linkedin.com/profile/view?id=318537647"><img src="http://www.tlogistics.eu/wp-content/uploads/2013/01/Linkedin-Logo1.png" alt="LinkedIn"/></a></td>

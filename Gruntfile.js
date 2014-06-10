@@ -11,7 +11,7 @@ module.exports = function(grunt) {
                     'app/scripts/lib/underscore.min.js',
                     'app/bower_components/backbone/backbone.js',
                     'app/bower_components/handlebars/handlebars.min.js',
-                    'app/bower_components/d3/d3.js',
+                    'app/bower_components/d3/d3.min.js',
                     'app/scripts/lib/q.js',
                     'app/scripts/models/*.js',
                     'app/scripts/collections/*.js',

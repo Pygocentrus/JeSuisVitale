@@ -42,7 +42,7 @@ d3.xml("img/map.svg", "image/svg+xml", function(xml) {
 	// Adjust lat
 	var linearScale = d3.scale.linear()
 	                           .domain([d3.min(listLat),d3.max(listLat)])
-	                           .range([document.getElementById('map').getBBox().width,0]);
+	                           .range([document.getElementById('map').getBBox().width + 10,25]);
 	for (dpt in data[0]) {
     	data[0][dpt].newLat = linearScale(data[0][dpt].lat);
     };
@@ -50,7 +50,7 @@ d3.xml("img/map.svg", "image/svg+xml", function(xml) {
 	// Adjust lng
 	var linearScale = d3.scale.linear()
 	                           .domain([d3.min(listLng),d3.max(listLng)])
-	                           .range([0,document.getElementById('map').getBBox().height]);
+	                           .range([40,document.getElementById('map').getBBox().height + 30]);
 	for (dpt in data[0]) {
     	data[0][dpt].newLng = linearScale(data[0][dpt].lng);
     };
@@ -89,6 +89,19 @@ d3.xml("img/map.svg", "image/svg+xml", function(xml) {
 	                 .attr("font-family", "sans-serif")
 	                 .attr("font-size", "10px")
 	                 .attr("fill", "red");
+
+	// draw the rectancles
+	var rectangles = svgContainer.selectAll("path")
+	                             .data(datas)
+	                             .enter()
+	                             .append("path");
+
+	// rectangle attributes
+	var rectangleAttributes = rectangles
+	                          .attr("x", function (d) { return d.newLng })
+	                          .attr("y", function (d) { return d.newLat })
+	                          .attr("d", 'M311.7,181.8c0,8.6-15.6,28.9-15.6,28.9s-15.6-20.3-15.6-28.9c0-8.6,7-15.6,15.6-15.6C304.7,166.3,311.7,173.2,311.7,181.8z')
+	                          .style("fill", 'green');
 });
     
 

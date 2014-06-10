@@ -17132,6 +17132,33 @@ Location.getError = function() {
     return this.error;
 };
 
+var handlebarsConfig = {
+	insertDatas: function () {
+		// datas of the note : level-1
+		var element = document.getElementById('level-1');
+		var source = element.innerHTML;
+		var template = Handlebars.compile(source);
+		var context = {
+			aqualite: ($scope.city.attributes.aqualite / 10).toFixed(2)
+		}
+		var html = template(context);
+		element.innerHTML = html;
+
+		// datas of the goutte : level-2
+		var element = document.getElementById('level-2');
+		var source = element.innerHTML;
+		var template = Handlebars.compile(source);
+		var context = {
+			ammonium: $scope.city.attributes.ammonium, 
+			chlore: $scope.city.attributes.chlore, 
+			ph: $scope.city.attributes.ph, 
+			conductivite: $scope.city.attributes.conductivite, 
+			nitrates: $scope.city.attributes.nitrates
+		}
+		var html = template(context);
+		element.innerHTML = html;
+	}
+}
 var Locator = {};
 
 /**
@@ -17271,7 +17298,6 @@ var $scope = {
     cities: new Cities(),
     city: null
 };
-
 // Manages window height
 (function() {
     var section = document.querySelectorAll('.section-height');
@@ -17320,6 +17346,7 @@ Locator.init(function cityReceived(location, err){
                     //Checks if the current county equals the user's and set the Scope
                     if(currentCity.get('id') === location.address.postcode.substr(0, 2)){
                         $scope.city = currentCity;
+                        handlebarsConfig.insertDatas();
                     }
                     $scope.cities.add(currentCity);
                 }

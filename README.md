@@ -8,13 +8,11 @@ Data visualization student project about the french water system
   //TODO
 </p>
 
-###Branche front
+###Getting started
 <p>
 <b>1.Installation:</b><br />
-a. mkdir $nomDuProjet<br />
-b. cd nomDuProjet<br />
-c. git clone -b front $nomRepository<br />
+c. git clone https://github.com/Pygocentrus/dataviz.git<br />
 d. npm install<br />
 e. bower install<br />
-f. grunt serve --force<br />
+f. grunt<br />
 </p>

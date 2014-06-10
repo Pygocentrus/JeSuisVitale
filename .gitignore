@@ -9,3 +9,5 @@ app/bower_components
 .yo-rc.json
 .DS_Store
 app/config.rb
+app/scripts/production.js
+app/scripts/production.min.js

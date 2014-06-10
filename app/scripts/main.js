@@ -46,6 +46,7 @@ Locator.init(function cityReceived(location, err){
                     //Checks if the current county equals the user's and set the Scope
                     if(currentCity.get('id') === location.address.postcode.substr(0, 2)){
                         $scope.city = currentCity;
+                        handlebarsConfig.insertDatas();
                     }
                     $scope.cities.add(currentCity);
                 }

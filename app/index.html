@@ -1,5 +1,6 @@
 <!doctype html>
 <html class="no-js">
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +9,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles/stylesheets/main.css">
     </head>
+
     <body>
+    
         <nav class="menu">
             <h2>Menu</h2>
             <ul>
@@ -25,7 +28,6 @@
                 <h2>Et si l'eau de votre robinet était tout aussi bonne ?</h2>
                 <input type="text" class="geolocation" placeholder="Localisez vous"></input>
                 <a class="go-down" href="#level-1">Go</a>
-            </div>
         </section>
 
         <section id="map-wrapper" class="section-height"></section>
@@ -34,7 +36,7 @@
             <h2>Arcachon</h2>
             <div class="wrapper">
                 <div class="blur-percentage">
-                    <p id="percentage">7.5</p>
+                    <p id="percentage">{{aqualite}}</p>
                 </div>
                 <div id="blur"></div>
             </div>
@@ -56,7 +58,7 @@
                 </path>
             </svg>
             <p>
-                Votre eau possède une aqualité* de 7.5/10
+                Votre eau possède une aqualité* de {{aqualite}}/10
                 <span>Elle est meilleure que dans 85% des départements français</span>
             </p>
             <a class="go-down" href="#level-2">Découvrez pourquoi</a>
@@ -68,11 +70,11 @@
             </h3>
             <img src="img/drop.png" alt="Drop">
             <ul>
-                <li id="ammonium">Ammonium<span><0,05</span><sub>mg/L</sub></li>
-                <li id="chlore">Chlore<span>0,11</span><sub>mg/LCI2</sub></li>
-                <li id="ph">pH<span>7.85</span><sub>unité pH</sub></li>
-                <li id="conductivite">Conductivité<span>264</span><sub>pS/cm</sub></li>
-                <li id="nitrates">Nitrates<span>0,8</span><sub>mg/L</sub></li>
+                <li id="ammonium">Ammonium<span id="ammonium-value">{{ammonium}}</span><sub>mg/L</sub></li>
+                <li id="chlore">Chlore<span>{{chlore}}</span><sub>mg/LCI2</sub></li>
+                <li id="ph">pH<span>{{ph}}</span><sub>unité pH</sub></li>
+                <li id="conductivite">Conductivité<span>{{conductivite}}</span><sub>pS/cm</sub></li>
+                <li id="nitrates">Nitrates<span>{{nitrates}}</span><sub>mg/L</sub></li>
             </ul>
         </section>
 

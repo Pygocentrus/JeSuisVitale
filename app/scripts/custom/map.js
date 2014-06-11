@@ -17,17 +17,6 @@ var mapWrapper = d3.select('#map-wrapper');
 	    mapWrapper.node().appendChild(importedNode);
 
 	    var svgContainer = d3.select('#map');
-	    var groups = svgContainer.selectAll('g');
-	    var paths = groups.selectAll('path'); 
-
-	    console.log(paths);
-
-	    groups.append('circle')
-			  .attr('r', 7)
-			  .style('fill', '#FFFFFF')
-			  .style('pointer-events', 'none')
-			  .style('stroke', '#FB5050')
-			  .style('stroke-width', '3px');
 
 		// create tmp arrays
 	    var listLat = [];
@@ -38,19 +27,19 @@ var mapWrapper = d3.select('#map-wrapper');
 	    }
 
 		// Adjust lat
-		var linearScale = d3.scale.linear()
+		var linearScaleLat = d3.scale.linear()
 		                           .domain([d3.min(listLat),d3.max(listLat)])
-		                           .range([document.getElementById('map').getBBox().width + 10,25]);
+		                           .range([document.getElementById('map').getBBox().width + 40,0]);
 		for (dpt in data[0]) {
-	    	data[0][dpt].newLat = linearScale(data[0][dpt].lat);
+	    	data[0][dpt].newLat = linearScaleLat(data[0][dpt].lat);
 	    };
 
 		// Adjust lng
-		var linearScale = d3.scale.linear()
+		var linearScaleLng = d3.scale.linear()
 		                           .domain([d3.min(listLng),d3.max(listLng)])
-		                           .range([40,document.getElementById('map').getBBox().height + 30]);
+		                           .range([0,document.getElementById('map').getBBox().height + 80]);
 		for (dpt in data[0]) {
-	    	data[0][dpt].newLng = linearScale(data[0][dpt].lng);
+	    	data[0][dpt].newLng = linearScaleLng(data[0][dpt].lng);
 	    };
 
 		// remake the object data to datas for a better manipulation
@@ -61,17 +50,37 @@ var mapWrapper = d3.select('#map-wrapper');
 
 
 		// draw the pins
-		var pins = svgContainer.selectAll("path")
+		var pins = svgContainer.selectAll("circle")
 		                             .data(datas)
 		                             .enter()
-		                             .append("path");
+		                             .append("circle");
 
 		// pins attributes
 		var pinsAttributes = pins
-	                          .attr("x", function (d) { return d.newLng })
-	                          .attr("y", function (d) { return d.newLat })
-	                          .attr("d", 'M311.7,181.8c0,8.6-15.6,28.9-15.6,28.9s-15.6-20.3-15.6-28.9c0-8.6,7-15.6,15.6-15.6C304.7,166.3,311.7,173.')
-	                          .style("fill", '#3F9BCF');
+	                          .attr("cx", function (d) { return d.newLng })
+	                          .attr("cy", function (d) { return d.newLat })
+	                          .attr("r", "13")
+	                          .on('click' , function(d){ console.log(d); })
+	                          .style("fill", function(d) {
+	                          	var note = Math.round((d.aqualite * 5) / 100);  
+	                          	switch (note) {
+								    case 1:
+								        return "#3f9bcf";
+								        break;
+								    case 2:
+								        return "#48acdb";
+								        break;
+								    case 3:
+								        return "#53bce6";
+								        break;
+								    case 4:
+								        return "#57c6f0";
+								        break;
+								    case 5:
+								        return "#78d0ea";
+								        break;
+								}
+	                          });
 
 		//Add the SVG Text Element to the svgContainer
 		var text = svgContainer.selectAll("text")
@@ -81,12 +90,14 @@ var mapWrapper = d3.select('#map-wrapper');
 
 		//Add SVG Text Element Attributes
 		var textLabels = text
-		                 .attr("x", function(d) { return d.newLng; })
-		                 .attr("y", function(d) { return d.newLat; })
-		                 .text( function (d) { return d.aqualite; })
-		                 .attr('transform', 'matrix(1 0 0 1 19.5166 46.4175)')
-		                 .attr("font-family", "sans-serif")
-		                 .attr("font-size", "39")
+						 .on('click' , function(d){ console.log(d); })
+		                 .attr("x", function(d) { return d.newLng - 3; })
+		                 .attr("y", function(d) { return d.newLat + 5.5; })
+		                 .text(function (d) {
+		                 	var note = Math.round((d.aqualite * 5) / 100); 
+		                 	return note; 
+		                 })
+		                 .attr("font-size", "15px")
 		                 .attr("fill", "#FFFFFF");
 });
 

@@ -1,0 +1,106 @@
+#not-found {
+  padding: 5vw 0 0 0;
+  position: relative;
+  min-height: 100%;
+  text-align: center;
+  @include box-sizing(border-box);
+  @include background(linear-gradient(top, rgba(150,214,233,1) 0%,rgba(125,185,232,1) 100%));
+  a {
+    color: #fff;
+    font-size: 1.3em;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.error {
+  font: 10em 'Glober', sans-serif;
+  text-transform: uppercase;
+  text-align:center;
+  display:block;
+  position:absolute;
+  left:0; right:0; top:0; bottom:0;
+  margin: auto;
+  height:120px;
+  line-height: 120px;
+  width: 260px;
+}
+
+.error-2 {
+  top: 300px;
+  width: 473px;
+  height: 97px;
+  font-size: 0;
+  background:rgba(255,255,255,0.06);
+  margin: 0 auto;
+}
+
+.ff {
+  position: absolute;
+  font-size: 12pt;
+  top: -20px;
+  color: #fff;
+  line-height: 12pt;
+}
+
+.error-2-text {
+  background-image: url('http://i.imgur.com/cZc1otp.png');
+  width: 473px;
+  height: 97px;
+  display: inline-block;
+}
+
+.wave {
+  opacity:1;
+  color: rgba(0,0,0,0);
+  background-size:200px 100px;
+  background-repeat:repeat-x;
+  background-image: url('http://i.imgur.com/uFpLbYt.png');
+  @include background-clip(text);
+  text-shadow: 0px 0px rgba(255,255,255,0.06);
+  -webkit-animation: wave-animation 1s infinite linear, loading-animation 10s infinite linear alternate;
+          animation: wave-animation 1s infinite linear, loading-animation 10s infinite linear alternate;
+}
+
+.wave-2 {
+  display:inline-block;
+  @include background-clip(initial);
+}
+
+@keyframes wave-animation {
+  0% {
+    background-position:0 bottom;
+  }
+  100%{
+    background-position:200px bottom;
+  }
+}
+
+@-webkit-keyframes wave-animation {
+  0% {
+    background-position:0 bottom;
+  }
+  100%{
+    background-position:200px bottom;
+  }
+}
+
+@keyframes loading-animation{
+  0%{
+    background-size:200px 0px;
+  }
+  100%{
+    background-size:200px 200px;
+  }
+}
+
+@-webkit-keyframes loading-animation{
+  0%{
+    background-size:200px 0px;
+  }
+  100%{
+    background-size:200px 200px;
+  }
+}

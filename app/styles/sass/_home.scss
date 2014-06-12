@@ -31,12 +31,12 @@
 			&:nth-child(2) {
 				@include background(image-url('cloud_2.png') repeat-x);
 				-webkit-animation: cloud 180s ease infinite;
-						animation: cloud 220s ease infinite;
+						animation: cloud 180s ease infinite;
 			}
 			&:nth-child(3) {
 				@include background(image-url('cloud_3.png') repeat-x);
 				-webkit-animation: cloud 140s ease infinite;
-						animation: cloud 220s ease infinite;
+						animation: cloud 140s ease infinite;
 			}
 		}
 	}

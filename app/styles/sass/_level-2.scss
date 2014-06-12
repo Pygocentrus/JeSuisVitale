@@ -69,6 +69,7 @@
 		}
 	}
 	.right {
+		max-width: 40%;
 		text-align: left;
 		float: right;
 		h3 {
@@ -88,6 +89,7 @@
 		p {
 			clear: both;
 			text-transform: initial;
+			word-wrap: break-word;
 			strong {
 				color: #1062a2;
 				font: 2.5em 'Glober', 'DINCond', Verdana, sans-serif; 
@@ -106,11 +108,17 @@
 				margin-left: -13px;
 			}
 		}
+		.explications-composition {
+			display: none;
+		}
 	}
 }
 
 #goutte-wrapper {
 	min-width: 400px;
+	> svg {
+		pointer-events: none;
+	}
 }
 
 #ammonium, #chlore, #ph, #conductivite {
@@ -146,6 +154,16 @@
 	left: 0%;
 }
 
+#intern-svg {
+	position: absolute;
+	left: 0%;
+	pointer-events:none;
+}
+
+#intern-svg path {
+	pointer-events: all;
+}
+
 #ammonium-svg {
 	position: absolute;
 	/*top: 9%;*/
@@ -174,18 +192,7 @@
 	position: absolute;
 	top: 0;
 	left: 0;
+	pointer-events: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+#traits_norme { pointer-events: none;}

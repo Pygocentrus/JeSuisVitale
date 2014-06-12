@@ -60,6 +60,7 @@ Locator.init(function cityReceived(location, err){
                     if(currentCity.get('id') === location.address.postcode.substr(0, 2)){
                         $scope.city = currentCity;
                         handlebarsConfig.insertDatas();
+                        goutteSVGDrawer.drawGoutte();
                     }
                     $scope.cities.add(currentCity);
                 }

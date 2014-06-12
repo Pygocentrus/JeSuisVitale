@@ -45,7 +45,7 @@
 		font-size: 2.5vw;
 		margin: 40px 0 20px 0;
 	}
-	input[type="text"] {
+	.geolocation {
 		color: $font-color;
 		font-size: 2vw;
 		text-transform: uppercase;
@@ -53,16 +53,14 @@
 		min-width: 250px;
 		max-width: 450px;
 		height: 70px;
+        line-height: 70px;
 		padding: 0 0 0 60px;
-		border: none;
-		@include background(image-url('location.png') 15px center no-repeat, image-url('arrow.png') 95% center no-repeat, #fff);
+		/*@include background(image-url('goutte.gif') 15px center no-repeat, #fff);*/
+        background-position: 15px center;
+        background-repeat: no-repeat;
+        background-color: #fff;
+        background-size: 50px auto;
 		@include box-sizing(content-box);
-		@include input-placeholder {
-			color: $font-color;
-		}
-		&:focus {
-			outline: none;
-		}
 	}
 	svg {
 		path {

@@ -16,11 +16,12 @@
     customHeight(section);
 }).call(this);
 
-
+document.querySelector('.geolocation').style.backgroundImage = "";
 // Grab the user's current location and sets the input with his city
 Locator.init(function cityReceived(location, err){
     if(typeof err === 'undefined'){
-        document.querySelector('.geolocation').value = location.address.town+" - "+location.address.postcode.substr(0, 2);
+        document.querySelector('.geolocation').style.backgroundImage = "url('img/location.png')";
+        document.querySelector('.geolocation').innerHTML = location.address.town;
         Ajax.getJSON('data/fiefs.json', function jsonLoaded(data, dataErr) {
             if(typeof dataErr === 'undefined') {
                 var currentCity;

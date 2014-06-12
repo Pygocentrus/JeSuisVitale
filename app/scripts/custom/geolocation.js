@@ -8,7 +8,7 @@ function preventDefault(e) {
   e = e || window.event;
   if (e.preventDefault)
       e.preventDefault();
-  e.returnValue = false;  
+  e.returnValue = false;
 }
 
 function keydown(e) {
@@ -36,7 +36,7 @@ function enable_scroll() {
     if (window.removeEventListener) {
         window.removeEventListener('DOMMouseScroll', wheel, false);
     }
-    window.onmousewheel = document.onmousewheel = document.onkeydown = null;  
+    window.onmousewheel = document.onmousewheel = document.onkeydown = null;
 }
 
 disable_scroll();
@@ -90,7 +90,10 @@ Location.askLocation = function() {
  */
 Location.whenLocated = function(location) {
     isLocated = true;
-    Location.callback.call(this, location);
+    document.querySelector('.geolocation').style.backgroundImage = "url('img/goutte.gif')";
+    setTimeout(function(){
+        Location.callback.call(this, location)
+    }, 2000);
     // enable_scroll();
 };
 

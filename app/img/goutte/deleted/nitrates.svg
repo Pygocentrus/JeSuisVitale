@@ -2,15 +2,13 @@
 <!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="nitrates-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 400 400" height="400px" enable-background="new 0 0 400 400" xml:space="preserve">
-
-	<g>
+	 viewBox="0 0 400 400" enable-background="new 0 0 400 400" xml:space="preserve">
+		
 			<linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="626.2007" y1="-482.1374" x2="626.2007" y2="-340.445" gradientTransform="matrix(0.5404 0 0 -0.5404 -136.0031 35.312)">
 			<stop  offset="0" style="stop-color:#189EF2"/>
 			<stop  offset="1" style="stop-color:#0035CE"/>
 		</linearGradient>
-		<path id="nitrates-path" fill="url(#SVGID_5_)" d="M156.9,282.1c13.1,8.7,28.7,13.8,45.6,13.8c16.8,0,32.4-5,45.4-13.7
+		<path id="nitrates-path" fill="url(#SVGID_5_)" d="M157.9,284.1c13.1,8.7,28.7,13.8,45.6,13.8c16.8,0,32.4-5,45.4-13.7
 			c-15.2-21.1-45.6-63.1-45.4-62.9L156.9,282.1z"/>
-	</g>
-
+		
 </svg>

@@ -30,6 +30,7 @@ Locator.init(function cityReceived(location, err){
                     if(currentCity.get('id') === location.address.postcode.substr(0, 2)){
                         $scope.city = currentCity;
                         handlebarsConfig.insertDatas();
+                        goutteSVGDrawer.drawGoutte();
                     }
                     $scope.cities.add(currentCity);
                 }
@@ -71,3 +72,14 @@ function onUpdateStyleGeolocation(location) {
     pGeolocation.innerHTML = location.address.town;
     goDown.style.display = "block";
 }
+
+for (var i = 0, size = anchors.length ; i < size; i++) {
+    anchors[i].addEventListener('click', function(e) {
+        e.preventDefault(e);
+        if (this.getAttribute('href') == "#level-1" || this.getAttribute('href') == "#level-2") {
+            var target = document.getElementById(this.getAttribute('href').substr(1, this.getAttribute('href').length-1));
+            animate(document.body, "scrollTop", "", 0, target.offsetTop, 300, true);
+        }
+    }, false);
+};
+

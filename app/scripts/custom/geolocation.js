@@ -49,9 +49,9 @@ Location.whenLocated = function(location) {
     isLocated = true;
     Location.updateStyle();
     setTimeout(function(){
-        Location.callback.call(this, location)
+        toggleScroll();
+        Location.callback.call(this, location);
     }, 1000);
-    // enable_scroll();
 };
 
 /**

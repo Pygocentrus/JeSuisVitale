@@ -5,11 +5,13 @@
 	background: rgba(0,135,213,1);
 	@include box-sizing(border-box);
 	.light-container {
+		opacity: 0.3;
 		position:absolute;
 		bottom: 0;
 		left: 0;
 		width: 100%;
 		height: 170%;
+		overflow-x: hidden;
 		.light {
 			animation: cloud 200s ease infinite;
 			height:100%;
@@ -115,6 +117,10 @@
 	}
 }
 
+#goutte-wrapper {
+	min-width: 400px;
+}
+
 #ammonium, #chlore, #ph, #conductivite {
 	position: absolute;
 }
@@ -145,9 +151,37 @@
 
 #chlore-svg {
 	position: absolute;
-	transform-origin: 100% 100%;
-	top: 10%;
-	left: 10%;
+	left: 0%;
+}
+
+#ammonium-svg {
+	position: absolute;
+	/*top: 9%;*/
+	left: 0%;
+}
+
+#conductivite-svg {
+	position: absolute;
+	/*top: 9%;*/
+	left: 0%;
+}
+
+#nitrates-svg {
+	position: absolute;
+	/*top: 9%;*/
+	left: 0%;
+}
+
+#ph-svg {
+	position: absolute;
+	/*top: 9%;*/
+	left: 0%;
+}
+
+#normes-svg {
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 @keyframes light_1 {
@@ -155,7 +189,7 @@
 		@include transform(translateX(0%) translateZ(0));
 	}
 	50% {
-		@include transform(translateX(-50%) translateZ(0));
+		@include transform(translateX(-1%) translateZ(0));
 	}
 	100% {
 		@include transform(translateX(0%) translateZ(0));
@@ -167,7 +201,7 @@
 		@include transform(translateX(0%) translateZ(0));
 	}
 	50% {
-		@include transform(translateX(-50%) translateZ(0));
+		@include transform(translateX(-1%) translateZ(0));
 	}
 	100% {
 		@include transform(translateX(0%) translateZ(0));
@@ -179,7 +213,7 @@
 		@include transform(translateX(0%) translateZ(0));
 	}
 	50% {
-		@include transform(translateX(50%) translateZ(0));
+		@include transform(translateX(1%) translateZ(0));
 	}
 	100% {
 		@include transform(translateX(0%) translateZ(0));
@@ -191,9 +225,10 @@
 		@include transform(translateX(0%) translateZ(0));
 	}
 	50% {
-		@include transform(translateX(50%) translateZ(0));
+		@include transform(translateX(1%) translateZ(0));
 	}
 	100% {
 		@include transform(translateX(0%) translateZ(0));
 	}
 }
+

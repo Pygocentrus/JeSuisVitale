@@ -4,7 +4,7 @@
   min-height: 100%;
   text-align: center;
   @include box-sizing(border-box);
-  @include background(linear-gradient(top, rgba(150,214,233,1) 0%,rgba(125,185,232,1) 100%));
+  @include background(linear-gradient(top, rgba(145,217,241,1) 0%,rgba(96,180,217,1) 50%,rgba(127,195,220,1) 100%), #2186be);
   a {
     color: #fff;
     font-size: 1.3em;

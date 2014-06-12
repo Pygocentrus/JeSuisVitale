@@ -1,6 +1,22 @@
 <svg version="1.1"
 	 id="map" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:svg="http://www.w3.org/2000/svg" sodipodi:docname="D‚Äö√†√∂¬¨¬©partements_et_r‚Äö√†√∂¬¨¬©gions_de_France_vide.svg" inkscape:version="0.47 r22583" sodipodi:version="0.32" inkscape:output_extension="org.inkscape.output.svg.inkscape"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 713.891 726.69" enable-background="new 0 0 713.891 726.69" xml:space="preserve">
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 713.891 726.69" enable-background="new 0 0 713.891 726.69" xml:space="preserve" onload="init(evt)">
+<defs>
+    <filter id="dropShadow" x="0" y="0" width="200%" height="200%">
+        <feOffset result="offOut" in="SourceAlpha" dx="0" dy="10" />
+
+        <feGaussianBlur result="blurOut" in="offOut" stdDeviation="5" />
+        <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+        <feComponentTransfer>
+            <feFuncA type="linear" slope="0.2"/>
+        </feComponentTransfer>
+        <feMerge>
+            <feMergeNode/>
+            <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+    </filter>
+</defs>
+
 <g id="layer10" inkscape:label="D‚Äö√†√∂¬¨¬©partement" sodipodi:insensitive="true" inkscape:groupmode="layer">
 	<g>
 		<path id="FR-13" inkscape:label="Bouches-du-Rh‚Äö√†√∂¬¨‚Ä¢ne" fill="#EEEEEE" stroke="#EEEEEE" d="
@@ -113,7 +129,7 @@
 			L475.781,588.072z"/>
 	</g>
 	<g>
-		
+
 			<path id="FR-66" inkscape:label="Pyr‚Äö√†√∂¬¨¬©n‚Äö√†√∂¬¨¬©es-Orientales" fill="#EEEEEE" stroke="#EEEEEE" d="
 			M424.873,675.781l-6.109,3.346l0.437,3.637h-26.909l0.291,4.8l2.764,4.072l-11.491,5.673l-1.164-0.728l-9.454,0.728l-1.164,2.473
 			l-4.8,1.164l-3.2,2.764l-8.872,2.036l0.437,3.055l4.218,4.072l8.437,2.328l0.291,5.091l4.509,4.072l3.346-0.582l4.8-5.964
@@ -153,7 +169,7 @@
 			L422.836,400.581z"/>
 	</g>
 	<g>
-		
+
 			<path id="FR-65" inkscape:label="Haute-Pyr‚Äö√†√∂¬¨¬©n‚Äö√†√∂¬¨¬©es" fill="#EEEEEE" stroke="#EEEEEE" d="
 			M248.437,617.309l-2.764,1.455h0.436l4.8,8l-3.2,2.909l2.327,3.345l3.346,5.091l-2.764,3.637l-4.509,10.182l-7.709,6.546
 			l2.037,4.072l-1.746,1.164l-4.218-0.873l-1.164,9.31l-2.327,1.745l-0.437,5.818l0.727-0.437l4.8,2.909l5.673,4.218l0.582,3.346
@@ -164,7 +180,7 @@
 			l0.291-4.801h-4.218V617.309z"/>
 	</g>
 	<g>
-		
+
 			<path id="FR-64" inkscape:label="Pyr‚Äö√†√∂¬¨¬©n‚Äö√†√∂¬¨¬©es-Atlantiques" fill="#EEEEEE" stroke="#EEEEEE" d="
 			M238.254,617.891l-4.073,2.327l-8.291-0.291l-0.727-1.309l-5.382,1.745l-4.073,1.31l-3.055-2.328l-3.345,1.019l-1.018-1.309
 			h-4.073l-2.618,1.309l-6.691-0.291l-3.637,2.764l-6.4-0.437l-1.309,1.746l-1.6-0.582l2.037-2.036l-3.636-2.764L176,622.69

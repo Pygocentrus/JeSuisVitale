@@ -1,4 +1,5 @@
 goutteSVGDrawer = {
+
   drawGoutte: function() {
 
     var goutteWrapper = d3.select('#goutte-wrapper');
@@ -18,7 +19,19 @@ goutteSVGDrawer = {
           for (var i = 0; i < elements.length; i++) {
             elements[i].style.display = 'none';
           };
-          document.getElementById(idText).style.display = 'block';
+          var element = document.getElementById(idText);
+          clearTimeout(timer);
+          element.style.display = 'block';
+          var opacityValue = 0;
+          var timer;
+          for (var k = 1; k <= 100; k++) {
+            var timer = setTimeout((function (x) {
+              return function () {
+                opacityValue++;
+                element.style.opacity = opacityValue / 100;
+              };
+            })(k), k * 10);
+          }
         }
 
         var element = document.getElementById('ammonium-path');

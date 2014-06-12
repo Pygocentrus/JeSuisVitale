@@ -6,7 +6,7 @@ var handlebarsConfig = {
 		var template = Handlebars.compile(source);
 		var context = {
 			prefecture: $scope.city.attributes.prefecture,
-			aqualite: Math.round(($scope.city.attributes.aqualite / 10).toFixed(2))
+			aqualite: ($scope.city.attributes.aqualite / 10).toFixed(1)
 		}
 		var html = template(context);
 		element.innerHTML = html;

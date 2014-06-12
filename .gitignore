@@ -12,3 +12,7 @@ app/scripts/production.min.js
 .yo-rc.json
 .DS_Store
 dploy.yaml
+app/config.rb
+app/scripts/production.js
+app/scripts/production.min.js
+app/config.rb

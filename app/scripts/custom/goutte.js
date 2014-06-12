@@ -1,112 +1,137 @@
-var goutteWrapper = d3.select('#goutte-wrapper');
+goutteSVGDrawer = {
+  drawGoutte: function() {
 
-d3.xml("img/goutte/goutte_vide.svg", "image/svg+xml", function(xml) {
-	console.log(xml);
-    var importedNode = document.importNode(xml.documentElement, true);
-    goutteWrapper.node().appendChild(importedNode);
+    var goutteWrapper = d3.select('#goutte-wrapper');
 
-    var svgContainer = d3.select('#goutte');
-    // var path = document.querySelectorAll('path');
-    // console.log(path); 
+    d3.xml("img/goutte/goutte_fond.svg", "image/svg+xml", function(xml) {
+      var importedNode = document.importNode(xml.documentElement, true);
+      goutteWrapper.node().appendChild(importedNode);
 
-    // AMMONIUM
+      // AMMONIUM
+      d3.xml("img/goutte/ammonium.svg", "image/svg+xml", function(xml) {
+        var importedNode = document.importNode(xml.documentElement, true);
+        goutteWrapper.node().appendChild(importedNode);
+        var element = document.getElementById('ammonium-path');
+        var box = element.getBBox();
+        var maxScaleVal = 1.32;
+        var scaleVal = 1;
+        var norme = 0.04
 
-    // ammoniumGroup
-   	var ammoniumGroup = svgContainer.append("g");
+        // find scaleValue
+        if ($scope.city.attributes.ammonium > norme) {
+          scaleVal = ((($scope.city.attributes.ammonium / norme) - 1) * (maxScaleVal - 1)) + 1;
+          scaleVal = scaleVal > maxScaleVal ? maxScaleVal : scaleVal; 
+        } else {
+          scaleVal = $scope.city.attributes.ammonium / norme;
+        }
 
-	var lineData = [ { "x": 152,   "y": 206},  { "x": 20,  "y": 20},
-	                 { "x": 40,  "y": 10}, { "x": 60,  "y": 40},
-	                 { "x": 80,  "y": 5},  { "x": 100, "y": 60}];
+        // reajust data on la goutte
+        var cx = box.x + box.width;
+        var cy = box.y + box.height;
+        element.setAttribute('transform', 'translate(' + cx + ' ' + cy + ') scale(' + scaleVal + ') translate(' + (-cx) + ' ' + (-cy) + ')');
+      })
 
-	//This is the accessor function we talked about above
+      // CHLORE
+      d3.xml("img/goutte/chlore.svg", "image/svg+xml", function(xml) {
+        var importedNode = document.importNode(xml.documentElement, true);
+        goutteWrapper.node().appendChild(importedNode);
+        var element = document.getElementById('chlore-path');
+        var box = element.getBBox();
+        var maxScaleVal = 1.3;
+        var scaleVal =1;
+        var norme = 0.10;
 
-	var lineFunction = d3.svg.line()
-	                         .x(function(d) { return d.x; })
-	                         .y(function(d) { return d.y; })
-	                         .interpolate("linear");
+        // find scaleValue
+        if ($scope.city.attributes.chlore > norme) {
+          scaleVal = ((($scope.city.attributes.chlore / norme) - 1) * (maxScaleVal - 1)) + 1;
+          scaleVal = scaleVal > maxScaleVal ? maxScaleVal : scaleVal; 
+        } else {
+          scaleVal = $scope.city.attributes.chlore / norme;
+        }        
 
-	//The SVG Container
-	// var svgContainer = d3.select("body").append("svg")
-	//                                     .attr("width", 200)
-	//                                     .attr("height", 200);
+        // reajust data on la goutte
+        var cx = box.x;
+        var cy = box.y + box.height;
+        element.setAttribute('transform', 'translate(' + cx + ' ' + cy + ') scale(' + scaleVal + ') translate(' + (-cx) + ' ' + (-cy) + ')');
+      })
 
-	//The line SVG Path we draw
-	var lineGraph = ammoniumGroup.append("path")
-	                            .attr("d", lineFunction(lineData))
-	                            .attr("stroke", "blue")
-	                            .attr("stroke-width", 2)
-	                            .attr("fill", "none");
+      // CONDUCTIVITE
+      d3.xml("img/goutte/conductivite.svg", "image/svg+xml", function(xml) {
+        var importedNode = document.importNode(xml.documentElement, true);
+        goutteWrapper.node().appendChild(importedNode);
+        var element = document.getElementById('conductivite-path');
+        var box = element.getBBox();
+        var maxScaleVal = 1.35;
+        var scaleVal = 1;
+        var norme = 600;
 
-// });
+        // find scaleValue
+        if ($scope.city.attributes.conductivite > norme) {
+          scaleVal = ((($scope.city.attributes.conductivite / norme) - 1) * (maxScaleVal - 1)) + 1;
+          scaleVal = scaleVal > maxScaleVal ? maxScaleVal : scaleVal; 
+        } else {
+          scaleVal = $scope.city.attributes.conductivite / norme;
+        }
 
-// d3.xml("img/goutte/goutte_vide.svg", "image/svg+xml", function(xml) {
-//     var importedNode = document.importNode(xml.documentElement, true);
-//     goutteWrapper.node().appendChild(importedNode);
+        // reajust data on la goutte
+        var cx = box.x;
+        var cy = 222.4;
+        element.setAttribute('transform', 'translate(' + cx + ' ' + cy + ') scale(' + scaleVal + ') translate(' + (-cx) + ' ' + (-cy) + ')');
+      })
 
-//     var svgContainer = d3.select('#goutte');
+        // NITRATES
+      d3.xml("img/goutte/nitrates.svg", "image/svg+xml", function(xml) {
+        var importedNode = document.importNode(xml.documentElement, true);
+        goutteWrapper.node().appendChild(importedNode);
+        var element = document.getElementById('nitrates-path');
+        var box = element.getBBox();
+        var maxScaleVal = 1.50;
+        var scaleVal = 1;
+        var norme = 50;
 
-    d3.xml("img/goutte/chlore.svg", "image/svg+xml", function(xml) {
-    	// svgContainer.append(xml);
-    	var importedNode = document.importNode(xml.documentElement, true);
-    	goutteWrapper.node().appendChild(importedNode);
-      
+        // find scaleValue
+        if ($scope.city.attributes.nitrates > norme) {
+          scaleVal = ((($scope.city.attributes.nitrates / norme) - 1) * (maxScaleVal - 1)) + 1;
+          scaleVal = scaleVal > maxScaleVal ? maxScaleVal : scaleVal; 
+        } else {
+          scaleVal = $scope.city.attributes.nitrates / norme;
+        }
 
-      var element = document.getElementById('chlore-path');
-      var box = element.getBBox();
-      var scaleVal = 3;
-      var cx = box.x;
-      var cy = box.y + box.height;
+        // reajust data on la goutte
+        var cx = 203.7;
+        var cy = box.y;
+        element.setAttribute('transform', 'translate(' + cx + ' ' + cy + ') scale(' + scaleVal + ') translate(' + (-cx) + ' ' + (-cy) + ')');
+      })
 
-      element.setAttribute('transform', 'translate(' + cx + ' ' + cy + ') scale(' + scaleVal + ') translate(' + (-cx) + ' ' + (-cy) + ')');
+      // PH
+      d3.xml("img/goutte/ph.svg", "image/svg+xml", function(xml) {
+        var importedNode = document.importNode(xml.documentElement, true);
+        goutteWrapper.node().appendChild(importedNode);
+        var element = document.getElementById('ph-path');
+        var box = element.getBBox();
+        var maxScaleVal = 1.4;
+        var scaleVal =1;
+        var norme = 7.75;
 
+        // find scaleValue
+        if ($scope.city.attributes.ph > norme) {
+          scaleVal = ((($scope.city.attributes.ph / norme) - 1) * (maxScaleVal - 1)) + 1;
+          scaleVal = scaleVal > maxScaleVal ? maxScaleVal : scaleVal; 
+        } else {
+          scaleVal = $scope.city.attributes.ph / norme;
+        }
 
-	})
+        // reajust data on la goutte
+        var cx = 204;
+        var cy = 219.5;
+        element.setAttribute('transform', 'translate(' + cx + ' ' + cy + ') scale(' + scaleVal + ') translate(' + (-cx) + ' ' + (-cy) + ')');
+       })
 
-
-});
-
-
-// var svgContainer = goutteWrapper.append("svg")
-//                                     .attr("width", 200)
-//                                     .attr("height", 200);
-
-// var line = d3.svg.line()
-//     .interpolate("cardinal")
-//     .x(function(d) { return x(d.x); })
-//     .y(function(d) { return y(d.y); });
-//     var data = d3.range(10).map(function(i) {
-//   return {x: i / 9, y: (Math.sin(i * 2) + 1) / 2};
-// });
-//    //  svgContainer.selectAll("path")
-//    //  .data([0, 0.2, 0.4, 0.6, 0.8, 1])
-//   	// .enter().append("svg:path")
-//    //  .attr("d", function(d) { return line.tension(d)(data); })
-//    //  .style("stroke", d3.interpolateRgb("brown", "steelblue"));
-    
-//    var data = [0, 4.2, 2.4, 0.6, 0.8, 1];
-
-// 	var path = svgContainer.selectAll("path")
-// 	    .data([0, 4.2, 2.4, 0.6, 0.8, 1])
-// 	  	.enter().append("path")
-// 	    .attr("d", 'M202.5,219.3l79-25.4c-16.9-41.5-79-85.9-79-85.9V219.3z')
-// 	    .style("fill", "black")
-
-// 	// var pathAttributes = path.fill("black")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      // ligne jaunes des normes
+      d3.xml("img/goutte/normes.svg", "image/svg+xml", function(xml) {
+        var importedNode = document.importNode(xml.documentElement, true);
+        goutteWrapper.node().appendChild(importedNode);
+      });
+    });
+  }
+}

@@ -20,9 +20,11 @@ $font-color: #308ebb;
 .logo a {
 	font-size: 0;
 	display: inline-block;
-	width: 545px;
-	height: 160px;
-	@include background(image-url('logo.svg') no-repeat);
+	width: 100%;
+	height: 90px;
+	background-size: 100% auto;
+	@include background(image-url('logo.svg') center center no-repeat);
+
 }
 
 body {

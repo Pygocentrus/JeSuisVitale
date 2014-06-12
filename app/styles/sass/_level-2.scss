@@ -109,6 +109,10 @@
 	}
 }
 
+#goutte-wrapper {
+	min-width: 400px;
+}
+
 #ammonium, #chlore, #ph, #conductivite {
 	position: absolute;
 }
@@ -139,14 +143,40 @@
 
 #chlore-svg {
 	position: absolute;
-	transform-origin: 100% 100%;
-	top: 10%;
-	left: 10%;
+	/*transform-origin: 100% 100%;*/
+	/*top: 10%;*/
+	left: 0%;
 }
 
+#ammonium-svg {
+	position: absolute;
+	/*top: 9%;*/
+	left: 0%;
+}
 
+#conductivite-svg {
+	position: absolute;
+	/*top: 9%;*/
+	left: 0%;
+}
 
+#nitrates-svg {
+	position: absolute;
+	/*top: 9%;*/
+	left: 0%;
+}
 
+#ph-svg {
+	position: absolute;
+	/*top: 9%;*/
+	left: 0%;
+}
+
+#normes-svg {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
 
 
 

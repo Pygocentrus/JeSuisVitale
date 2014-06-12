@@ -6,7 +6,7 @@
 	width: 100%;
 	z-index: 150;
 	@include box-sizing(border-box);
-	@include background(linear-gradient(top, rgba(145,217,241,1) 0%,rgba(96,180,217,1) 50%,rgba(145,217,241,1) 94%,rgba(127,195,220,1) 100%), #2186be);
+	@include background(linear-gradient(top, rgba(145,217,241,1) 0%,rgba(96,180,217,1) 50%,rgba(127,195,220,1) 100%), #2186be);
 	h2 {
 		font: 2em 'DINCond', Verdana, sans-serif;
 		font-weight: 600;

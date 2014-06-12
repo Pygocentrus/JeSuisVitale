@@ -1,4 +1,4 @@
-dataviz
+Dataviz
 =======
 
 Data visualization student project about the french water system. This project was made by a student team from HETIC webschool, France. <br />
@@ -37,7 +37,7 @@ Website's preprod available <a href="http://pierreguilhou.fr/sites/jesuisvitale/
     <td><a href="https://github.com/pierreburgy"><img src="http://ciembor.github.io/4bit/images/github.png" alt="LinkedIn"/></a></td>
   </tr>
   <tr>
-    <td><img src="#" alt="front-dev"/></td>
+    <td><img src="http://www.gravatar.com/avatar/234fe0bab4cfd6d929a48dfda4a9557c.png" alt="front-dev"/></td>
     <td><h4>Chassagne Kévin</h4><h5>Développeur front</h5></td>
     <td><a href="http://fr.linkedin.com/pub/kévin-chassagne/8b/788/28b/"><img src="http://www.tlogistics.eu/wp-content/uploads/2013/01/Linkedin-Logo1.png" alt="LinkedIn"/></a></td>
     <td><a href="https://github.com/Kevin445"><img src="http://ciembor.github.io/4bit/images/github.png" alt="LinkedIn"/></a></td>

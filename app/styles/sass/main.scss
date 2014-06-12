@@ -20,9 +20,9 @@ $font-color: #308ebb;
 .logo a {
 	font-size: 0;
 	display: inline-block;
-	width: 150px;
-	height: 183px;
-	@include background(image-url('logo.png') no-repeat);
+	width: 545px;
+	height: 160px;
+	@include background(image-url('logo.svg') no-repeat);
 }
 
 body {
@@ -42,6 +42,7 @@ nav.menu {
 	text-decoration: none;
 	z-index: 9999;
 	h2 {
+		font-size: 1.5em;
 		position: relative;
 		cursor: pointer;
 		&::selection {
@@ -77,9 +78,10 @@ nav.menu {
 		@include transform(translate3d(150px, 0px, 0px) scale(0.2));
 		a {
 		color: #fff;
-		line-height: 2.5em;
+		font-size: 2em;
 		text-decoration: none;
 		text-transform: none;
+		line-height: 1.5em;
 		}
 	}
 	li.visible {
@@ -88,13 +90,13 @@ nav.menu {
 	}
 }
 
-#map-wrapper {
+#map-wrapper, #credits, div.more-visible {
+	opacity: 0;
 	visibility: hidden;
 	@include transition(all 400ms ease-in-out);
-	@include transform(translate3d(1500px, 0px, 0px));
 	&.visible {
 		visibility: initial;
-		@include transform(translate3d(0px, 0px, 0px));
+		opacity: 1;
 	}
 }
 
@@ -119,6 +121,8 @@ a.go-down {
 
 @import "home";
 @import "map";
+@import "credits";
 @import "level-1";
 @import "level-2";
 @import "level-3";
+@import "error";

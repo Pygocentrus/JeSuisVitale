@@ -4,7 +4,32 @@
 	padding: 3% 0 0 0;
 	background: rgba(0,135,213,1);
 	@include box-sizing(border-box);
-
+	.light-container {
+		opacity: 0.3;
+		position:absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 170%;
+		overflow-x: hidden;
+		.light {
+			animation: cloud 200s ease infinite;
+			height:100%;
+			width:200%;
+			position:absolute;
+			top:0; left:0;
+			&:nth-child(1) {
+				@include background(image-url('light_1.png') repeat-x);
+				-webkit-animation: light_1 10s ease infinite;
+						animation: light_1 10s ease infinite;
+			}
+			&:nth-child(2) {
+				@include background(image-url('light_1.png') repeat-x);
+				-webkit-animation: light_2 20s ease infinite;
+						animation: light_2 20s ease infinite;
+			}
+		}
+	}
 	.container {
 		padding-top: 40px;
 	}
@@ -16,23 +41,6 @@
 		@include background(image-url('arrow.png') 64% 81% no-repeat);
 		background-size: 15px auto;
 	}
-/*	// p {
-	// 	font-size: 1.2em;
-	// 	color: #fff;
-	// 	font-weight: 400;
-	// 	text-transform: uppercase;
-	// 	vertical-align: top;
-	// 	margin: 5px 5px 0 0; 
-	// 	i {
-	// 		display: inline-block;
-	// 		width: 15px;
-	// 		height: 18px;
-	// 		margin: 1px 5px 50px 5px; 
-	// 		@include background(image-url('glass.png') no-repeat);
-	// 		background-size: 15px auto;
-	// 		&.inactive { opacity: 0.35; }
-	// 	}
-	// }*/
 	.left {
 		float: left;
 		position: relative;
@@ -193,6 +201,54 @@
 	top: 0;
 	left: 0;
 	pointer-events: none;
+}
+
+@keyframes light_1 {
+	0% {
+		@include transform(translateX(0%) translateZ(0));
+	}
+	50% {
+		@include transform(translateX(-1%) translateZ(0));
+	}
+	100% {
+		@include transform(translateX(0%) translateZ(0));
+	}
+}
+
+@-webkit-keyframes light_1 {
+	0% {
+		@include transform(translateX(0%) translateZ(0));
+	}
+	50% {
+		@include transform(translateX(-1%) translateZ(0));
+	}
+	100% {
+		@include transform(translateX(0%) translateZ(0));
+	}
+}
+
+@keyframes light_2 {
+	0% {
+		@include transform(translateX(0%) translateZ(0));
+	}
+	50% {
+		@include transform(translateX(1%) translateZ(0));
+	}
+	100% {
+		@include transform(translateX(0%) translateZ(0));
+	}
+}
+
+@-webkit-keyframes light_2 {
+	0% {
+		@include transform(translateX(0%) translateZ(0));
+	}
+	50% {
+		@include transform(translateX(1%) translateZ(0));
+	}
+	100% {
+		@include transform(translateX(0%) translateZ(0));
+	}
 }
 
 #traits_norme { pointer-events: none;}

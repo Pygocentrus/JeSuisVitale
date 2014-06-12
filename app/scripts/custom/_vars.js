@@ -8,7 +8,8 @@ var h2           = document.querySelector('.menu h2'),
     credits      = document.querySelector('#credits'),
     section      = document.querySelectorAll('.section-height'),
     mapWrapper   = document.querySelector('#map-wrapper'),
-    pGeolocation = document.querySelector('.geolocation');
+    pGeolocation = document.querySelector('.geolocation'),
+    anchors      = document.querySelectorAll('body a');
 
 
 

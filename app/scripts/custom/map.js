@@ -1919,6 +1919,7 @@ function HideTooltip() {
                     aqualite : d.aqualite
                 });
                 handlebarsConfig.insertDatas();
+                goutteSVGDrawer.drawGoutte();
                 pGeolocation.innerHTML = d.prefecture;
                 lvl1.className = 'visible';
                 mapWrapper.className = 'hiden';

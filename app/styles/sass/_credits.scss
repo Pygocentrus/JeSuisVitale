@@ -1,8 +1,51 @@
 #credits {
+	padding: 5vw;
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	z-index: 150;
-	@include background(linear-gradient(top, rgba(150,214,233,1) 0%,rgba(125,185,232,1) 100%));
+	@include box-sizing(border-box);
+	@include background(linear-gradient(top, rgba(145,217,241,1) 0%,rgba(96,180,217,1) 50%,rgba(145,217,241,1) 94%,rgba(127,195,220,1) 100%), #2186be);
+	h2 {
+		font: 2em 'DINCond', Verdana, sans-serif;
+		font-weight: 600;
+		text-transform: uppercase;
+		line-height: 2em;
+	}
+	.left {
+		float: left;
+		width: 60%;
+	}
+	.right {
+		float: right;
+		width: 30%;
+	}
+	p {
+		font: 1.3em 'DINCond', Verdana, sans-serif;
+		font-weight: 400;
+		line-height: 1.3em;
+		&:nth-of-type(2) {
+			margin: 1em 0;
+		}
+	}
+	ul {
+		font: 1.3em 'DINCond', Verdana, sans-serif;
+		font-weight: 400;
+		line-height: 1.3em;
+		margin: 0 0 1.5em 0;
+		li {
+			line-height: 1.5em;
+		}
+	}
+	li a {
+		color: #fff;
+		text-decoration: none;
+		border-bottom: 2px solid #fff;
+		@include transition(all 0.2s ease-out);
+		&:hover {
+			color: #1678b2;
+			border-color: #1678b2;
+		}
+	}
 }

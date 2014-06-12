@@ -58,7 +58,7 @@
 		background-repeat: no-repeat;
 		background-size: 50px auto;
 		@include box-sizing(content-box);
-		@include transition(all 0.3s ease-in-out);
+		@include transition(all 0.3s ease-in);
 	}
 	svg {
 		path {

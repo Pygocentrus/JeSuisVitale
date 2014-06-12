@@ -29,7 +29,7 @@ var mapWrapper = d3.select('#map-wrapper');
 		// Adjust lat
 		var linearScaleLat = d3.scale.linear()
 		                           .domain([d3.min(listLat),d3.max(listLat)])
-		                           .range([document.getElementById('map').getBBox().width + 40,0]);
+		                           .range([document.getElementById('map').getBBox().width + 40,30]);
 		for (dpt in data[0]) {
 	    	data[0][dpt].newLat = linearScaleLat(data[0][dpt].lat);
 	    };
@@ -37,7 +37,7 @@ var mapWrapper = d3.select('#map-wrapper');
 		// Adjust lng
 		var linearScaleLng = d3.scale.linear()
 		                           .domain([d3.min(listLng),d3.max(listLng)])
-		                           .range([0,document.getElementById('map').getBBox().height + 80]);
+		                           .range([30,document.getElementById('map').getBBox().height + 60]);
 		for (dpt in data[0]) {
 	    	data[0][dpt].newLng = linearScaleLng(data[0][dpt].lng);
 	    };
@@ -61,6 +61,7 @@ var mapWrapper = d3.select('#map-wrapper');
 	                          .attr("cy", function (d) { return d.newLat })
 	                          .attr("r", "13")
 	                          .on('click' , function(d){ console.log(d); })
+	                          .style('cursor' , 'pointer')
 	                          .style("fill", function(d) {
 	                          	var note = Math.round((d.aqualite * 5) / 100);  
 	                          	switch (note) {
@@ -97,6 +98,7 @@ var mapWrapper = d3.select('#map-wrapper');
 		                 	var note = Math.round((d.aqualite * 5) / 100); 
 		                 	return note; 
 		                 })
+		                 .style('cursor' , 'pointer')
 		                 .attr("font-size", "15px")
 		                 .attr("fill", "#FFFFFF");
 });

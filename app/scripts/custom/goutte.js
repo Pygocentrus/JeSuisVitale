@@ -14,7 +14,6 @@ goutteSVGDrawer = {
         goutteWrapper.node().appendChild(importedNode);
 
         function changeDescriptionText (idText) {
-          console.log(idText);
           var elements = document.querySelectorAll('.explication');
           for (var i = 0; i < elements.length; i++) {
             elements[i].style.display = 'none';

@@ -1,39 +1,9 @@
-// Manages window height
-(function() {
-    var section = document.querySelectorAll('.section-height');
+onStartStyle();
 
-    function customHeight(section) {
-        var windowHeight = window.innerHeight + 'px';
-        for (var i = 0, size = section.length; i < size; i++) {
-            section[i].style.height =  windowHeight;
-        };
-    }
-
-    window.onresize = function() {
-        customHeight(section);
-    };
-
-    customHeight(section);
-}).call(this);
-
-document.querySelector('.geolocation').style.backgroundImage = "";
 // Grab the user's current location and sets the input with his city
 Locator.init(function cityReceived(location, err){
     if(typeof err === 'undefined'){
-        var pGeolocation = document.querySelector('.geolocation');
-
-        pGeolocation.style.backgroundImage = "url('img/location.png')";
-        pGeolocation.style.backgroundSize = "30px 30px";
-        pGeolocation.style.backgroundPosition = "";
-        pGeolocation.style.lineHeight = "60px";
-        pGeolocation.style.height = "60px";
-        pGeolocation.style.width = "";
-        pGeolocation.style.textTransform = "uppercase";
-        pGeolocation.style.borderRadius = "0px";
-        pGeolocation.style.padding = "0px";
-
-
-        document.querySelector('.geolocation').innerHTML = location.address.town;
+        onUpdateStyleGeolocation(location);
         Ajax.getJSON('data/fiefs.json', function jsonLoaded(data, dataErr) {
             if(typeof dataErr === 'undefined') {
                 var currentCity;
@@ -72,3 +42,32 @@ Locator.init(function cityReceived(location, err){
         console.log(err);
     }
 });
+
+
+/**
+ * Start's style, before grabbing location
+ * @return {NULL}  None
+ */
+function onStartStyle() {
+    pGeolocation.style.backgroundImage = "";
+    goDown.style.display = "none";
+}
+
+
+/**
+ * Update style, after grabbing location
+ * @return {NULL}  None
+ */
+function onUpdateStyleGeolocation(location) {
+    pGeolocation.style.backgroundImage = "url('img/location.png')";
+    pGeolocation.style.backgroundSize = "30px 30px";
+    pGeolocation.style.backgroundPosition = "";
+    pGeolocation.style.lineHeight = "60px";
+    pGeolocation.style.height = "60px";
+    pGeolocation.style.width = "";
+    pGeolocation.style.textTransform = "uppercase";
+    pGeolocation.style.borderRadius = "0px";
+    pGeolocation.style.padding = "0px";
+    pGeolocation.innerHTML = location.address.town;
+    goDown.style.display = "block";
+}

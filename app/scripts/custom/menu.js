@@ -1,11 +1,4 @@
-// MENU
-(function() {
-var h2         = document.querySelector('.menu h2'),
-    list       = document.querySelectorAll('.menu ul li'),
-    href       = document.querySelectorAll('.menu a'),
-    credits    = document.querySelector('#credits'),
-    mapWrapper = document.querySelector('#map-wrapper');
-
+// Menu Handling
 function menu(e) {
     e.stopPropagation();
     if (h2.className == 'cross') {
@@ -53,7 +46,7 @@ for (var i = 0, size = href.length ; i < size; i++) {
                 }, timer);
             });
             mapWrapper.className = 'visible';
-            mapWrapper.scrollIntoView(true);
+            document.getElementById('map-wrapper').scrollIntoView(true);
         }
         if (this.getAttribute('href') == "#credits") {
             Array.prototype.forEach.call(list, function(li, i) {
@@ -69,5 +62,3 @@ for (var i = 0, size = href.length ; i < size; i++) {
         }
     }, false);
 };
-
-}).call(this);

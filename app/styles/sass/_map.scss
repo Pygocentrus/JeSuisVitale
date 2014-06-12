@@ -5,4 +5,24 @@
 	width: 100%;
 	z-index: 150;
 	@include background(linear-gradient(top, rgba(150,214,233,1) 0%,rgba(125,185,232,1) 100%));
+    svg text, #tooltip {
+        pointer-events: none;
+    }
+
+    svg > path {
+        pointer-events: all;
+    }
+
+    svg > path:hover {
+        cursor: pointer;
+        fill: darkblue !important;
+    }
+
+    #tooltip {
+        position: absolute;
+        top:0; left:0;
+    }
+    #tool_city {
+        text-shadow: white 2px 0px 20px,white 2px 0px 20px;
+    }
 }

@@ -11,3 +11,4 @@ app/bower_components
 app/config.rb
 app/scripts/production.js
 app/scripts/production.min.js
+app/config.rb

@@ -59,14 +59,14 @@ function onStartStyle() {
  * @return {NULL}  None
  */
 function onUpdateStyleGeolocation(location) {
-    pGeolocation.style.backgroundImage = "url('img/location.png')";
+    pGeolocation.style.backgroundImage = "url('img/location.svg')";
     pGeolocation.style.backgroundSize = "30px 30px";
     pGeolocation.style.backgroundPosition = "";
     pGeolocation.style.lineHeight = "60px";
     pGeolocation.style.height = "60px";
     pGeolocation.style.width = "";
     pGeolocation.style.textTransform = "uppercase";
-    pGeolocation.style.borderRadius = "0px";
+    pGeolocation.style.borderRadius = "30px";
     pGeolocation.style.padding = "0px";
     pGeolocation.innerHTML = location.address.town;
     goDown.style.display = "block";

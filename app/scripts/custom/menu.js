@@ -25,4 +25,34 @@ function menu(e) {
 
 if (typeof h2 !== 'undefined') h2.addEventListener('click', menu);
 
+// MAPS & CRÉDITS
+var href       = document.querySelectorAll('.menu a'),
+    credits    = document.querySelector('#credits'),
+    mapWrapper = document.querySelector('#map-wrapper');
+
+for (var i = 0, size = href.length ; i < size; i++) {
+    href[i].addEventListener('click', function() {
+        if (this.getAttribute('href') == "#mapWrapper") {
+            if (mapWrapper.className == 'visible') {
+                mapWrapper.className = '';
+                this.innerHTML = 'Carte';
+            } else {
+                mapWrapper.className = 'visible';
+                credits.className = '';
+                this.innerHTML = 'Home';
+            }
+        };
+        if (this.getAttribute('href') == "#credits") {
+            if (credits.className == 'visible') {
+                credits.className = '';
+                this.innerHTML = 'Crédits';
+            } else {
+                credits.className = 'visible';
+                mapWrapper.className = '';
+                this.innerHTML = 'Home';
+            }
+        };
+    }, false);
+};
+
 }).call(this);

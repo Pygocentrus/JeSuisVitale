@@ -20,9 +20,9 @@ $font-color: #308ebb;
 .logo a {
 	font-size: 0;
 	display: inline-block;
-	width: 150px;
-	height: 183px;
-	@include background(image-url('logo.png') no-repeat);
+	width: 545px;
+	height: 160px;
+	@include background(image-url('logo.svg') no-repeat);
 }
 
 body {
@@ -31,6 +31,7 @@ body {
 	@include background(linear-gradient(top, rgba(136,197,225,0) 0%,rgba(141,200,229,1) 100%));
 }
 
+/* NAV */
 nav.menu {
 	position: fixed;
 	top: 3%;
@@ -39,8 +40,9 @@ nav.menu {
 	text-align: center;
 	text-transform: uppercase;
 	text-decoration: none;
-	z-index: 50;
+	z-index: 9999;
 	h2 {
+		font-size: 1.5em;
 		position: relative;
 		cursor: pointer;
 		&::selection {
@@ -76,9 +78,10 @@ nav.menu {
 		@include transform(translate3d(150px, 0px, 0px) scale(0.2));
 		a {
 		color: #fff;
-		line-height: 2.5em;
+		font-size: 2em;
 		text-decoration: none;
 		text-transform: none;
+		line-height: 1.5em;
 		}
 	}
 	li.visible {
@@ -86,6 +89,18 @@ nav.menu {
 		@include transform(translate3d(0px, 0px, 0px) scale(1));
 	}
 }
+
+#map-wrapper, #credits, div.more-visible {
+	opacity: 0;
+	visibility: hidden;
+	@include transition(all 400ms ease-in-out);
+	&.visible {
+		visibility: initial;
+		opacity: 1;
+	}
+}
+
+/* END NAV */
 
 a.go-down {
 	position: relative;
@@ -106,6 +121,8 @@ a.go-down {
 
 @import "home";
 @import "map";
+@import "credits";
 @import "level-1";
 @import "level-2";
 @import "level-3";
+@import "error";

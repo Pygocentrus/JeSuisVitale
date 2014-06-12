@@ -1,73 +1,74 @@
 #level-1 {
-	position: relative;
-	text-align: center;
-	padding: 5% 0 0 0;
-	@include box-sizing(border-box);
-	@include background(linear-gradient(top, rgba(125,185,232,1) 0%, rgba(0,135,213,0.8) 45%, rgba(0,135,213,0.8) 55%, rgba(0,135,213,1) 100%));
-	h2 {
-		font-size: 3.5em;
-		color: rgba(255,255,255,0.2);
-		text-transform: uppercase;
-		line-height: 0.5em;
-	}
-	.blur-percentage p {
-	  font: 9em 'Glober', 'DINCond', Verdana, sans-serif;
-	  font-weight: 600;
-	  line-height: 1em;
-	  -webkit-animation: unblur 6s infinite ease-in-out;
-	  		  animation: unblur 6s infinite ease-in-out;
-	}
-	/* BLUR */
-	.wrapper {
-	  position: relative;
-	  display: inline-block;
-	  z-index: 15;
-	}
-	.blur-percentage {
-	  display: block;
-	  height: 100px;
-	  width: 170px;
-	}
-	#blurred-percentage{
-		opacity: 1;
-		position: absolute;
-		width: 180px;
-		height: auto;
-		top:-5px;
+    position: relative;
+    text-align: center;
+    padding: 5% 0 0 0;
+    @include box-sizing(border-box);
+    @include background(linear-gradient(top, rgba(125,185,232,1) 0%, rgba(0,135,213,0.8) 45%, rgba(0,135,213,0.8) 55%, rgba(0,135,213,1) 100%));
+    h2 {
+        font-size: 3.5em;
+        color: rgba(255,255,255,0.2);
+        text-transform: uppercase;
+        line-height: 0.5em;
+    }
+    .blur-percentage p {
+      font: 9em 'Glober', 'DINCond', Verdana, sans-serif;
+      font-weight: 600;
+      line-height: 1em;
+      -webkit-animation: unblur 6s infinite ease-in-out;
+              animation: unblur 6s infinite ease-in-out;
+    }
+    /* BLUR */
+    .wrapper {
+      position: relative;
+      display: inline-block;
+      z-index: 15;
+    }
+    .blur-percentage {
+      display: block;
+      height: 100px;
+      width: 170px;
+    }
+    #blurred-percentage{
+        opacity: 1;
+        position: absolute;
+        width: 180px;
+        height: auto;
+        top:-5px;
     left: -3px;
-		padding: 4px 6px 0;
-		@include filter(blur(5px));
-		@include box-sizing(border-box);
-		-webkit-animation: blur 6s infinite;
-				animation: blur 6s infinite;
-	}
-	.content-blurred {
-		opacity: 1;
-	  	@include filter(blur(2px));
-	}
-	.content-blurred .blur-percentage {
-		position: relative;
-		top: -88px;
-		left: 0;
-	}
-	svg{
-		position: absolute;
-		left: 0;
-		z-index: 9999;
-	}
-	p {
-		font-size: 1.5em;
-		font-weight: bold;
-		position: relative;
-		margin: 7% 0 0 0;
-		line-height: 2em;
-		z-index: 20;
-		span {
-			display: block;
-			font-weight: normal;
-			font-style: italic;
-		}
-	}
+        padding: 4px 6px 0;
+        @include filter(blur(5px));
+        @include box-sizing(border-box);
+        -webkit-animation: blur 6s infinite;
+                animation: blur 6s infinite;
+    }
+    .content-blurred {
+        opacity: 1;
+        @include filter(blur(2px));
+    }
+    .content-blurred .blur-percentage {
+        position: relative;
+        top: -88px;
+        left: 0;
+    }
+    svg{
+        position: absolute;
+    top: 130px;
+        left: 0;
+        z-index: 9999;
+    }
+    p {
+        font-size: 1.5em;
+        font-weight: bold;
+        position: relative;
+        margin: 7% 0 0 0;
+        line-height: 2em;
+        z-index: 20;
+        span {
+            display: block;
+            font-weight: normal;
+            font-style: italic;
+        }
+    }
 }
 
 

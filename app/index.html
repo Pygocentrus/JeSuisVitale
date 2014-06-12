@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Je suis vitale</title>
-        <meta name="description" content="Découvrez l'eau de votre robinet, sa composition, sa qualité globale et comparez-la avec celle d'autres départements">
+        <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles/stylesheets/main.css">
     </head>
@@ -15,9 +15,8 @@
         <nav class="menu">
             <h2>Menu</h2>
             <ul>
-                <li><a href="#home">Carte</a></li>
-                <li><a href="#level-1">Composition</a></li>
-                <li><a href="#level-2">Crédits</a></li>
+                <li><a href="#mapWrapper">Carte</a></li>
+                <li><a href="#credits">Crédits</a></li>
             </ul>
         </nav>
 
@@ -32,14 +31,15 @@
             <a class="go-down" href="#level-1">Go</a>
         </section>
 
-        <!-- <section id="map-wrapper" class="section-height"></section> -->
+        <section id="map-wrapper" class="section-height"></section>
+        <section id="credits" class="section-height"></section>
 
         <section id="level-1" class="section-height">
-            <h2>Arcachon</h2>
+            <h2>{{prefecture}}</h2>
             <div class="wrapper">
               <div class="blur-percentage">
-                <p id="percentage" style="mask: url(#fade_right_svg_mask); -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), color-stop(.7, rgba(0,0,0,0)), to(rgba(0,0,0,0)));">7.5</p>
-                <p id="blurred-percentage" style="mask: url(#fade_right_svg_mask); -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), color-stop(.5, rgba(0,0,0,.5)), to(rgba(0,0,0,1)));">7.5</p>
+                <p id="percentage" style="mask: url(#fade_right_svg_mask); -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), color-stop(.7, rgba(0,0,0,0)), to(rgba(0,0,0,0)));">{{aqualite}}</p>
+                <p id="blurred-percentage" style="mask: url(#fade_right_svg_mask); -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), color-stop(.5, rgba(0,0,0,.5)), to(rgba(0,0,0,1)));">{{aqualite}}</p>
               </div>
             </div>
             <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 50" preserveAspectRatio="none">
@@ -89,7 +89,7 @@
         </section>
 
         <section id="level-2" class="section-height">
-            <h2>Arcachon</h2>
+            <h2>{{prefecture}}</h2>
             <div class="container">
                 </h3>
                 <div class="left">

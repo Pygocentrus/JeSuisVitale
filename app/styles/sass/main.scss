@@ -20,9 +20,11 @@ $font-color: #308ebb;
 .logo a {
 	font-size: 0;
 	display: inline-block;
-	width: 545px;
-	height: 160px;
-	@include background(image-url('logo.svg') no-repeat);
+	width: 100%;
+	height: 90px;
+	background-size: 100% auto;
+	@include background(image-url('logo.svg') center center no-repeat);
+
 }
 
 body {
@@ -72,6 +74,9 @@ nav.menu {
 			@include transition(transform 0.3s ease);
 		}
 	}
+	ul {
+		margin: 1em 0 0 0;
+	}
 	li {
 		opacity: 0;
 		@include transition(all 400ms ease-in-out, opacity 1000ms ease);
@@ -81,7 +86,12 @@ nav.menu {
 		font-size: 2em;
 		text-decoration: none;
 		text-transform: none;
-		line-height: 1.5em;
+		line-height: 2em;
+		text-transform: uppercase;
+		@include transition(all 0.2s ease-out);
+		&:hover {
+			color: #1678b2;
+		}
 		}
 	}
 	li.visible {

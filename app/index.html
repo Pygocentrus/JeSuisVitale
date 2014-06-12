@@ -31,8 +31,52 @@
             <a class="go-down" href="#level-1">Go</a>
         </section>
 
-        <section id="map-wrapper" class="section-height"></section>
-        <section id="credits" class="section-height"></section>
+        <section id="map-wrapper" class="section-height">
+            <svg id="tooltip" visibility="hidden" viewBox="0 0 200 80" height="80" width="200">
+                <g>
+                    <g id="tool_wrapper">
+                        <polygon fill="#FFFFFF" points="160,58 40,58 45,27 155,27" filter="url(#dropShadow)"/>
+                        <text transform="matrix(1 0 0 1 53.2089 49.5958)" fill="#999999" font-family="'DINCond" font-weight: "500" font-size="10">Cliquez ici pour plus de détails</text>
+                        <g>
+                            <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="0">
+                                <stop  offset="0" style="stop-color:#1E9CD7"/>
+                                <stop  offset="0.4777" style="stop-color:#0075BE"/>
+                                <stop  offset="0.9944" style="stop-color:#005B97"/>
+                            </linearGradient>
+                            <text text-anchor="middle" id="tool_city" transform="matrix(1 0 0 1 100.0283 38.21)" font-family="'DINCond'" font-weight: "600" fill="url(#SVGID_1_)" font-size="24">VILLE</text>
+                        </g>
+                        <polygon fill="#58C7F0" points="97,54 103,54 100,56.806 "/>
+                    </g>
+
+                </g>
+            </svg>
+        </section>
+
+        <section id="credits" class="section-height">
+            <div class="left">
+                <h2>Le projet</h2>
+                <p>Jesuisvitale.fr est un projet pédagogique réalisé par des étudiants de troisième année à Hétic, la grande école de l’internet.</p>
+                <p>Le concept est simple. L’eau est vitale. Nous en consommons quotidiennement afin d’hydrater notre corps, composé à 60% d’eau. L’eau du robinet en France est d’une grande qualité. Nous en consommons 137 litres quotidiennement mais que savons nous d’elle?
+                Autant de composants présents dans l’eau mais peu évocateurs pour les consommateurs.</p>
+                <p>Jesuisvitale.fr se donne l’objectif de vous faire découvrir plus en profondeur l’eau de chez vous, celle que vous consommez quotidiennement.</p>
+            </div>
+            <div class="right">
+                <h2>Les sources</h2>
+                <ul>
+                    <li><a href="http://www.ars.poitou-charentes.sante.fr/Les-exigences-de-qualite-de-l.118515.0.html" target="_blank">Les exigences de qualité de l'eau du robinet</a></li>
+                    <li><a href="http://www.tarifdeleau.fr/" target="_blank">Les tarifs de l’eau par ville</a></li>
+                    <li><a href="http://www.sante.gouv.fr/resultats-du-controle-sanitaire-de-la-qualite-de-l-eau-potable.html" target="_blank">Les informations sur la qualité de l'eau dans sa commune</a></li>
+                </ul>
+                <h2>L'équipe</h2>
+                <ul>
+                    <li><a href="https://www.linkedin.com/profile/view?id=261554790" target="_blank">Pierre Burgy</a> : Développement, statisticien</li>
+                    <li><a href="http://kevinchassagne.com" target="_blank">Kévin Chassagne</a> : Développement front-end, back-end</li>
+                    <li><a href="http://www.cffcreative.net/" target="_blank">Claire Fénart</a> : Conception, design et direction artistique</li>
+                    <li><a href="https://www.linkedin.com/profile/view?id=318537647" target="_blank">Pierre Guilhou</a> : Développement, statisticien</li>
+                    <li><a href="http://www.justinejouffroy.com/" target="_blank">Justine Jouffroy</a> : Conception-rédaction, gestion de projet</li>
+                </ul>
+            </div>
+        </section>
 
         <section id="level-1" class="section-height">
             <h2>{{prefecture}}</h2>

@@ -62,38 +62,32 @@
 	<g id="normes">
 		<g>
 			<g>
-				<text transform="matrix(1 0 0 1 140.3115 160.873)" fill="#FFFFFF" font-family="'DINCond-Bold'" font-size="16">&lt; 0,04</text>
+				<text text-anchor="middle" transform="matrix(1 0 0 1 145 163)" fill="#FFFFFF" font-family="'MyriadPro-Regular'" font-size="16">&lt; 0,04</text>
 			</g>
 		</g>
 		<g>
 			<g>
-				<text transform="matrix(1 0 0 1 251.8923 160.8727)" fill="#FFFFFF" font-family="'DINCond-Bold'" font-size="16">0,10</text>
+				<text text-anchor="middle" transform="matrix(1 0 0 1 260 163)" fill="#FFFFFF" font-family="'MyriadPro-Regular'" font-size="16">0,10</text>
 			</g>
 		</g>
 		<g>
 			<g>
-				<text transform="matrix(1 0 0 1 258.9549 243.8983)" fill="#FFFFFF" font-family="'MyriadPro-Regular'" font-size="16">≥ 180 et ≤ 1000</text>
-				<!-- <text transform="matrix(1 0 0 1 263.2743 243.8983)" fill="#FFFFFF" font-family="'DINCond-Bold'" font-size="16"> 180 et </text> -->
-				<!-- <text transform="matrix(1 0 0 1 280.6931 243.8983)" fill="#FFFFFF" font-family="'MyriadPro-Regular'" font-size="16">≤</text> -->
-				<!-- <text transform="matrix(1 0 0 1 284.9649 243.8983)" fill="#FFFFFF" font-family="'DINCond-Bold'" font-size="16"> 1000</text> -->
+				<text text-anchor="middle" transform="matrix(1 0 0 1 260 247)" fill="#FFFFFF" font-family="'MyriadPro-Regular'" font-size="16">≥ 180 et ≤ 1000</text>
 			</g>
 		</g>
 		<g>
 			<g>
-				<text transform="matrix(1 0 0 1 109.4267 243.8983)" fill="#FFFFFF" font-family="'MyriadPro-Regular'" font-size="16">≥ 6,5 et ≤ 9</text>
-				<!-- <text transform="matrix(1 0 0 1 113.7461 243.8983)" fill="#FFFFFF" font-family="'DINCond-Bold'" font-size="16"> 6,5 et </text> -->
-				<!-- <text transform="matrix(1 0 0 1 129.8962 243.8983)" fill="#FFFFFF" font-family="'MyriadPro-Regular'" font-size="16">≤</text> -->
-				<!-- <text transform="matrix(1 0 0 1 134.2155 243.8983)" fill="#FFFFFF" font-family="'DINCond-Bold'" font-size="16"> 9</text> -->
+				<text text-anchor="middle" transform="matrix(1 0 0 1 130 247)" fill="#FFFFFF" font-family="'MyriadPro-Regular'" font-size="16">≥ 6,5 et ≤ 9</text>
 			</g>
 		</g>
 		<g>
 			<g>
-				<text transform="matrix(1 0 0 1 199.2733 299.4148)" fill="#FFFFFF" font-family="'DINCond-Bold'" font-size="16">50</text>
+				<text text-anchor="middle" transform="matrix(1 0 0 1 202 302)" fill="#FFFFFF" font-family="'MyriadPro-Regular'" font-size="16">50</text>
 			</g>
 		</g>
 		<g>
 			<g>
-				<text text-anchor="middle" transform="matrix(1 0 0 1 205 113.4081)" fill="#FFFF55" font-family="'DINCond-Bold'" font-size="12">NORME</text>
+				<text text-anchor="middle" transform="matrix(1 0 0 1 205 113.4081)" fill="#FFFF55" font-family="'MyriadPro-Regular'" font-size="16">NORME</text>
 			</g>
 		</g>
 	</g>

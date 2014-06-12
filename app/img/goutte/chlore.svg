@@ -3,11 +3,13 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="chlore-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 400 400" height="400px" enable-background="new 0 0 400 400" xml:space="preserve">
-		
-			<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="708.3583" y1="-205.1227" x2="599.7043" y2="-313.7766" gradientTransform="matrix(0.5404 0 0 -0.5404 -136.0031 35.312)">
-				<stop  offset="0" style="stop-color:#188DD6"/>
-				<stop  offset="1" style="stop-color:#0B466B"/>
-			</linearGradient>
+
+	<g>
+		<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="708.3583" y1="-205.1227" x2="599.7043" y2="-313.7766" gradientTransform="matrix(0.5404 0 0 -0.5404 -136.0031 35.312)">
+			<stop  offset="0" style="stop-color:#188DD6"/>
+			<stop  offset="1" style="stop-color:#0B466B"/>
+		</linearGradient>
 		<path id="chlore-path" fill="url(#SVGID_3_)" d="M202.5,219.3l79-25.4c-16.9-41.5-79-85.9-79-85.9V219.3z"/>
-		
+	</g>
+
 </svg>

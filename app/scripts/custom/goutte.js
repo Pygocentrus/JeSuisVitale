@@ -1,67 +1,74 @@
 var goutteWrapper = d3.select('#goutte-wrapper');
 
-d3.xml("img/goutte/goutte_vide.svg", "image/svg+xml", function(xml) {
-	console.log(xml);
+d3.xml("img/goutte/goutte_fond.svg", "image/svg+xml", function(xml) {
     var importedNode = document.importNode(xml.documentElement, true);
     goutteWrapper.node().appendChild(importedNode);
 
-    var svgContainer = d3.select('#goutte');
-    // var path = document.querySelectorAll('path');
-    // console.log(path); 
-
     // AMMONIUM
+    d3.xml("img/goutte/ammonium.svg", "image/svg+xml", function(xml) {
+      var importedNode = document.importNode(xml.documentElement, true);
+      goutteWrapper.node().appendChild(importedNode);
+      // var element = document.getElementById('ammonium-path');
+      // var box = element.getBBox();
+      // var scaleVal = 1.32;
+      // var cx = box.x + box.width;
+      // var cy = box.y + box.height;
+      // element.setAttribute('transform', 'translate(' + cx + ' ' + cy + ') scale(' + scaleVal + ') translate(' + (-cx) + ' ' + (-cy) + ')');
+    })
 
-    // ammoniumGroup
-   	var ammoniumGroup = svgContainer.append("g");
-
-	var lineData = [ { "x": 152,   "y": 206},  { "x": 20,  "y": 20},
-	                 { "x": 40,  "y": 10}, { "x": 60,  "y": 40},
-	                 { "x": 80,  "y": 5},  { "x": 100, "y": 60}];
-
-	//This is the accessor function we talked about above
-
-	var lineFunction = d3.svg.line()
-	                         .x(function(d) { return d.x; })
-	                         .y(function(d) { return d.y; })
-	                         .interpolate("linear");
-
-	//The SVG Container
-	// var svgContainer = d3.select("body").append("svg")
-	//                                     .attr("width", 200)
-	//                                     .attr("height", 200);
-
-	//The line SVG Path we draw
-	var lineGraph = ammoniumGroup.append("path")
-	                            .attr("d", lineFunction(lineData))
-	                            .attr("stroke", "blue")
-	                            .attr("stroke-width", 2)
-	                            .attr("fill", "none");
-
-// });
-
-// d3.xml("img/goutte/goutte_vide.svg", "image/svg+xml", function(xml) {
-//     var importedNode = document.importNode(xml.documentElement, true);
-//     goutteWrapper.node().appendChild(importedNode);
-
-//     var svgContainer = d3.select('#goutte');
-
+    // CHLORE
     d3.xml("img/goutte/chlore.svg", "image/svg+xml", function(xml) {
-    	// svgContainer.append(xml);
     	var importedNode = document.importNode(xml.documentElement, true);
     	goutteWrapper.node().appendChild(importedNode);
-      
+      // var element = document.getElementById('chlore-path');
+      // var box = element.getBBox();
+      // var scaleVal = 1.665;
+      // var cx = box.x;
+      // var cy = box.y + box.height;
+      // element.setAttribute('transform', 'translate(' + cx + ' ' + cy + ') scale(' + scaleVal + ') translate(' + (-cx) + ' ' + (-cy) + ')');
+	 })
 
-      var element = document.getElementById('chlore-path');
-      var box = element.getBBox();
-      var scaleVal = 3;
-      var cx = box.x;
-      var cy = box.y + box.height;
+    // CONDUCTIVITE
+    d3.xml("img/goutte/conductivite.svg", "image/svg+xml", function(xml) {
+      var importedNode = document.importNode(xml.documentElement, true);
+      goutteWrapper.node().appendChild(importedNode);
+      // var element = document.getElementById('conductivite-path');
+      // var box = element.getBBox();
+      // var scaleVal = 1.35;
+      // var cx = box.x;
+      // var cy = 222.4;
+      // element.setAttribute('transform', 'translate(' + cx + ' ' + cy + ') scale(' + scaleVal + ') translate(' + (-cx) + ' ' + (-cy) + ')');
+   })
 
-      element.setAttribute('transform', 'translate(' + cx + ' ' + cy + ') scale(' + scaleVal + ') translate(' + (-cx) + ' ' + (-cy) + ')');
+    // NITRATES
+    d3.xml("img/goutte/nitrates.svg", "image/svg+xml", function(xml) {
+      var importedNode = document.importNode(xml.documentElement, true);
+      goutteWrapper.node().appendChild(importedNode);
+      // var element = document.getElementById('nitrates-path');
+      // var box = element.getBBox();
+      // var scaleVal = 1.47;
+      // var cx = 203.7;
+      // var cy = box.y;
+      // element.setAttribute('transform', 'translate(' + cx + ' ' + cy + ') scale(' + scaleVal + ') translate(' + (-cx) + ' ' + (-cy) + ')');
+   })
 
+  //   // PH
+  //   d3.xml("img/goutte/ph.svg", "image/svg+xml", function(xml) {
+  //     var importedNode = document.importNode(xml.documentElement, true);
+  //     goutteWrapper.node().appendChild(importedNode);
+  //     // var element = document.getElementById('ph-path');
+  //     // var box = element.getBBox();
+  //     // var scaleVal = 1.47;
+  //     // var cx = 204;
+  //     // var cy = 219.5;
+  //     // element.setAttribute('transform', 'translate(' + cx + ' ' + cy + ') scale(' + scaleVal + ') translate(' + (-cx) + ' ' + (-cy) + ')');
+  //  })
 
-	})
-
+	   // ligne jaunes des normes
+    d3.xml("img/goutte/normes.svg", "image/svg+xml", function(xml) {
+    	var importedNode = document.importNode(xml.documentElement, true);
+    	goutteWrapper.node().appendChild(importedNode);
+    });
 
 });
 

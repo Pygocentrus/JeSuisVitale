@@ -2,14 +2,14 @@
 <!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 400 400" enable-background="new 0 0 400 400" height="500px" xml:space="preserve">
+	 viewBox="0 0 400 400" enable-background="new 0 0 400 400" xml:space="preserve">
 <g id="Layer_4" display="none">
 	
 		<image display="inline" overflow="visible" enable-background="new    " width="1440" height="901" xlink:href="../ressources/BG.jpg"  transform="matrix(0.4565 0 0 0.4565 -125.7019 -8.1752)">
 	</image>
 </g>
-<!-- <g id="goutte_fond">
-</g> -->
+<g id="goutte_fond">
+</g>
 <g id="traits_separation">
 	<line fill="none" stroke="#53BBE4" stroke-miterlimit="10" x1="202.6" y1="220.3" x2="61.3" y2="174.5"/>
 	<line fill="none" stroke="#53BBE4" stroke-miterlimit="10" x1="202.6" y1="220.3" x2="115.3" y2="340.5"/>
@@ -23,10 +23,10 @@
 		c23.5,0,45.4-7,63.6-19.1l0,0c31.2-20.7,51.7-56.1,51.7-96.3C317.9,210.2,315.7,201.1,311.8,191.7z"/>
 	<line fill="none" stroke="#53BBE4" stroke-miterlimit="10" x1="202.5" y1="220.2" x2="202.5" y2="45.5"/>
 </g>
-<g id="goutte_decoupee">
+<!-- <g id="goutte_decoupee">
 	<g>
 		
-		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="473.9116" y1="-375.0659" x2="626.3744" y2="-375.0659" gradientTransform="matrix(0.5404 0 0 -0.5404 -136.0031 35.312)">
+			<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="473.9116" y1="-375.0659" x2="626.3744" y2="-375.0659" gradientTransform="matrix(0.5404 0 0 -0.5404 -136.0031 35.312)">
 			<stop  offset="0" style="stop-color:#23579D"/>
 			<stop  offset="0.2105" style="stop-color:#215395"/>
 			<stop  offset="0.5302" style="stop-color:#1D4780"/>
@@ -60,7 +60,7 @@
 		<path fill="url(#SVGID_5_)" d="M156.9,282.1c13.1,8.7,28.7,13.8,45.6,13.8c16.8,0,32.4-5,45.4-13.7
 			c-15.2-21.1-45.6-63.1-45.4-62.9L156.9,282.1z"/>
 	</g>
-</g>
+</g> -->
 <g id="traits_norme">
 	<path fill="#FFFF55" d="M281.8,194.3c3,7.2,3.4,14.2,3.4,19.4c0,7.5-1,14.8-3,21.9h1.5c1.9-7,2.9-14.4,2.9-21.9
 		c0-5.4-0.4-12.6-3.5-20c-3.9-9.7-10.4-19.6-17.8-28.9h-1.8C271,174.4,277.7,184.4,281.8,194.3z"/>

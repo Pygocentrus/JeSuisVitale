@@ -1,6 +1,4 @@
 // MAP
-(function() {
-
 function init(evt) {
     if (window.svgDocument == null) {
         svgDocument = evt.target.ownerDocument;
@@ -21,6 +19,8 @@ function ShowTooltip(evt) {
 function HideTooltip() {
     tooltip.setAttributeNS(null, "visibility", "hidden");
 }
+
+(function() {
 
 var data = [{
     "10": {

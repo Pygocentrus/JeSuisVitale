@@ -9,7 +9,7 @@ goutteSVGDrawer = {
 
       // AMMONIUM
       d3.xml("img/goutte/intern.svg", "image/svg+xml", function(xml) {
-        console.log('intern charged');
+
         var importedNode = document.importNode(xml.documentElement, true);
         goutteWrapper.node().appendChild(importedNode);
 

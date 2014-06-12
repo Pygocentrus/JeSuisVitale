@@ -12,6 +12,16 @@ goutteSVGDrawer = {
         console.log('intern charged');
         var importedNode = document.importNode(xml.documentElement, true);
         goutteWrapper.node().appendChild(importedNode);
+
+        function changeDescriptionText (idText) {
+          console.log(idText);
+          var elements = document.querySelectorAll('.explication');
+          for (var i = 0; i < elements.length; i++) {
+            elements[i].style.display = 'none';
+          };
+          document.getElementById(idText).style.display = 'block';
+        }
+
         var element = document.getElementById('ammonium-path');
         var box = element.getBBox();
         var maxScaleVal = 1.32;
@@ -31,17 +41,7 @@ goutteSVGDrawer = {
         var cy = box.y + box.height;
         element.setAttribute('transform', 'translate(' + cx + ' ' + cy + ') scale(' + scaleVal + ') translate(' + (-cx) + ' ' + (-cy) + ')');
 
-        // document.getElementById('ammonium-svg').onmouseover = function() {
-        //   console.log('in ammonium');
-        // };
-        document.getElementById('ammonium-path').onmouseover=function(){console.log('hello')};
-
-      // })
-
-      // CHLORE
-      // d3.xml("img/goutte/chlore.svg", "image/svg+xml", function(xml) {
-        // var importedNode = document.importNode(xml.documentElement, true);
-        // goutteWrapper.node().appendChild(importedNode);
+        // CHLORE
         var element = document.getElementById('chlore-path');
         var box = element.getBBox();
         var maxScaleVal = 1.3;
@@ -60,12 +60,8 @@ goutteSVGDrawer = {
         var cx = box.x;
         var cy = box.y + box.height;
         element.setAttribute('transform', 'translate(' + cx + ' ' + cy + ') scale(' + scaleVal + ') translate(' + (-cx) + ' ' + (-cy) + ')');
-      // })
 
       // CONDUCTIVITE
-      // d3.xml("img/goutte/conductivite.svg", "image/svg+xml", function(xml) {
-        // var importedNode = document.importNode(xml.documentElement, true);
-        // goutteWrapper.node().appendChild(importedNode);
         var element = document.getElementById('conductivite-path');
         var box = element.getBBox();
         var maxScaleVal = 1.35;
@@ -84,12 +80,8 @@ goutteSVGDrawer = {
         var cx = box.x;
         var cy = 222.4;
         element.setAttribute('transform', 'translate(' + cx + ' ' + cy + ') scale(' + scaleVal + ') translate(' + (-cx) + ' ' + (-cy) + ')');
-      // })
 
         // NITRATES
-      // d3.xml("img/goutte/nitrates.svg", "image/svg+xml", function(xml) {
-        // var importedNode = document.importNode(xml.documentElement, true);
-        // goutteWrapper.node().appendChild(importedNode);
         var element = document.getElementById('nitrates-path');
         var box = element.getBBox();
         var maxScaleVal = 1.50;
@@ -108,12 +100,8 @@ goutteSVGDrawer = {
         var cx = 203.7;
         var cy = box.y;
         element.setAttribute('transform', 'translate(' + cx + ' ' + cy + ') scale(' + scaleVal + ') translate(' + (-cx) + ' ' + (-cy) + ')');
-      // })
 
-      // PH
-      // d3.xml("img/goutte/ph.svg", "image/svg+xml", function(xml) {
-        // var importedNode = document.importNode(xml.documentElement, true);
-        // goutteWrapper.node().appendChild(importedNode);
+        // PH
         var element = document.getElementById('ph-path');
         var box = element.getBBox();
         var maxScaleVal = 1.4;
@@ -134,10 +122,19 @@ goutteSVGDrawer = {
         element.setAttribute('transform', 'translate(' + cx + ' ' + cy + ') scale(' + scaleVal + ') translate(' + (-cx) + ' ' + (-cy) + ')');
        // })
 
-      // ligne jaunes des normes
-      // d3.xml("img/goutte/normes.svg", "image/svg+xml", function(xml) {
-        // var importedNode = document.importNode(xml.documentElement, true);
-        // goutteWrapper.node().appendChild(importedNode);
+        // onmouseenter
+        document.getElementById('ammonium-path').onmouseover=function(){changeDescriptionText('explications-ammonium')};
+        document.getElementById('chlore-path').onmouseover=function(){changeDescriptionText('explications-chlore')};
+        document.getElementById('conductivite-path').onmouseover=function(){changeDescriptionText('explications-conductivite')};
+        document.getElementById('nitrates-path').onmouseover=function(){changeDescriptionText('explications-nitrates')};
+        document.getElementById('ph-path').onmouseover=function(){changeDescriptionText('explications-ph')};
+
+        // onmouseout
+        document.getElementById('ammonium-path').onmouseout=function(){changeDescriptionText('explication-aqualite')};
+        document.getElementById('chlore-path').onmouseout=function(){changeDescriptionText('explication-aqualite')};
+        document.getElementById('conductivite-path').onmouseout=function(){changeDescriptionText('explication-aqualite')};
+        document.getElementById('nitrates-path').onmouseout=function(){changeDescriptionText('explication-aqualite')};
+        document.getElementById('ph-path').onmouseout=function(){changeDescriptionText('explication-aqualite')};
       });
     });
   }

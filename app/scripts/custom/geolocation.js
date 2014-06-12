@@ -90,10 +90,17 @@ Location.askLocation = function() {
  */
 Location.whenLocated = function(location) {
     isLocated = true;
-    document.querySelector('.geolocation').style.backgroundImage = "url('img/goutte.gif')";
+    var pGeolocation = document.querySelector('.geolocation');
+    pGeolocation.innerHTML = '';
+    pGeolocation.style.backgroundImage = "url('img/goutte.gif')";
+    pGeolocation.style.backgroundPosition = "center center";
+    pGeolocation.style.width = "70px";
+    pGeolocation.style.height = "70px";
+    pGeolocation.style.borderRadius = "50%";
+
     setTimeout(function(){
         Location.callback.call(this, location)
-    }, 2000);
+    }, 1000);
     // enable_scroll();
 };
 
@@ -128,7 +135,7 @@ Location.whenError = function(error) {
  * @return {Boolean} The assertion
  */
 Location.userIsLocated = function() {
-    return isLocated;
+    return this.isLocated;
 };
 
 /**

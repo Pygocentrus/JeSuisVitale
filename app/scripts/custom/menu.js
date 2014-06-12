@@ -53,6 +53,7 @@ for (var i = 0, size = href.length ; i < size; i++) {
                 }, timer);
             });
             mapWrapper.className = 'visible';
+            mapWrapper.scrollIntoView(true);
         }
         if (this.getAttribute('href') == "#credits") {
             Array.prototype.forEach.call(list, function(li, i) {
@@ -64,6 +65,7 @@ for (var i = 0, size = href.length ; i < size; i++) {
                 }, timer);
             });
             credits.className = 'visible';
+            credits.scrollIntoView(true);
         }
     }, false);
 };

@@ -20,7 +20,19 @@ document.querySelector('.geolocation').style.backgroundImage = "";
 // Grab the user's current location and sets the input with his city
 Locator.init(function cityReceived(location, err){
     if(typeof err === 'undefined'){
-        document.querySelector('.geolocation').style.backgroundImage = "url('img/location.png')";
+        var pGeolocation = document.querySelector('.geolocation');
+
+        pGeolocation.style.backgroundImage = "url('img/location.png')";
+        pGeolocation.style.backgroundSize = "30px 30px";
+        pGeolocation.style.backgroundPosition = "";
+        pGeolocation.style.lineHeight = "60px";
+        pGeolocation.style.height = "60px";
+        pGeolocation.style.width = "";
+        pGeolocation.style.textTransform = "uppercase";
+        pGeolocation.style.borderRadius = "0px";
+        pGeolocation.style.padding = "0px";
+
+
         document.querySelector('.geolocation').innerHTML = location.address.town;
         Ajax.getJSON('data/fiefs.json', function jsonLoaded(data, dataErr) {
             if(typeof dataErr === 'undefined') {

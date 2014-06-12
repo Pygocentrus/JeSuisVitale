@@ -46,21 +46,19 @@
 		margin: 40px 0 20px 0;
 	}
 	.geolocation {
-		color: $font-color;
+		color: #308ebb;
 		font-size: 2vw;
-		text-transform: uppercase;
-		width: 35%;
-		min-width: 250px;
+		width: 30%;
 		max-width: 450px;
-		height: 70px;
-        line-height: 70px;
-		padding: 0 0 0 60px;
-		/*@include background(image-url('goutte.gif') 15px center no-repeat, #fff);*/
-        background-position: 15px center;
-        background-repeat: no-repeat;
-        background-color: #fff;
-        background-size: 50px auto;
+		line-height: 2.5vw;
+		margin: 0 auto;
+		padding: 10px;
+		background-color: #fff;
+		background-position: 15px center;
+		background-repeat: no-repeat;
+		background-size: 50px auto;
 		@include box-sizing(content-box);
+		@include transition(all 0.3s ease-in-out);
 	}
 	svg {
 		path {

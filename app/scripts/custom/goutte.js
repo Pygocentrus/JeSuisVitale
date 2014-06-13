@@ -4,7 +4,7 @@ goutteSVGDrawer = {
 
     var goutteWrapper = d3.select('#goutte-wrapper');
 
-    d3.xml("img/goutte/goutte_fond.svg", "image/svg+xml", function(xml) {
+    d3.xml("img/goutte/fond_goutte.svg", "image/svg+xml", function(xml) {
       var importedNode = document.importNode(xml.documentElement, true);
       goutteWrapper.node().appendChild(importedNode);
 

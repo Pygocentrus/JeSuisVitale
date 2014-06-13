@@ -12,6 +12,7 @@ module.exports = function(grunt) {
                     'app/bower_components/backbone/backbone.js',
                     'app/bower_components/handlebars/handlebars.min.js',
                     'app/bower_components/d3/d3.min.js',
+                    'app/bower_components/smooth-scroll.js/smooth-scroll.js',
                     'app/scripts/lib/q.js',
                     'app/scripts/models/*.js',
                     'app/scripts/collections/*.js',

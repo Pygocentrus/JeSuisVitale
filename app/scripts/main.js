@@ -1,4 +1,5 @@
 onStartStyle();
+smoothScroll.init();
 
 // Grab the user's current location and sets the input with his city
 Locator.init(function cityReceived(location, err){

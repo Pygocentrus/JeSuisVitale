@@ -1,5 +1,5 @@
 #home {
-	z-index: 100;
+	z-index: 2100;
 	position: relative;
 	padding: 5vw 0 0 0;
 	text-align: center;
@@ -62,6 +62,10 @@
 		background-size: 50px auto;
 		@include box-sizing(content-box);
 		@include transition(border-radius 0.3s ease-in, width 0.3s ease-in);
+		small {
+			display: block;
+			font-size: 0.6em;
+		}
 	}
 	svg {
 		path {

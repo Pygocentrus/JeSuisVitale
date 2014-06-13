@@ -110,6 +110,18 @@ nav.menu {
 	}
 }
 
+#scrolltotop {
+	font-size:0;
+	color: transparent;
+	width: 35px; height: 35px;
+	position: fixed;
+	bottom: 35px;
+	right: 35px;
+	z-index: 2000;
+	@include background(image-url('arrow_top.png') no-repeat);
+	background-size: 35px;
+}
+
 /* END NAV */
 
 a.go-down {
@@ -134,5 +146,4 @@ a.go-down {
 @import "credits";
 @import "level-1";
 @import "level-2";
-@import "level-3";
 @import "error";

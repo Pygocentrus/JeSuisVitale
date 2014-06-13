@@ -12,8 +12,10 @@
 		width: 100%;
 		height: 170%;
 		overflow-x: hidden;
+		pointer-events:none;
 		.light {
 			animation: light_1 10s linear infinite;
+			pointer-events:none;
 			height:100%;
 			width:200%;
 			position:absolute;
@@ -137,26 +139,33 @@
 #ammonium, #chlore, #ph, #conductivite { position: absolute; }
 
 #ammonium {
-	top: 9%;
-	left: 0%;
+	top: 12%;
+	left: 9%;
 }
 
 #ph {
-	top: 58%;
+	top: 51%;
 	left: -2%;
 }
 
 #chlore {
-	top: 9%;
-	right: -2%;
+	top: 12%;
+	right: 7%;
 }
 
 #conductivite {
-	top: 58%;
-	right: -22%;
+	top: 51%;
+	right: -6%;
 }
 
+<<<<<<< HEAD
 #nitrates { margin: -1% auto 0 auto; }
+=======
+#nitrates {
+	margin: -8% auto 0 auto;
+	padding-bottom: 40px;
+}
+>>>>>>> edfe25622477ca70782bbb5a06e09897fc21ee74
 
 #chlore-svg {
 	position: absolute;

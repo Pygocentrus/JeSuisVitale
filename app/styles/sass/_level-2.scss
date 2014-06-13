@@ -5,7 +5,7 @@
 	background: rgba(0,135,213,1);
 	@include box-sizing(border-box);
 	.light-container {
-		opacity: 0.3;
+		opacity: 0.2;
 		position:absolute;
 		bottom: 0;
 		left: 0;
@@ -14,21 +14,21 @@
 		overflow-x: hidden;
 		pointer-events:none;
 		.light {
+			animation: light_1 10s linear infinite;
 			pointer-events:none;
-			animation: cloud 200s ease infinite;
 			height:100%;
 			width:200%;
 			position:absolute;
 			top:0; left:0;
 			&:nth-child(1) {
 				@include background(image-url('light_1.png') repeat-x);
-				-webkit-animation: light_1 10s ease infinite;
-						animation: light_1 10s ease infinite;
+				-webkit-animation: light_1 5s linear infinite;
+						animation: light_1 5s linear infinite;
 			}
 			&:nth-child(2) {
 				@include background(image-url('light_1.png') repeat-x);
-				-webkit-animation: light_2 20s ease infinite;
-						animation: light_2 20s ease infinite;
+				-webkit-animation: light_2 5s linear infinite;
+						animation: light_2 5s linear infinite;
 			}
 		}
 	}
@@ -118,6 +118,11 @@
 				margin-left: -13px;
 			}
 		}
+		#explication-aqualite > p:nth-child(7) {
+			margin: 10px 0 0 0;
+			padding: 0 0 0 50px;
+			@include background(image-url('warning.svg') left center no-repeat);
+		}
 		.explications-composition {
 			display: none;
 		}
@@ -131,9 +136,7 @@
 	}
 }
 
-#ammonium, #chlore, #ph, #conductivite {
-	position: absolute;
-}
+#ammonium, #chlore, #ph, #conductivite { position: absolute; }
 
 #ammonium {
 	top: 12%;
@@ -154,6 +157,8 @@
 	top: 51%;
 	right: -6%;
 }
+
+// #nitrates { margin: -1% auto 0 auto; }
 
 #nitrates {
 	margin: -8% auto 0 auto;
@@ -177,25 +182,21 @@
 
 #ammonium-svg {
 	position: absolute;
-	/*top: 9%;*/
 	left: 0%;
 }
 
 #conductivite-svg {
 	position: absolute;
-	/*top: 9%;*/
 	left: 0%;
 }
 
 #nitrates-svg {
 	position: absolute;
-	/*top: 9%;*/
 	left: 0%;
 }
 
 #ph-svg {
 	position: absolute;
-	/*top: 9%;*/
 	left: 0%;
 }
 
@@ -206,15 +207,14 @@
 	pointer-events: none;
 }
 
-#traits_norme { pointer-events: none;}
-
+#traits_norme { pointer-events: none; }
 
 @keyframes light_1 {
 	0% {
 		@include transform(translateX(0%) translateZ(0));
 	}
 	50% {
-		@include transform(translateX(-1%) translateZ(0));
+		@include transform(translateX(10%) translateZ(0));
 	}
 	100% {
 		@include transform(translateX(0%) translateZ(0));
@@ -226,7 +226,7 @@
 		@include transform(translateX(0%) translateZ(0));
 	}
 	50% {
-		@include transform(translateX(-1%) translateZ(0));
+		@include transform(translateX(10%) translateZ(0));
 	}
 	100% {
 		@include transform(translateX(0%) translateZ(0));
@@ -238,7 +238,7 @@
 		@include transform(translateX(0%) translateZ(0));
 	}
 	50% {
-		@include transform(translateX(1%) translateZ(0));
+		@include transform(translateX(15%) translateZ(0));
 	}
 	100% {
 		@include transform(translateX(0%) translateZ(0));
@@ -250,10 +250,9 @@
 		@include transform(translateX(0%) translateZ(0));
 	}
 	50% {
-		@include transform(translateX(1%) translateZ(0));
+		@include transform(translateX(15%) translateZ(0));
 	}
 	100% {
 		@include transform(translateX(0%) translateZ(0));
 	}
 }
-

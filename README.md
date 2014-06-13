@@ -37,7 +37,7 @@ Website's preprod available here at <a href="http://jesuisvitale.fr">jesuisvital
     <td><a href="https://github.com/pierreburgy"><img src="http://ciembor.github.io/4bit/images/github.png" alt="LinkedIn"/></a></td>
   </tr>
   <tr>
-    <td><img src="https://media.licdn.com/mpr/mpr/shrink_200_200/p/1/005/047/258/1698ca2.jpg" alt="back-dev"/></td>
+    <td><img src="https://media.licdn.com/mpr/mpr/shrink_200_200/p/1/005/047/258/1698ca2.jpg" width="80px" height="80px" alt="back-dev"/></td>
     <td><h4>CERVELLERA Valentin</h4><h5>UI / UX design</h5></td>
     <td><a href="fr.linkedin.com/pub/valentin-cervellera/45/a95/b0b"><img src="http://www.tlogistics.eu/wp-content/uploads/2013/01/Linkedin-Logo1.png" alt="LinkedIn"/></a></td>
     <td><a href="https://github.com/brainra"><img src="http://ciembor.github.io/4bit/images/github.png" alt="LinkedIn"/></a></td>
@@ -49,9 +49,9 @@ Website's preprod available here at <a href="http://jesuisvitale.fr">jesuisvital
     <td><a href="https://github.com/Kevin445"><img src="http://ciembor.github.io/4bit/images/github.png" alt="LinkedIn"/></a></td>
   </tr>
   <tr>
-    <td><img src="https://media.licdn.com/mpr/mpr/shrink_200_200/p/4/005/024/39d/08646ba.jpg" alt="front-dev"/></td>
+    <td><img src="https://media.licdn.com/mpr/mpr/shrink_200_200/p/4/005/024/39d/08646ba.jpg" width="80px" height="80px" alt="front-dev"/></td>
     <td><h4>FENART Claire</h4><h5>Conception, design and artistic direction</h5></td>
-    <td><a href="https://www.linkedin.com/profile/view?id=38291512"><img src="http://www.tlogistics.eu/wp-content/uploads/2013/01/Linkedin-Logo1.png" alt="LinkedIn"/></a></td>
+    <td><a href="fr.linkedin.com/in/clairefenart"><img src="http://www.tlogistics.eu/wp-content/uploads/2013/01/Linkedin-Logo1.png" alt="LinkedIn"/></a></td>
     <td><a href="https://github.com/Kevin445"><img src="http://ciembor.github.io/4bit/images/github.png" alt="LinkedIn"/></a></td>
   </tr>
   <tr>
@@ -61,9 +61,9 @@ Website's preprod available here at <a href="http://jesuisvitale.fr">jesuisvital
     <td><a href="https://github.com/Pygocentrus"><img src="http://ciembor.github.io/4bit/images/github.png" alt="LinkedIn"/></a></td>
   </tr>
   <tr>
-    <td><img src="https://media.licdn.com/mpr/mpr/shrink_200_200/p/8/005/016/145/2a3044d.jpg" alt="lead dev"/></td>
+    <td><img src="https://media.licdn.com/mpr/mpr/shrink_200_200/p/8/005/016/145/2a3044d.jpg" width="80px" height="80px" alt="lead dev"/></td>
     <td><h4>JOUFFROY Justine</h4><h5>Content</h5></td>
-    <td><a href="http://www.linkedin.com/profile/view?id=318537647"><img src="http://www.tlogistics.eu/wp-content/uploads/2013/01/Linkedin-Logo1.png" alt="LinkedIn"/></a></td>
+    <td><a href="fr.linkedin.com/pub/justine-jouffroy/61/405/3a0"><img src="http://www.tlogistics.eu/wp-content/uploads/2013/01/Linkedin-Logo1.png" alt="LinkedIn"/></a></td>
     <td><a href="https://github.com/Pygocentrus"><img src="http://ciembor.github.io/4bit/images/github.png" alt="LinkedIn"/></a></td>
   </tr>
 </table>

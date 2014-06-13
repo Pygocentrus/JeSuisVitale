@@ -39,8 +39,8 @@ Website's preprod available here at <a href="http://jesuisvitale.fr">jesuisvital
   <tr>
     <td><img src="https://fr.gravatar.com/userimage/58955705/05d7d60184e3f1dcebfc25f1c08c1794" alt="back-dev"/></td>
     <td><h4>CERVELLERA Valentin</h4><h5>UI / UX design</h5></td>
-    <td><a href="http://www.linkedin.com/profile/view?id=261554790"><img src="http://www.tlogistics.eu/wp-content/uploads/2013/01/Linkedin-Logo1.png" alt="LinkedIn"/></a></td>
-    <td><a href="https://github.com/pierreburgy"><img src="http://ciembor.github.io/4bit/images/github.png" alt="LinkedIn"/></a></td>
+    <td><a href="fr.linkedin.com/pub/valentin-cervellera/45/a95/b0b"><img src="http://www.tlogistics.eu/wp-content/uploads/2013/01/Linkedin-Logo1.png" alt="LinkedIn"/></a></td>
+    <td><a href="https://github.com/brainra"><img src="http://ciembor.github.io/4bit/images/github.png" alt="LinkedIn"/></a></td>
   </tr>
   <tr>
     <td><img src="http://www.gravatar.com/avatar/234fe0bab4cfd6d929a48dfda4a9557c.png" alt="front-dev"/></td>

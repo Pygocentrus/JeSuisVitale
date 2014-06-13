@@ -4,7 +4,7 @@
 	left: 0;
 	width: 100%;
 	z-index: 150;
-	@include background(linear-gradient(top, rgba(145,217,241,1) 0%,rgba(96,180,217,1) 50%,rgba(127,195,220,1) 100%), #2186be);
+	@include background(image-url('bg_map.png') no-repeat center, linear-gradient(top, rgba(145,217,241,1) 0%,rgba(96,180,217,1) 50%,rgba(127,195,220,1) 100%), #2186be);
     svg text, #tooltip {
         pointer-events: none;
     }

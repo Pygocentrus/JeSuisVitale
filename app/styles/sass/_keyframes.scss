@@ -1,0 +1,197 @@
+@keyframes light_1 {
+	0% {
+		@include transform(translateX(0%) translateZ(0));
+	}
+	50% {
+		@include transform(translateX(10%) translateZ(0));
+	}
+	100% {
+		@include transform(translateX(0%) translateZ(0));
+	}
+}
+
+@-webkit-keyframes light_1 {
+	0% {
+		@include transform(translateX(0%) translateZ(0));
+	}
+	50% {
+		@include transform(translateX(10%) translateZ(0));
+	}
+	100% {
+		@include transform(translateX(0%) translateZ(0));
+	}
+}
+
+@keyframes light_2 {
+	0% {
+		@include transform(translateX(0%) translateZ(0));
+	}
+	50% {
+		@include transform(translateX(-10%) translateZ(0));
+	}
+	100% {
+		@include transform(translateX(0%) translateZ(0));
+	}
+}
+
+@-webkit-keyframes light_2 {
+	0% {
+		@include transform(translateX(0%) translateZ(0));
+	}
+	50% {
+		@include transform(translateX(-10%) translateZ(0));
+	}
+	100% {
+		@include transform(translateX(0%) translateZ(0));
+	}
+}
+
+@keyframes blur {
+  0% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes blur {
+  0% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes unblur {
+  0% {
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 500%;
+  }
+  20% {
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+  }
+  50% {
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+  }
+  75% {
+    -webkit-mask-size: 100% 500%;
+    mask-size: 100% 500%;
+  }
+  83% {
+    -webkit-mask-size: 100% 500%;
+    mask-size: 100% 500%;
+  }
+  100% {
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+  }
+}
+
+@-webkit-keyframes unblur {
+  0% {
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 500%;
+  }
+  20% {
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+  }
+  50% {
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+  }
+  75% {
+    -webkit-mask-size: 100% 500%;
+    mask-size: 100% 500%;
+  }
+  83% {
+    -webkit-mask-size: 100% 500%;
+    mask-size: 100% 500%;
+  }
+  100% {
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+  }
+}
+
+@keyframes cloud {
+	0% {
+		@include transform(translateX(0%) translateZ(0));
+	}
+	50% {
+		@include transform(translateX(-50%) translateZ(0));
+	}
+	100% {
+		@include transform(translateX(0%) translateZ(0));
+	}
+}
+
+@-webkit-keyframes cloud {
+	0% {
+		@include transform(translateX(0%) translateZ(0));
+	}
+	50% {
+		@include transform(translateX(-50%) translateZ(0));
+	}
+	100% {
+		@include transform(translateX(0%) translateZ(0));
+	}
+}
+
+@keyframes wave-animation {
+  0% {
+    background-position:0 bottom;
+  }
+  100%{
+    background-position:200px bottom;
+  }
+}
+
+@-webkit-keyframes wave-animation {
+  0% {
+    background-position:0 bottom;
+  }
+  100%{
+    background-position:200px bottom;
+  }
+}
+
+@keyframes loading-animation{
+  0%{
+    background-size:200px 0px;
+  }
+  100%{
+    background-size:200px 200px;
+  }
+}
+
+@-webkit-keyframes loading-animation{
+  0%{
+    background-size:200px 0px;
+  }
+  100%{
+    background-size:200px 200px;
+  }
+}

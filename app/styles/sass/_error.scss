@@ -70,39 +70,3 @@
   display:inline-block;
   @include background-clip(initial);
 }
-
-@keyframes wave-animation {
-  0% {
-    background-position:0 bottom;
-  }
-  100%{
-    background-position:200px bottom;
-  }
-}
-
-@-webkit-keyframes wave-animation {
-  0% {
-    background-position:0 bottom;
-  }
-  100%{
-    background-position:200px bottom;
-  }
-}
-
-@keyframes loading-animation{
-  0%{
-    background-size:200px 0px;
-  }
-  100%{
-    background-size:200px 200px;
-  }
-}
-
-@-webkit-keyframes loading-animation{
-  0%{
-    background-size:200px 0px;
-  }
-  100%{
-    background-size:200px 200px;
-  }
-}

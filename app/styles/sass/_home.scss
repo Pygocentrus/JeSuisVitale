@@ -84,27 +84,3 @@
 		@include background(image-url('arrow.svg'));
 	}
 }
-
-@keyframes cloud {
-	0% {
-		@include transform(translateX(0%) translateZ(0));
-	}
-	50% {
-		@include transform(translateX(-50%) translateZ(0));
-	}
-	100% {
-		@include transform(translateX(0%) translateZ(0));
-	}
-}
-
-@-webkit-keyframes cloud {
-	0% {
-		@include transform(translateX(0%) translateZ(0));
-	}
-	50% {
-		@include transform(translateX(-50%) translateZ(0));
-	}
-	100% {
-		@include transform(translateX(0%) translateZ(0));
-	}
-}

@@ -18,6 +18,7 @@ var handlebarsConfig = {
 		// datas of the goutte : level-2
 		template = Handlebars.compile(this.templates.templateLvl2);
 		var context = {
+			prefecture: $scope.city.attributes.prefecture,
 			ammonium: $scope.city.attributes.ammonium,
 			chlore: $scope.city.attributes.chlore,
 			ph: $scope.city.attributes.ph,
